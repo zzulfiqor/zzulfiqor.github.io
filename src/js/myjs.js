@@ -80,7 +80,7 @@ $(document).ready(function () {
 
         if(nim == '' || password == ''){
             alert('Lengkapi form yang belum diisi');
-        } else if(nim == '17.11.1669' || password == '12345'){
+        } else if(nim == '17.11.1669' && password == '12345'){
             window.location.replace("./mahasiswa.html");
         } else{
             alert('Password atau Email salah.')
