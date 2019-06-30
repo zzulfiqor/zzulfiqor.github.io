@@ -87,3 +87,8 @@
 #bio{
     height: 300px !important;
 }
+
+.logout button{
+    width: 90%;
+    margin-left: 0;
+}
