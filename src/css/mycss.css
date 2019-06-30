@@ -118,7 +118,9 @@ nav {
     margin-top: -16px;
     padding: 10px;
     background-color: #3C0B66;
-    height: 400px;
+    height: auto;
+    width: 100%;
+    display: inline-block;
 }
 
 .title-footer{

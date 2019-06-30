@@ -145,12 +145,14 @@
 }
 
 #col-pengumuman{
-    height: 460px;
+    display: inline-block;
+    height: auto;
     background-color: #3C0B66;
 }
 
 #col-berita{
-    height: 460px;
+    display: inline-block;
+    height: auto;
     background-color: rgb(233, 233, 233);
 }
 
