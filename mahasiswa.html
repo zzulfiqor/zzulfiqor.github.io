@@ -97,7 +97,7 @@
             </div>
         </div>
         <!-- main display -->
-        <div class="col-md-9 p-5">
+        <div class="col-md-9 pt-3 px-5 pb-4" style="overflow: scroll">
 
             <!-- Biodata Mahasiswa -->
             <div id="bio" class="row">
@@ -109,29 +109,79 @@
                         <div class="card-body">
                             <table>
                                 <tr class="biodata-p">
-                                    <td style="font-weight:bold" >Nama </td>
+                                    <td style="font-weight:bold">Nama </td>
                                     <td class="pl-4 pr-2">:</td>
                                     <td>Ahmad Zuhair Dzulfiqor</td>
                                 </tr>
                                 <tr class="biodata-p">
-                                    <td style="font-weight:bold" >NIM </td>
+                                    <td style="font-weight:bold">NIM </td>
                                     <td class="pl-4 pr-2">:</td>
                                     <td>17.11.1669</td>
                                 </tr>
                                 <tr class="biodata-p">
-                                    <td style="font-weight:bold" >Prodi </td>
+                                    <td style="font-weight:bold">Prodi </td>
                                     <td class="pl-4 pr-2">:</td>
                                     <td>S1 Informatika</td>
                                 </tr>
                                 <tr class="biodata-p">
-                                    <td style="font-weight:bold" >Email </td>
+                                    <td style="font-weight:bold">Email </td>
                                     <td class="pl-4 pr-2">:</td>
                                     <td>ahmad.dzulfiqor@students.amikom.ac.id</td>
                                 </tr>
                                 <tr class="biodata-p">
-                                    <td style="font-weight:bold" >Kelas </td>
+                                    <td style="font-weight:bold">Kelas </td>
                                     <td class="pl-4 pr-2">:</td>
                                     <td>Informatika-12</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            <h5>Alamat</h5>
+                        </div>
+                        <div class="card-body">
+                            <table>
+                                <tr class="biodata-p">
+                                    <td style="font-weight:bold">Alamat asal </td>
+                                    <td class="pl-4 pr-2">:</td>
+                                    <td>Jalan Salafiyah-Desa Kajen Rt4 Rw1-Kecamatan Margoyoso-Kabupaten Pati</td>
+                                </tr>
+                                <tr class="biodata-p">
+                                    <td style="font-weight:bold">Alamat di Jogja </td>
+                                    <td class="pl-4 pr-2">:</td>
+                                    <td>Jl Sulawesi 8, Rumah No.9, Sariharjo, Ngaglik, Sleman</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            <h5>Data Orangtua</h5>
+                        </div>
+                        <div class="card-body">
+                            <table>
+                                <tr class="biodata-p">
+                                    <td style="font-weight:bold">Nama Ayah</td>
+                                    <td class="pl-4 pr-2">:</td>
+                                    <td>Ubaidillah Wahab</td>
+                                </tr>
+                                <tr class="biodata-p">
+                                    <td style="font-weight:bold">Nama Ibu</td>
+                                    <td class="pl-4 pr-2">:</td>
+                                    <td>Irna Baroroh</td>
+                                </tr>
+                                <tr class="biodata-p">
+                                    <td style="font-weight:bold">Pekerjaan Ayah </td>
+                                    <td class="pl-4 pr-2">:</td>
+                                    <td>Guru Swasta</td>
+                                </tr>
+                                <tr class="biodata-p">
+                                    <td style="font-weight:bold">Pekerjaan Ibu </td>
+                                    <td class="pl-4 pr-2">:</td>
+                                    <td>Guru Swasta</td>
                                 </tr>
                             </table>
                         </div>
@@ -142,28 +192,227 @@
             <!-- Kuliah Mahasiswa -->
             <div id="kuliah" class="row not-selected">
                 <div class="col-md">
-                    kuliah
+                    <div class="alert alert-success" role="alert">
+                        Jadwal Mata kuliah dapat sewaktu-waktu berubah.
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="card">
+                                <h5 class="card-header">DPA </h5>
+                                <div class="card-body">
+                                    Sumarni Adi, S.Kom, M.Cs
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md">
+                            <div class="card">
+                                <h5 class="card-header">Total SKS</h5>
+                                <div class="card-body">
+                                    96 SKS
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md">
+                            <div class="card">
+                                <h5 class="card-header">SKS semester ini</h5>
+                                <div class="card-body">
+                                    24 SKS
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-md">
+                            <div class="jadwal-kuliah-title">
+                                Jadwal Kuliah
+                            </div>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">No</th>
+                                        <th scope="col">Hari</th>
+                                        <th scope="col">Jam</th>
+                                        <th scope="col">Ruang</th>
+                                        <th scope="col">Mata Kuliah</th>
+                                        <th scope="col">Dosen Pengampu</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Selasa</td>
+                                        <td>07.00 WIB</td>
+                                        <td>Ruang</td>
+                                        <td>Pemrograman Web (Teori)</td>
+                                        <td>Firman Asharuddin M.Kom</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Selasa</td>
+                                        <td>08.50 WIB</td>
+                                        <td>Ruang</td>
+                                        <td>Pemrograman Basis Data</td>
+                                        <td>Kamarudin M.Kom</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Selasa</td>
+                                        <td>15.00 WIB</td>
+                                        <td>Ruang</td>
+                                        <td>Pemrograman Web (Praktik)</td>
+                                        <td>Firman Asharuddin M.Kom</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Rabu</td>
+                                        <td>07.00 WIB</td>
+                                        <td>Ruang</td>
+                                        <td>Statistika (Praktikum)</td>
+                                        <td>Ikmah, M.Kom</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5</th>
+                                        <td>Rabu</td>
+                                        <td>08.50 WIB</td>
+                                        <td>Ruang</td>
+                                        <td>Pemrograman Basis Data</td>
+                                        <td>Kamarudin M.Kom</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">6</th>
+                                        <td>Kamis</td>
+                                        <td>07.00 WIB</td>
+                                        <td>Ruang</td>
+                                        <td>Kecakapan Antar Personal</td>
+                                        <td>Nuraini,M.Kom</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">7</th>
+                                        <td>Kamis</td>
+                                        <td>08.50 WIB</td>
+                                        <td>Ruang</td>
+                                        <td>Riset Oprasi</td>
+                                        <td>Lia Ayu Ivanjelita, M.Kom</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">8</th>
+                                        <td>Kamis</td>
+                                        <td>10.40 WIB</td>
+                                        <td>Ruang</td>
+                                        <td>Sistem Berkas dan Kemanan Data</td>
+                                        <td>Dwi Nurani, M.Kom</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">9</th>
+                                        <td>Jumat</td>
+                                        <td>07.00 WIB</td>
+                                        <td>Ruang</td>
+                                        <td>ANSI</td>
+                                        <td>Rifda Faticha Alfa Aziza, S.Kom., M.Kom</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">10</th>
+                                        <td>Jumat</td>
+                                        <td>08.50 WIB</td>
+                                        <td>Ruang</td>
+                                        <td>Kepemimpinan</td>
+                                        <td>Yusuf Amri Amrullah, SE, MM</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">11</th>
+                                        <td>Jumat</td>
+                                        <td>13.30 WIB</td>
+                                        <td>Ruang</td>
+                                        <td>Statistika</td>
+                                        <td>Ikmah, M.Kom</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">13</th>
+                                        <td>Jumat</td>
+                                        <td>15.30 WIB</td>
+                                        <td>Ruang</td>
+                                        <td>Sistem Informasi Manajemen</td>
+                                        <td>Subektiningsih, M.Kom</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
             <!-- KRS Mahasiswa -->
             <div id="krs" class="row not-selected">
                 <div class="col-md">
-                    krs
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="card">
+                                <h5 class="card-header">Pengambilan KRS</h5>
+                                <div class="card-body">
+                                    Semester Genap TA. 2018/2019 <br>
+                                    <button class="btn btn-warning mt-2" type="button">AMBIL KRS</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md">
+                            <div class="card">
+                                <h5 class="card-header">Jadwal Pengambilan KRS</h5>
+                                <div class="card-body">
+                                    Semester Genap TA. 2018/2019<br>
+                                    <button class="btn btn-warning mt-2" type="button">JADWAL KRS</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Perpus Mahasiswa -->
             <div id="perpus" class="row not-selected">
                 <div class="col-md">
-                    perpus
+                    <div class="row">
+
+                        <div class="col-md">
+                            <div class="card">
+                                <h5 class="card-header">Pinjaman Aktif</h5>
+                                <div class="card-body">
+                                    Semester Genap TA. 2018/2019 <br>
+                                    <button class="btn btn-warning mt-2" type="button">AMBIL KRS</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+
+                    <div class="row">
+
+                            <div class="col-md">
+                                <div class="card">
+                                    <h5 class="card-header">Riwayat Peminjaman</h5>
+                                    <div class="card-body">
+                                        Semester Genap TA. 2018/2019 <br>
+                                        <button class="btn btn-warning mt-2" type="button">AMBIL KRS</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+    
+                        </div>
                 </div>
             </div>
 
             <!-- Pembayaran Mahasiswa -->
             <div id="pembayaran" class="row not-selected">
                 <div class="col-md">
-                    pembayaran
+
+
                 </div>
             </div>
 
