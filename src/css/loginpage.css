@@ -1,0 +1,104 @@
+body{
+    background-color: #F9FBFC;
+    overflow: hidden;
+}
+
+#logo_bg{
+    width: 45%;
+    position: fixed;
+    right: -7%;
+    bottom: -13%;
+    z-index: -1;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 7em;
+}
+
+.login-container{
+    width: 420px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, .75);
+    border-radius:  0 0 10px 10px;
+    box-shadow: 0 15px 10px rgba(119, 119, 119, 0.075);
+
+}
+
+.instruksi-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 420px;
+    height: 55px;
+    background-color: #3c0b66;
+    border-radius: 10px 10px 0 0;
+}
+
+.logo-container{
+    width: 420px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.white{
+    color: white;
+}
+
+
+.vertical-center {
+    margin: 0;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+#logo-ungu{
+    width: 45%;
+    animation-name: grow;
+    animation-duration: .75s;
+}
+
+@keyframes grow {
+    from {width: 0%;height: 0;}
+    to {width: 45%; height: 100%;}
+  }
+
+.form-control{
+    width: 90%;
+    margin-bottom: 10px;
+    margin-left: 5%;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #3c0b6679 !important;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem #3c0b661a;
+}
+
+.btn-primary{
+    background-color: #3c0b66 !important;
+    box-shadow: none !important;
+    border: none !important;
+    font-size: 10pt;
+}
+
+.btn-login-container{
+    margin-left: 150px;
+}
+
+.below-container{
+    margin-left: -10px;
+}
+
+.below-container a{
+    color: #3c0b66;
+    font-size: 11pt;
+}

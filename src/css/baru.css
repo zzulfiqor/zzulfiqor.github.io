@@ -1,0 +1,395 @@
+#vidback{
+    width: 2500px;
+    height: 720px;
+    opacity: 0.8;
+    position: absolute;
+    margin-top: -10px;
+    margin-left: -600px;
+}
+
+#mikomputi{
+    width: 500px;
+    height: 500px;
+    
+}
+
+.kotak{
+    height: 130px;
+    width: 300px;
+    background-color: #23043E;
+    margin-top: 200px;
+    margin-left: 100px;
+}
+
+.protak{
+    color: white;
+    text-transform: capitalize;
+    font-size: 25px;
+    position: relative;
+    top: 0px;
+    margin-top: -110px;
+    margin-left: 130px;
+    font-size: 26px;
+    text-decoration: none;
+}
+
+.gamprod{
+    width: 150px;
+    height: 150px;
+    opacity: 0.6;
+    margin-left: -30px;
+    margin-top: -10px;
+}
+
+.grsbaw{
+    background-color: orange;
+    border-width: 10px;
+    width: 310px;
+    margin-left: 100px;
+}
+
+.hrfd{
+    font-family: "malgun gothic";
+    color: #23043E;
+    text-transform: capitalize;
+    margin-top: 70px;
+    font-weight: 500;
+    text-indent: 100px;
+}
+
+#kotak2{
+    height: 130px;
+    width: 300px;
+    background-color: #23043E;
+    margin-top: -105px;
+    margin-left: 400px;
+}
+
+#kotak3{
+    height: 130px;
+    width: 300px;
+    background-color: #23043E;
+    margin-top: -130px;
+    margin-left: 800px;
+}
+
+.picsa{
+    height: 450px;
+    width: 450px;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+#kotakp{
+    height: 130px;
+    width: 300px;
+    background-color: #23043E;
+    margin-top: -450px;
+    margin-left: 600px;
+}
+
+.kotakp2{
+    height: 130px;
+    width: 300px;
+    background-color: #23043E;
+    margin-top: 30px;
+    margin-left: 600px;
+}
+
+#kotakp3{
+    height: 130px;
+    width: 300px;
+    background-color: #23043E;
+    margin-top: -130px;
+    margin-left: 950px;
+}
+
+.kotakp4{
+    height: 130px;
+    width: 300px;
+    background-color: #23043E;
+    margin-top: -450px;
+    margin-left: 420px;
+}
+
+#hrfd2{
+    font-family: "malgun gothic";
+    color: #23043E;
+    text-transform: capitalize;
+    margin-top: 200px;
+    margin-right: 60px;
+    font-weight: 500;
+    text-indent: 100px;
+    text-align: right;
+}
+
+#grsbaw2{
+    background-color: orange;
+    border-width: 10px;
+    width: 300px;
+    margin-right: 60px;
+}
+
+#picsa2{
+    height: 450px;
+    width: 450px;
+    margin-top: 10px;
+    margin-left: 800px;
+}
+
+#kotakp3{
+    height: 130px;
+    width: 300px;
+    background-color: #23043E;
+    margin-top: -430px;
+    margin-left: 80px;
+}
+
+.kotakp5{
+    height: 130px;
+    width: 300px;
+    background-color: #23043E;
+    margin-top: 30px;
+    margin-left: 80px;
+}
+
+.kotakp6{
+    height: 130px;
+    width: 300px;
+    background-color: #23043E;
+    margin-top: 30px;
+    margin-left: 420px;
+}
+
+.gfoot{
+    background-color: orange;
+    border-width: 10px;
+    margin-top: 400px;
+}
+
+.foot{
+    background-color: #23043E;
+    margin-top: -20px;
+}
+
+.foot-img{
+    margin-top: -200px;
+}
+
+.fmaps{
+    width: 300px;
+    height: 300px;
+    margin-left: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.ftxt{
+    color: white;
+    font-family: "malgun gothic";
+    font-weight: 500;
+    margin-left: 100px;
+    padding-top: 50px;
+    text-transform: capitalize;
+}
+
+.ftxt2{
+    color: white;
+    font-family: "malgun gothic";
+    font-weight: 500;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-bottom: 100px; 
+    text-transform: capitalize;
+    font-size: 15px;
+}
+
+
+
+<!--S A R J A N A-->
+
+.head-pic{
+    margin-top: 100px;
+    width: 200px;
+    height: 150px;
+}
+
+.imghead{
+	opacity: 0.5;
+	width: 400;
+    height: 400;
+    margin-top: -100px;
+    margin-left: 100px;
+}
+
+.txthead{
+    background-color: black;
+    opacity: 0.5;
+    width: 400px;
+    height: 150px;
+    margin-top: -250px;
+    margin-left: 880px;
+    color: white;
+    font-family: "malgun gothic";
+    text-transform: capitalize;
+}
+
+.txthead2{
+    margin-top: -50px;
+    margin-left: 900px;
+    text-transform: capitalize;
+    color:black;
+}
+
+.style-ul{
+    list-style-type: none;
+    margin-top: 50px;
+}
+
+.font-li{
+    font-family: "malgun gothic";
+    text-transform: capitalize;
+    margin-left: 70px;
+    margin-top: 0px;
+    font-size: 25px;
+    color: black;
+}
+
+li :hover{
+    background-color: black;
+    opacity: 0.1;
+}
+
+.hrf-sar{
+    font-family: "malgun gothic";
+    text-transform: capitalize;
+    margin-top: 10px;
+    font-weight: 500;
+    text-indent: 100px;
+}
+
+.hrf-exp{
+    font-family: "malgun gothic";
+    font-size: 18px;
+    text-align: justify;
+    text-indent: 50px;
+    margin-left: 100px;
+    margin-top: 30px;
+    margin-right: 70px;
+}
+
+.img-sub{
+    width: 400px;
+    height: 250px;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.hrf-pro{
+    font-family: "malgun gothic";
+    text-transform: capitalize;
+    font-weight: 500;
+    text-indent: 100px;
+    margin-top: 50px;
+}
+
+.grsbaw-pro{
+    background-color: orange;
+    border-width: 10px;
+    width: 310px;
+    margin-right: 190px;
+}
+
+.ass-img{
+    margin-top: 800px;
+}
+
+.img-sub2{
+    width: 400px;
+    height: 250px;
+    margin-top: 50px;
+    margin-left: 300px;
+}
+
+.desc_pojok{
+  background-color: black;
+  
+    height: 100px;
+    width: 550px;
+    margin-left: 700px;
+    margin-top: -00px;
+}
+
+#kotak-penel{
+    width: 90px;
+    height: 50px;
+    margin-right: 100px;
+}
+
+.hrf-prosar{
+    font-family: "malgun gothic";
+    text-align: center;
+    text-transform: uppercase;
+    color: yellow;
+}
+
+#kotakpenel{
+    height: 50px;
+    width: 90px;
+    background-color: #23043E;
+    margin-top: -350px;
+    margin-left: 200px;
+
+}
+
+.hrf-penel{
+    font-family: "malgun gothic";
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+}
+
+.img_penel{
+    height: 300px;
+    width: 300px;
+    margin-top: 300px;
+    margin-left: 100px;
+}
+
+.headexp{
+    background-color: #FF8900;
+    height: 200px;
+    width: 200ox;
+    margin-top: -500px;
+}
+
+.header-explore-container{
+    margin-top: -96px;
+    height: 95vh;
+    background-image: url(../img/Tugu-Yogyakarta.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.each-menu{
+    width: 200px;
+    height: 300px;
+    padding: 0px !important;
+}
+
+.thumbs-img{
+    width: 285px;
+}
+
+.thumbs-title{
+    color: #23043E;
+}
+
+.btn-primary{
+    background-color: #FF8900 !important;
+    border: none;
+}
+
+.zzz{
+    margin-left: 70px;
+}

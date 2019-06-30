@@ -1,0 +1,137 @@
+* {
+    font-family: 'Poppins';
+}
+
+
+
+/* Navbar */
+
+nav {
+    z-index: 999;
+}
+
+.topbar {
+    position: relative;
+    transition: .30s ease-in;
+    min-height: 35px;
+    z-index: 999;
+}
+
+#topbar {
+    position: relative;
+    background-color: #23043E;
+    padding: 1px 1px;
+    padding-right: 10px;
+}
+
+.navbar #top-nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding-left: 0px;
+    margin-bottom: 0;
+    list-style: none
+}
+
+.navbar #top-nav .top-item {
+    margin-left: 15px;
+}
+
+.bg-dark {
+    background-color: rgba(0, 0, 0, 0) !important;
+    transition: .30s ease-in;
+}
+
+.bg-dark.scrolled {
+    background-color: #3C0B66 !important;
+    transition: .30s ease-in;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav-item {
+    margin-left: 10px;
+    font-size: 10pt;
+    text-transform: uppercase;
+}
+
+.nav-item a:hover {
+    color: #FF8900 !important;
+    transition-duration: 0.5s;
+}
+
+.nav-item a.nav-link:hover::after {
+    content: '';
+    display: block;
+    border-bottom: 2px solid #FF8900;
+    width: 75%;
+    margin: auto;
+    padding-bottom: 10px;
+    margin-bottom: -12px;
+    transition-duration: 0.5s;
+}
+
+.headercurve {
+    background: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 20px;
+    border-radius: 0 0 50% 50%;
+    position: relative;
+    z-index: 998;
+    transition: .30s ease-in;
+}
+
+.headercurve.scrolled{
+    background-color: #3C0B66;
+    transition: .30s ease-in;
+    position: fixed;
+    width: 100%;    
+    top: 76px;
+    left: 0;
+}
+
+.navbar a img {
+    height: 2.5em;
+}
+
+.top-item {
+    font-size: 9pt;
+}
+
+.dropdown-item {
+    text-transform: capitalize;
+    font-size: 10pt;
+}
+
+.dropdown-menu {
+    background-color: #3C0B66
+}
+
+/* endof Navbar */
+
+
+/* Footer */
+.container-footer{
+    margin-top: -16px;
+    padding: 10px;
+    background-color: #3C0B66;
+    height: 400px;
+}
+
+.title-footer{
+    color: #fff;
+}
+
+.white{
+    color: white
+}
+
+.bottom-footer{
+  height: 45px; 
+  background-color: #23043E; 
+  font-size: 9pt;
+}
+/* endof footer */

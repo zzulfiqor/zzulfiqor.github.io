@@ -1,0 +1,65 @@
+.foto{
+    width: 400px;
+    margin-left: 100px;
+    margin-top: 40px;
+}
+
+.battle_of_surabaya_awards{
+    color: #3C0B66;
+}
+
+.pertama{
+    height:350px;
+}
+
+.profile_foto{
+    margin-top: -99px
+}
+
+#pertama{
+    margin-left: 0;
+    width: 100%;
+    border-bottom: 2px solid #FF8900;
+}
+
+#kedua{
+    margin-top: -5px;
+    width: 200px;
+    margin-left: 0;
+    border-bottom: 2px solid #FF8900
+}
+
+.kata{
+    margin-right: 20px;
+    color: #3C0B66;
+}
+
+.th2019{
+    margin-left: 50%;
+    color: #3C0B66;
+}
+
+#ketiga{
+    margin-left: 40%;
+    width: 350px;
+    border-bottom: 2px solid #FF8900
+}
+
+.th2018{
+    margin-left: 50%;
+    color: #3C0B66;
+}
+
+#keempat{
+    margin-top: -10px;
+    margin-left: 40%;
+    width: 350px;
+    border-bottom: 2px solid #FF8900
+}
+
+#divider{
+    margin-top: 7px;
+    border-bottom: 1px solid #FF8900;
+    opacity: 0.5;
+    width: 75%;
+}

@@ -1,0 +1,219 @@
+/* Header */
+.header {
+    margin-top: -99px;
+    width: 100%;
+}
+
+.header.scrolled {
+    margin-top: 0px;
+    width: 100%;
+}
+
+.carousel-item {
+    max-height: 95vh;
+}
+
+/* endof header */
+
+/* wcu */
+.wcu-container {
+    width: 100%;
+    padding-bottom: 30px;
+    padding-top: 50px;
+}
+
+.wcu-container.scrolled {
+    width: 100%;
+}
+
+
+#wcu .col-md hr {
+    border-bottom: solid 2px #FF8900;
+    margin-left: 0;
+    margin-bottom: 20px;
+}
+
+.descpic-container {
+    height: 100%;
+    width: 100%;
+}
+
+#descpic {
+    width: 100%;
+}
+
+.btn-container .btn {
+    color: white;
+    background-color: #FF8900 !important;
+    border: none;
+    box-shadow: none !important;
+    font-size: 9pt !important;
+}
+
+.row .col hr {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 1.5px solid #FF8900;
+    opacity: 0.5;
+}
+
+/* endof wcu */
+
+/* Amikom Now */
+.amikomnow {
+    width: 100%;
+}
+
+#amikomnow .col-md hr {
+    border-bottom: solid 2px #FF8900;
+    margin-left: 0;
+    margin-bottom: 20px;
+}
+
+.section-title{
+    color: #23043E;
+}
+
+
+
+.tgl-berita {
+    font-size: 9pt;
+    color: #717171;
+}
+
+.judul-berita {
+    color: #23043E;
+}
+
+.isi-berita{
+    font-size: 10pt;
+}
+
+.news-container{
+    background-color: #F8F8F8;
+    padding: 20px;
+}
+
+.newsphoto-container{
+    width: 100%;
+    height: 305px;
+    background: url(../img/berita-1-2.jpg);
+    background-size: contain;
+}
+
+.newsphoto-container img{
+    width: 130%;
+}
+
+.berita-kecil{
+    cursor: pointer;
+    width: 250px;
+    height: 185px;
+    overflow: hidden;
+}
+
+.thumbnail_kecil{
+    width: 250px;
+    height: 185px;
+}
+
+.judulberita-kecil{
+    background: rgba(0,0,0,0.5);
+    width: 250px;
+    height: 40px;
+    margin-top: -40px;
+    z-index: 997;
+    position: relative;
+}
+
+.judulberita-kecil:hover{
+    transition: 0.25s;
+    background: rgba(0,0,0,0.75);
+}
+
+.judulberita-kecil p{
+    color: white;
+    padding: 15px;
+    font-size: 10pt;
+}
+/* Endof amikom now */
+
+/* pengumuman */
+.pengumuman{
+    width: 100%;
+    margin-top: 20px;
+}
+
+#col-pengumuman{
+    height: 460px;
+    background-color: #3C0B66;
+}
+
+#col-berita{
+    height: 460px;
+    background-color: rgb(233, 233, 233);
+}
+
+#judul-pengumuman{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.col-md hr{
+    border-bottom: solid 3px #FF8900;
+    margin-bottom: 20px;
+    width: 100px;
+    margin-top: -10px;
+}
+
+.pengumuman-list{
+    cursor: pointer;
+    list-style-type: none;
+    color: white;
+    margin-top: 20px;
+}
+
+.berita-list{
+    cursor: pointer;
+    list-style-type: none;
+    color: #3C0B66;
+    margin-top: 20px;
+}
+
+#list-divider{
+    margin-top: -5px;
+    border-bottom: solid 2px #FFF;
+    margin-left: 0px;
+    width: 85%;
+    opacity: 0.25;
+    margin-bottom: 15px;
+}
+
+#list-divider-berita{
+    margin-top: -5px;
+    border-bottom: solid 2px #000;
+    margin-left: 0px;
+    width: 85%;
+    opacity: 0.25;
+    margin-bottom: 15px;
+}
+
+#btn-pengumuman-lanjut{
+    background-color: #FF8900 !important;
+    border: none;
+    margin-top: -10px;
+}
+
+#btn-berita-lanjut{
+    background-color:#3C0B66 !important;
+    border: none;
+    margin-top: -10px;
+}
+
+/* endof pengumuman */
+
+/* Footer */
+
+/* endof footer */
+
+#map { position:absolute; top:0; bottom:0; width:100%; }

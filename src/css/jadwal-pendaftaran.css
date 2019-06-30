@@ -1,0 +1,104 @@
+section {
+	padding-top: 20px;
+}
+
+.jadwal-head{
+	height: 47px;
+	background-color: grey;
+}
+
+.icon-jadwal{
+	margin-top: 10px;
+	margin-left: 30px;
+	height: 22px;
+}
+
+#jadwal-tittle{
+	margin-top: -21px;
+	margin-left: 60px;
+	color: white;
+}
+
+.table-head{
+	background-color: #FF8900;
+}
+
+.border-jadwal{
+	margin-top: 10px;
+	margin-left: 75px;
+	width: 1200px;
+	border: solid 2px #3C0B66;
+	padding-bottom: 20px;
+}
+#gelombang-khusus{
+	margin-top: 15px;
+	margin-left: 35px;
+	font-size: 18px;
+}
+
+.gk-table{
+	margin-top: -10px;
+	margin-left: 75px;
+	width: 1050px;
+}
+
+#gelombang1{
+	margin-top: 50px;
+	margin-left: 35px;
+	font-size: 18px;
+}
+
+.g1-table{
+	margin-top: -10px;
+	margin-left: 75px;
+	width: 1050px;
+}
+
+#gelombang2{
+	margin-top: 50px;
+	margin-left: 35px;
+	font-size: 18px;
+}
+
+.g2-table{
+	margin-top: -10px;
+	margin-left: 75px;
+	width: 1050px;
+}
+
+#gelombang3{
+	margin-top: 50px;
+	margin-left: 35px;
+	font-size: 18px;
+}
+
+.g3-table{
+	margin-top: -10px;
+	margin-left: 75px;
+	width: 1050px;
+}
+
+.jadwal-head2{
+	margin-top: 50px;
+	height: 47px;
+	background-color: grey;
+}
+
+#s1-alih{
+	margin-top: 15px;
+	margin-left: 35px;
+	font-size: 18px;
+}
+
+.table-head2{
+	margin-left: 75px;
+	margin-right: 75px;
+	margin-top: -10px;
+	height: 40px;
+	background-color: #FF8900;
+}
+
+.s1-tanggal{
+	margin-left: 15px;
+	margin-bottom: 70px;
+}

@@ -1,0 +1,47 @@
+.section-divider{
+    border-bottom: solid 1px #FF8900;
+}
+
+.underline{
+    border-bottom: solid 2.5px #FF8900;
+    margin-top: -1px;
+}
+
+#desc-organisasi{
+    text-align: justify;
+    margin-top: 10px;
+}
+
+.container-sarpras-each{
+    background-color: aquamarine;
+    height: 150px;
+    overflow: hidden;
+}
+
+
+.bg-darker{
+    background-color: rgba(87, 87, 87, 0.521);
+    height: 110px;
+}
+
+.bg-darkerer{
+    background-color: rgba(44, 44, 44, 0.5);
+    height: 40px;
+    padding-top: 10px;
+}
+
+.each{
+    margin-top: 110px;
+    transition: .3s;
+}
+
+.each:hover{
+    margin-top: 0;
+    transition: .3s;
+}
+
+
+.white{
+    color: white;
+    opacity: 1;
+}

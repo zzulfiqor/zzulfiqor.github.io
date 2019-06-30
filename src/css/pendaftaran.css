@@ -1,0 +1,244 @@
+section {
+    padding-top: 20px;
+}
+
+.head {
+	margin-top: -20px;
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.jadwal-info {
+	margin-top: 20px;
+	margin-left: 50px;
+}
+
+.jadwal {
+	color: #3C0B66;
+}
+
+#border_jadwal{
+	margin-left: 2px;
+	padding-bottom: 20px;
+	border: solid 1px #FF8900;
+}
+
+#kolom_kiri {
+	margin-top: 20px;
+}
+
+#kolom_kanan {
+	margin-top: 20px;
+}
+
+.info {
+	color: #3C0B66;
+}
+
+.gk {
+	background-color: #3C0B66;
+	height: 70px;
+	width: 80%;
+}
+
+.logo0 {
+	margin-left: -15px;
+	margin-top: -15px;
+	height: 100px;
+	width: 40%;
+}
+
+.gelk{
+	margin-top: -75px;
+	margin-left: 95px;
+	color: white;
+	font-size: 20px;
+
+}
+
+.g1 {
+	background-color: #3C0B66;
+	height: 70px;
+	width: 80%;
+}
+
+.logo1 {
+	margin-left: -15px;
+	margin-top: -15px;
+	height: 100px;
+	width: 40%;
+}
+
+.gel1{
+	margin-top: -65px;
+	margin-left: 85px;
+	color: white;
+	font-size: 20px;
+
+}
+
+.g2 {
+	margin-top: 15px;
+	background-color: #3C0B66;
+	height: 70px;
+	width: 80%;
+}
+
+.logo2 {
+	margin-left: -15px;
+	margin-top: -15px;
+	height: 100px;
+	width: 40%;
+}
+
+.gel2{
+	margin-top: -75px;
+	margin-left: 90px;
+	color: white;
+	font-size: 20px;
+
+}
+
+.s1 {
+	margin-top: 15px;
+	background-color: #3C0B66;
+	height: 70px;
+	width: 80%;
+}
+
+.logoakhir {
+	margin-left: -15px;
+	margin-top: -15px;
+	height: 100px;
+	width: 40%;
+}
+
+.alih{
+	margin-top: -65px;
+	margin-left: 85px;
+	color: white;
+	font-size: 20px;
+
+}
+
+.g3 {
+	margin-top: 15px;
+	background-color: #3C0B66;
+	height: 70px;
+	width: 80%;
+}
+
+.logo3 {
+	margin-left: -15px;
+	margin-top: -15px;
+	height: 100px;
+	width: 40%;
+}
+
+.gel3{
+	margin-top: -75px;
+	margin-left: 90px;
+	color: white;
+	font-size: 20px;
+
+}
+
+#garis1 {
+	margin-left: 0;
+	width: 250px;
+	border-bottom: 2px solid #FF8900;
+}
+
+#garis2 {
+	margin-left: 0;
+	width: 250px;
+	border-bottom: 2px solid #FF8900;
+}
+
+#garis3 {
+	margin-left: 0;
+	width: 210px;
+	border-bottom: 2px solid #0000;
+}
+
+#garis4 {
+	margin-left: 0;
+	width: 210px;
+	border-bottom: 2px solid #0000;
+}
+
+#garis5 {
+	margin-left: 0;
+	width: 210px;
+	border-bottom: 2px solid #0000;
+}
+
+#garis6 {
+	margin-left: 0;
+	width: 210px;
+	border-bottom: 2px solid #0000;
+}
+
+#garis7 {
+	margin-left: 0;
+	width: 210px;
+	border-bottom: 2px solid #0000;
+}
+
+#garis_tes{
+	margin-top: 50px;
+	width: 1000px;
+	border-bottom: 1px solid #FF8900;
+}
+
+.tes {
+	margin-top: 50px;
+	margin-left: 60px;
+}
+
+#kanan{
+	padding: 30px;
+	padding-right: 60px;
+}
+
+#kiri{
+	padding: 30px;
+	padding-right: 50px;
+}
+
+.testul {
+	color: #3C0B66;
+}
+
+.regis {
+	color: #3C0B66;
+}
+
+.ppm {
+	color: #3C0B66;
+}
+
+.psu {
+	color: #3C0B66;
+}
+
+.jam {
+	color: #3C0B66;
+}
+
+#bawah{
+	margin-top: 10px;
+	width: 1000px;
+	border-bottom: 1px solid #FF8900;
+}
+
+#penutup {
+	margin-top: 30px;
+	border-bottom: 5px solid #FF8900;
+}
+
+.list-menu-pendaftaran{
+	font-size: 10pt;
+}

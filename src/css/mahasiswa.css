@@ -1,0 +1,72 @@
+/* top bar */
+.topbar-mhs{
+    display: flex;
+    align-items: center;
+    min-height: 45px;
+    width: 100%;
+    background-color: #3C0B66;
+}
+
+#logo-top{
+    height: 30px;
+}
+
+/* sidebar */
+.sidebar-container{
+    background-color: rgb(20, 4, 34);
+    height: 620px;
+}
+.photo-bio{
+    height: 95px;
+    overflow: hidden;
+}
+
+.thumbnail-img{
+    height: 17%;
+    float: left;
+}
+
+.short-bio p{
+    font-size: 10pt;
+}
+
+.sidebar-divider{
+    width: 100% !important;
+    margin-top: 15px !important;
+    border-bottom: solid 1px rgba(255, 212, 162, 0.445) !important;
+}
+
+.icon{
+    width: 16px;
+    height: 16px;;
+}
+
+.menu-ea{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    transition: .2s;
+}
+
+.menu-ea-a:hover{
+    text-decoration: none;
+}
+
+.menu-ea:hover{
+    background-color: rgba(255, 255, 255, 0.836);
+    color: rgb(20, 4, 34);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.not-selected{
+    position: absolute;
+    left: -999999px;
+}
+
+.biodata-p{
+    font-size: 10pt;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

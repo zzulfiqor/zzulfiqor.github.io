@@ -1,0 +1,40 @@
+.section-divider{
+    border-bottom: solid 1px #FF8900;
+}
+
+.underline{
+    border-bottom: solid 2.5px #FF8900;
+    margin-top: -1px;
+}
+
+#desc-organisasi{
+    text-align: justify;
+    margin-top: 10px;
+}
+
+.logo-item-container{
+    padding: 1px;
+}
+
+.logo-item{
+    height: 130px;
+}
+
+.logo-item-koma{
+    height: 70px;
+}
+
+.row-logo{
+    height: 135px;
+    object-fit: contain;
+}
+
+.row.mb-5 .col-md:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.row.mb-4 .col-md:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+
+}

@@ -1,0 +1,107 @@
+section {
+	padding-top: 20px;
+}
+
+.profile_foto {
+	margin-top: -100px;
+	width: 100%;
+}
+
+hr {
+	margin-top: -2px;
+	border-bottom: 5px solid #FF8900;
+}
+
+.pak_yanto {
+	overflow: hidden;
+	margin-top: -16px;
+	height: 400px;
+	width: 100%;
+	background-color: #3C0B66;
+}
+
+.foto {
+	margin-left: 150px;
+	margin-top: 50px;
+	height: 350px;
+}
+
+.sambutan {
+	padding-top: 20px;
+	color: white;
+}
+
+#kedua {
+	margin-top: -5px;
+	margin-left: 0;
+	width: 200px;
+	border-bottom: 2px solid #FF8900;
+}
+
+.kata {
+	padding-right: 25px;
+	color: white;
+}
+
+.vm{
+	width: 98.99%;
+}
+#kolom_misi {
+	padding-top: 40px;
+	height: 200px;
+
+}
+
+.misi {
+	color: #3C0B66
+}
+
+#kolom_visi {
+	background: rgb(233, 233, 233);
+	padding-top: 40px;
+	height: 200px;
+}
+
+.visi {
+	color: #3C0B66
+}
+
+#ketiga {
+	margin-top: 50px;
+	width: 100%;
+	border-bottom: 1px solid #FF8900;
+}
+
+.amikom {
+	padding-top: 20px;
+	margin-left: 50px;
+}
+
+#keempat {
+	margin-left: 50px;
+	width: 200px;
+	border-bottom: 2px solid #FF8900;
+}
+
+#histori {
+	margin-left: 50px;
+	padding-right: 25px;
+	text-align: justify
+}
+
+#kelima {
+	width: 100%;
+	border-bottom: 1px solid #FF8900;
+	margin-top: 50px;
+}
+
+.asosi {
+	margin-top: 20px;
+	margin-left: 200px;
+	width: 70%
+}
+
+#bawah {
+	margin-top: 30px;
+	border-bottom: 5px solid #FF8900;
+}

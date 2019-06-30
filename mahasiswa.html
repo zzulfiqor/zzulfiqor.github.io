@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./src/css/bootstrap.min.css">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="./src/css/mycss.css">
+    <link rel="stylesheet" href="./src/css/home.css">
+    <link rel="stylesheet" href="./src/css/mahasiswa.css">
+
+    <!-- Material Icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <!-- title and icon -->
+    <link rel="icon" href="./src/img/logoamikomicon.png">
+    <title>Dashboard Mahasiswa</title>
+</head>
+
+<body style="overflow: hidden">
+
+    <!-- Top Bar -->
+    <div class="topbar-mhs pl-3">
+        <img id="logo-top" src="./src/img/logo-topbar.png" alt="">
+    </div>
+    <!-- endof top bar -->
+
+    <div class="row main">
+        <div class="col-md-3 sidebar-container p-3">
+            <div class="row photo-bio">
+                <div class="col-md">
+                    <img src="./src/img/WhatsApp Image 2019-06-23 at 15.50.14.jpeg" alt=""
+                        class="rounded thumbnail-img ml-3">
+                    <div class="short-bio">
+                        <div class="row">
+                            <div class="col white">
+                                <p>Ahmad Zuhair Dzulfiqor</p>
+                                <p>17.11.1669</p>
+                                <p>Mahasiswa Aktif</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row line">
+                <div class="col">
+                    <hr class="sidebar-divider pl-3">
+                </div>
+            </div>
+
+            <div class="row main-menu">
+                <div class="col">
+                    <a class="menu-ea-a" id="btn-biodata">
+                        <div class="div menu-ea white"><i class="material-icons mr-3">
+                                account_circle
+                            </i>Biodata Mahasiswa</div>
+                    </a>
+                    <a id="btn-kuliah" class="menu-ea-a">
+                        <div class="div menu-ea white"><i class="material-icons mr-3">
+                                assignment
+                            </i>Kuliah</div>
+                    </a>
+                    <a id="btn-krs" class="menu-ea-a">
+                        <div class="div menu-ea white"><i class="material-icons mr-3">
+                                assignment_turned_in
+                            </i>Kartu Rencana Studi</div>
+                    </a>
+                    <a id="btn-perpus" class="menu-ea-a">
+                        <div class="div menu-ea white"><i class="material-icons mr-3">
+                                book
+                            </i>Perpustakaan</div>
+                    </a>
+                    <a id="btn-pembayaran" class="menu-ea-a">
+                        <div class="div menu-ea white"><i class="material-icons mr-3">
+                                monetization_on
+                            </i>Pembayaran</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row line">
+                <div class="col">
+                    <hr class="sidebar-divider pl-3">
+                </div>
+            </div>
+
+            <div class="row logout">
+                <a href="./loginpage.html"> <button class="btn btn-danger ml-4" type="button">Logout</button>
+                </a>
+            </div>
+        </div>
+        <!-- main display -->
+        <div class="col-md-9 p-5">
+
+            <!-- Biodata Mahasiswa -->
+            <div id="bio" class="row">
+                <div class="col-md">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>Biodata</h5>
+                        </div>
+                        <div class="card-body">
+                            <table>
+                                <tr class="biodata-p">
+                                    <td style="font-weight:bold" >Nama </td>
+                                    <td class="pl-4 pr-2">:</td>
+                                    <td>Ahmad Zuhair Dzulfiqor</td>
+                                </tr>
+                                <tr class="biodata-p">
+                                    <td style="font-weight:bold" >NIM </td>
+                                    <td class="pl-4 pr-2">:</td>
+                                    <td>17.11.1669</td>
+                                </tr>
+                                <tr class="biodata-p">
+                                    <td style="font-weight:bold" >Prodi </td>
+                                    <td class="pl-4 pr-2">:</td>
+                                    <td>S1 Informatika</td>
+                                </tr>
+                                <tr class="biodata-p">
+                                    <td style="font-weight:bold" >Email </td>
+                                    <td class="pl-4 pr-2">:</td>
+                                    <td>ahmad.dzulfiqor@students.amikom.ac.id</td>
+                                </tr>
+                                <tr class="biodata-p">
+                                    <td style="font-weight:bold" >Kelas </td>
+                                    <td class="pl-4 pr-2">:</td>
+                                    <td>Informatika-12</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kuliah Mahasiswa -->
+            <div id="kuliah" class="row not-selected">
+                <div class="col-md">
+                    kuliah
+                </div>
+            </div>
+
+            <!-- KRS Mahasiswa -->
+            <div id="krs" class="row not-selected">
+                <div class="col-md">
+                    krs
+                </div>
+            </div>
+
+            <!-- Perpus Mahasiswa -->
+            <div id="perpus" class="row not-selected">
+                <div class="col-md">
+                    perpus
+                </div>
+            </div>
+
+            <!-- Pembayaran Mahasiswa -->
+            <div id="pembayaran" class="row not-selected">
+                <div class="col-md">
+                    pembayaran
+                </div>
+            </div>
+
+
+        </div>
+        <!-- main display end -->
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./src/js/jquery.js"></script>
+    <script src="./src/js/bootstrap.min.js"></script>
+    <script src="./src/js/popper.js"></script>
+
+    <!-- my js -->
+    <script src="./src/js/myjs.js"></script>
+
+</body>
+
+</html>
