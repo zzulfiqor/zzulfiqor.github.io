@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./src/css/jadwal-pendaftaran.css">
 
     <!-- font poppins -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 
     <!-- title and icon -->
     <link rel="icon" href="./src/img/logoamikomicon.png">
@@ -25,339 +25,348 @@
 
 <body>
 
-       <!-- Navbar Amikom -->
+    <!-- Navbar Amikom -->
     <div class="topbar">
-            <nav id="topbar" class="navbar navbar-expand-lg navbar-dark">
-                <ul id="top-nav" class="navbar-nav ml-auto">
-                    <li class="top-item active">
-                        <a href="" class="nav-link">Contact</a>
+        <nav id="topbar" class="navbar navbar-expand-lg navbar-dark">
+            <ul id="top-nav" class="navbar-nav ml-auto">
+                <li class="top-item active">
+                    <a href="" class="nav-link">Contact</a>
+                </li>
+                <li class="top-item active">
+                    <a href="" class="nav-link">Alamat</a>
+                </li>
+                <li class="top-item active">
+                    <a href="" class="nav-link">Bahasa Indonesia</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./src/img/logoamikom.png" class="d-inline-block align-top" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./index.html">Home</a>
                     </li>
-                    <li class="top-item active">
-                        <a href="" class="nav-link">Alamat</a>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link " href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Profile
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="./profil.html">Profil Amikom</a>
+                            <a class="dropdown-item" href="./prof-kel.html">Profil Kelompok</a>
+                        </div>
                     </li>
-                    <li class="top-item active">
-                        <a href="" class="nav-link">Bahasa Indonesia</a>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./organisasi.html">Organisasi</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./pro-pen.html">Prodi</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./sarpras.html">Fasilitas</a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link " href="./pendaftaran.html" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Pendaftaran
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="./pendaftaran.html">Pendaftaran</a>
+                            <a class="dropdown-item" href="./jadwal-pendaftaran.html">Jadwal Pendaftaran</a>
+                            <a class="dropdown-item" href="#">Form Pendaftaran</a>
+                        </div>
                     </li>
                 </ul>
-            </nav>
-        </div>
-        </div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="./src/img/logoamikom.png" class="d-inline-block align-top" alt="">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="./index.html">Home</a>
-                        </li>
-                        <li class="nav-item dropdown active">
-                            <a class="nav-link " href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Profile
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="./profil.html">Profil Amikom</a>
-                                <a class="dropdown-item" href="./prof-kel.html">Profil Kelompok</a>
-                            </div>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="./organisasi.html">Organisasi</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="./pro-pen.html">Prodi</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="./sarpras.html">Fasilitas</a>
-                        </li>
-                        <li class="nav-item dropdown active">
-                                <a class="nav-link " href="./pendaftaran.html" id="navbarDropdownMenuLink" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Pendaftaran
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="./pendaftaran.html">Pendaftaran</a>
-                                    <a class="dropdown-item" href="./jadwal-pendaftaran.html">Jadwal Pendaftaran</a>
-                                    <a class="dropdown-item" href="#">Form Pendaftaran</a>
-                                </div>
-                            </li>
-                    </ul>
-                </div>
             </div>
-    
-        </nav>
-        <div class="headercurve"></div>
-        <!-- Endof Navbar Amikom -->
-    
+        </div>
+
+    </nav>
+    <div class="headercurve"></div>
+    <!-- Endof Navbar Amikom -->
+
     <img class="head" style="margin-top: -100px" src="./src/img/daftar.png">
 
-    <div class="border-jadwal">
-    <!-- Table Jadwal Penerimaan Mhs Baru -->
-    <div class="jadwal-head">
-        <img class="icon-jadwal" src="./src/img/box-icon-r.png">
-        <h5 id="jadwal-tittle">Jadwal Penerimaan Mahasiswa Baru</h5>
-    </div>
-
-    <!-- Table Gelombang Khusus -->
-    <ul id="gelombang-khusus">
-        <li>Gelombang Khusus ( 3 Desember 2018 s/d 6 April 2019 )</li>
-    </ul>
-
-    <div class="gk-table">
-        <table class="table table-bordered">
-            <thead class="table-head">
-                <tr>
-                    <th scope="col">Test CBT/Tertulis</th>
-                    <th scope="col">Kuliah Umum</th>
-                    <th scope="col">Her-Registrasi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>3 Desember 2018 - 30 Desember 2018</td>
-                    <td>30 Desember 2018</td>
-                    <td>3 Desember 2018 - 31 Januari 2019</td>
-                </tr>
-                <tr>
-                    <td>31 Desember 2018 - 27 Januari 2019</td>
-                    <td>27 Januari 2019</td>
-                    <td>27 Januari 2019 - 28 Pebruari 2019</td>
-                </tr>
-                <tr>
-                    <td>28 Januari 2019 - 24 Pebruari 2019</td>
-                    <td>24 Pebruari 2019</td>
-                    <td>24 Pebruari 2019 - 28 Maret 2019</td>
-                </tr>
-                <tr>
-                    <td>25 Pebruari 2019 - 24 Maret 2019</td>
-                    <td>24 Maret 2019</td>
-                    <td>24 Maret 2019 - 11 April 2019</td>
-                </tr>
-                <tr>
-                    <td>25 Maret 2019 - 7 April 2019</td>
-                    <td>7 April 2019</td>
-                    <td>7 April 2019 - 18 April 2019</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <!-- End of Table Khusus -->
-
-
-    <!-- Table Gelombang I -->
-    <ul id="gelombang1">
-        <li>Gelombang I ( 7 April 2019 s/d 10 Mei 2019 )</li>
-    </ul>
-
-    <div class="g1-table">
-        <table class="table table-bordered">
-            <thead class="table-head">
-                <tr>
-                    <th scope="col">Test CBT/Tertulis</th>
-                    <th scope="col">Kuliah Umum</th>
-                    <th scope="col">Her-Registrasi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>8 April 2019 - 13 April 2019</td>
-                    <td>13 April 2019</td>
-                    <td>8 April 2019 - 25 April 2019</td>
-                </tr>
-                <tr>
-                    <td>15 April 2019 - 20 April 2019</td>
-                    <td>20 April 2019</td>
-                    <td>15 April 2019 - 2 Mei 2019</td>
-                </tr>
-                <tr>      
-                    <td>22 April 2019 - 27 April 2019</td>
-                    <td>27 April 2019</td>
-                    <td>22 April 2019 - 9 Mei 2019</td>
-                </tr>
-                <tr>    
-                    <td>29 April 2019 - 4 Mei 2019</td>
-                    <td>4 Mei 2019</td>
-                    <td>29 April 2019 - 16 Mei 2019</td>
-                </tr>
-                <tr>     
-                    <td>6 Mei 2019 - 11 Mei 2019</td>
-                    <td>11 Mei 2019</td>
-                    <td>6 Mei 2019 - 23 Mei 2019</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <!-- End of Table Gelombang I -->
-
-    <!-- Table Gelombang II -->
-    <ul id="gelombang2">
-        <li>Gelombang II ( 11 Mei 2019 s/d 29 Juni 2019 )</li>
-    </ul>
-
-    <div class="g2-table">
-        <table class="table table-bordered">
-            <thead class="table-head">
-                <tr>
-                    <th scope="col">Test CBT/Tertulis</th>
-                    <th scope="col">Kuliah Umum</th>
-                    <th scope="col">Her-Registrasi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>    
-                    <td>13 Mei 2019 - 18 Mei 2019</td>
-                    <td>18 Mei 2019</td>
-                    <td>13 Mei 2019 - 29 Mei 2019</td>
-                </tr>
-                <tr>    
-                    <td>20 Mei 2019 - 25 Mei 2019</td>
-                    <td>25 Mei 2019</td>
-                    <td>20 Mei 2019 - 17 Juni 2019</td>
-                </tr>
-                <tr>            
-                    <td>27 Mei 2019 - 21 Juni 2019</td>
-                    <td>22 Juni 2019</td>
-                    <td>27 Mei 2019 - 4 Juli 2019</td>
-                </tr>
-                    <td>22 Juni 2019 - 29 Juni 2019</td>
-                    <td>29 Juni 2019</td>
-                    <td>22 Juni 2019 - 11 Juli 2019</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <!-- End of Table Gelombang II -->
-
-    <!-- Table Gelombang III -->
-    <ul id="gelombang3">
-        <li>Gelombang III ( 30 Juni 2019 s/d 23 Agustus 2019 )</li>
-    </ul>
-
-    <div class="g3-table">
-        <table class="table table-bordered">
-            <thead class="table-head">
-                <tr>
-                    <th scope="col">Test CBT/Tertulis</th>
-                    <th scope="col">Kuliah Umum</th>
-                    <th scope="col">Her-Registrasi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>    
-                    <td>1 Juli 2019 - 5 Juli 2019</td>
-                    <td>6 Juli 2019</td>
-                    <td>1 Juli 2019 - 18 Juli 2019</td>
-                </tr>
-                <tr>      
-                    <td>6 Juli 2019 - 12 Juli 2019</td>
-                    <td>13 Juli 2019</td>
-                    <td>6 Juli 2019 - 24 Juli 2019</td>
-                </tr>
-                <tr>             
-                    <td>13 Juli 2019 - 19 Juli 2019</td>
-                    <td>20 Juli 2019</td>
-                    <td>13 Juli 2019 - 1 Agustus 2019</td>
-                </tr>
-                <tr>          
-                    <td>20 Juli 2019 - 26 Juli 2019</td>
-                    <td>27 Juli 2019</td>
-                    <td>20 Juli 2019 - 8 Agustus 2019</td>
-                </tr>
-                <tr>          
-                    <td>27 Juli 2019 - 2 Agustus 2019</td>
-                    <td>3 Agustus 2019</td>
-                    <td>27 Juli 2019 - 15 Agustus 2019</td>
-                </tr>
-                <tr>            
-                    <td>3 Agustus 2019 - 9 Agustus 2019</td>
-                    <td>10 Agustus 2019</td>
-                    <td>3 Agustus 2019 - 22 Agustus 2019</td>
-                </tr>
-                <tr>              
-                    <td>10 Agustus 2019 - 16 Agustus 2019</td>
-                    <td>24 Agustus 2019</td>
-                    <td>10 Agustus 2019 - 22 Agustus 2019</td>
-                </tr>
-                <tr>                  
-                    <td>19 Agustus 2019 - 23 Agustus 2019</td>
-                    <td>24 Agustus 2019</td>
-                    <td>19 Agustus 2019 - 29 Agustus 2019</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <!-- End of Table Gelombang III -->
-</div>
-
-<!-- Footer -->
-<hr style="border: solid 4px #FF8900; width: 1280x; margin-top: 10px;">
-<section class="footer">
-    <div class="container-footer">
-        <div class="container">
-            <div class="row pt-4">
-                <div class="col-md">
-                    <h5 class="title-footer">Alamat & Kontak :</h5>
-                </div>
-                <div class="col-md"></div>
-                <div class="col-md">
-                    <h5 class="title-footer">Link lain :</h5>
-                </div>
-            </div>
+    <div class="container text-center">
+        <!-- Table Jadwal Penerimaan Mhs Baru -->
+        <div class="jadwal-head">
             <div class="row">
-                <div class="col-md">
-                    <img style="margin-top: 10px" src="./src/img/maps.png" width="300px" alt="">
-                </div>
-                <div class="col-md">
-                    <div class="row">
-                        <div class="col"></div>
+                <img class="icon-jadwal" src="./src/img/box-icon-r.png">
+                <h5 id="jadwal-tittle">Jadwal Penerimaan Mahasiswa Baru</h5>
+            </div>
+        </div>
+        <div class="border-jadwal text-center">
+
+            <!-- Table Gelombang Khusus -->
+            <ul id="gelombang-khusus">
+                <li>Gelombang Khusus ( 3 Desember 2018 s/d 6 April 2019 )</li>
+            </ul>
+
+            <div class="gk-table">
+                <table class="table table-bordered">
+                    <thead class="table-head">
+                        <tr>
+                            <th scope="col">Test CBT/Tertulis</th>
+                            <th scope="col">Kuliah Umum</th>
+                            <th scope="col">Her-Registrasi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3 Desember 2018 - 30 Desember 2018</td>
+                            <td>30 Desember 2018</td>
+                            <td>3 Desember 2018 - 31 Januari 2019</td>
+                        </tr>
+                        <tr>
+                            <td>31 Desember 2018 - 27 Januari 2019</td>
+                            <td>27 Januari 2019</td>
+                            <td>27 Januari 2019 - 28 Pebruari 2019</td>
+                        </tr>
+                        <tr>
+                            <td>28 Januari 2019 - 24 Pebruari 2019</td>
+                            <td>24 Pebruari 2019</td>
+                            <td>24 Pebruari 2019 - 28 Maret 2019</td>
+                        </tr>
+                        <tr>
+                            <td>25 Pebruari 2019 - 24 Maret 2019</td>
+                            <td>24 Maret 2019</td>
+                            <td>24 Maret 2019 - 11 April 2019</td>
+                        </tr>
+                        <tr>
+                            <td>25 Maret 2019 - 7 April 2019</td>
+                            <td>7 April 2019</td>
+                            <td>7 April 2019 - 18 April 2019</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- End of Table Khusus -->
+
+
+            <!-- Table Gelombang I -->
+            <ul id="gelombang1">
+                <li>Gelombang I ( 7 April 2019 s/d 10 Mei 2019 )</li>
+            </ul>
+
+            <div class="g1-table">
+                <table class="table table-bordered">
+                    <thead class="table-head">
+                        <tr>
+                            <th scope="col">Test CBT/Tertulis</th>
+                            <th scope="col">Kuliah Umum</th>
+                            <th scope="col">Her-Registrasi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>8 April 2019 - 13 April 2019</td>
+                            <td>13 April 2019</td>
+                            <td>8 April 2019 - 25 April 2019</td>
+                        </tr>
+                        <tr>
+                            <td>15 April 2019 - 20 April 2019</td>
+                            <td>20 April 2019</td>
+                            <td>15 April 2019 - 2 Mei 2019</td>
+                        </tr>
+                        <tr>
+                            <td>22 April 2019 - 27 April 2019</td>
+                            <td>27 April 2019</td>
+                            <td>22 April 2019 - 9 Mei 2019</td>
+                        </tr>
+                        <tr>
+                            <td>29 April 2019 - 4 Mei 2019</td>
+                            <td>4 Mei 2019</td>
+                            <td>29 April 2019 - 16 Mei 2019</td>
+                        </tr>
+                        <tr>
+                            <td>6 Mei 2019 - 11 Mei 2019</td>
+                            <td>11 Mei 2019</td>
+                            <td>6 Mei 2019 - 23 Mei 2019</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- End of Table Gelombang I -->
+
+            <!-- Table Gelombang II -->
+            <ul id="gelombang2">
+                <li>Gelombang II ( 11 Mei 2019 s/d 29 Juni 2019 )</li>
+            </ul>
+
+            <div class="g2-table">
+                <table class="table table-bordered">
+                    <thead class="table-head">
+                        <tr>
+                            <th scope="col">Test CBT/Tertulis</th>
+                            <th scope="col">Kuliah Umum</th>
+                            <th scope="col">Her-Registrasi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>13 Mei 2019 - 18 Mei 2019</td>
+                            <td>18 Mei 2019</td>
+                            <td>13 Mei 2019 - 29 Mei 2019</td>
+                        </tr>
+                        <tr>
+                            <td>20 Mei 2019 - 25 Mei 2019</td>
+                            <td>25 Mei 2019</td>
+                            <td>20 Mei 2019 - 17 Juni 2019</td>
+                        </tr>
+                        <tr>
+                            <td>27 Mei 2019 - 21 Juni 2019</td>
+                            <td>22 Juni 2019</td>
+                            <td>27 Mei 2019 - 4 Juli 2019</td>
+                        </tr>
+                        <td>22 Juni 2019 - 29 Juni 2019</td>
+                        <td>29 Juni 2019</td>
+                        <td>22 Juni 2019 - 11 Juli 2019</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- End of Table Gelombang II -->
+
+            <!-- Table Gelombang III -->
+            <ul id="gelombang3">
+                <li>Gelombang III ( 30 Juni 2019 s/d 23 Agustus 2019 )</li>
+            </ul>
+
+            <div class="g3-table">
+                <table class="table table-bordered">
+                    <thead class="table-head">
+                        <tr>
+                            <th scope="col">Test CBT/Tertulis</th>
+                            <th scope="col">Kuliah Umum</th>
+                            <th scope="col">Her-Registrasi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1 Juli 2019 - 5 Juli 2019</td>
+                            <td>6 Juli 2019</td>
+                            <td>1 Juli 2019 - 18 Juli 2019</td>
+                        </tr>
+                        <tr>
+                            <td>6 Juli 2019 - 12 Juli 2019</td>
+                            <td>13 Juli 2019</td>
+                            <td>6 Juli 2019 - 24 Juli 2019</td>
+                        </tr>
+                        <tr>
+                            <td>13 Juli 2019 - 19 Juli 2019</td>
+                            <td>20 Juli 2019</td>
+                            <td>13 Juli 2019 - 1 Agustus 2019</td>
+                        </tr>
+                        <tr>
+                            <td>20 Juli 2019 - 26 Juli 2019</td>
+                            <td>27 Juli 2019</td>
+                            <td>20 Juli 2019 - 8 Agustus 2019</td>
+                        </tr>
+                        <tr>
+                            <td>27 Juli 2019 - 2 Agustus 2019</td>
+                            <td>3 Agustus 2019</td>
+                            <td>27 Juli 2019 - 15 Agustus 2019</td>
+                        </tr>
+                        <tr>
+                            <td>3 Agustus 2019 - 9 Agustus 2019</td>
+                            <td>10 Agustus 2019</td>
+                            <td>3 Agustus 2019 - 22 Agustus 2019</td>
+                        </tr>
+                        <tr>
+                            <td>10 Agustus 2019 - 16 Agustus 2019</td>
+                            <td>24 Agustus 2019</td>
+                            <td>10 Agustus 2019 - 22 Agustus 2019</td>
+                        </tr>
+                        <tr>
+                            <td>19 Agustus 2019 - 23 Agustus 2019</td>
+                            <td>24 Agustus 2019</td>
+                            <td>19 Agustus 2019 - 29 Agustus 2019</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- End of Table Gelombang III -->
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <hr style="border: solid 4px #FF8900; width: 1280x; margin-top: 10px;">
+    <section class="footer">
+        <div class="container-footer">
+            <div class="container">
+                <div class="row pt-4">
+                    <div class="col-md">
+                        <h5 class="title-footer">Alamat & Kontak :</h5>
                     </div>
-                    <div class="row">
-                        <div class="col">
-                            <p class="white"><b>Universitas Amikom Yogyakarta</b></p>
-                            <p class="white">
-                                Kampus Terpadu : Jl. Ring Road Utara, Condong Catur, Sleman, Yogyakarta
-                                Telp: (0274) 884201 - 207 | Fax: (0274) 884208 Kodepos: 55283 |
-                                E-Mail: amikom@amikom.ac.id
-                            </p>
+                    <div class="col-md"></div>
+                    <div class="col-md">
+                        <h5 class="title-footer">Link lain :</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md">
+                        <img style="margin-top: 10px" src="./src/img/maps.png" width="300px" alt="">
+                    </div>
+                    <div class="col-md">
+                        <div class="row">
+                            <div class="col"></div>
                         </div>
                         <div class="row">
-                            <div class="col" style="padding-left: 30px; margin-top: 10px">
-                                <p class="white"><b>International Office</b></p>
+                            <div class="col">
+                                <p class="white"><b>Universitas Amikom Yogyakarta</b></p>
                                 <p class="white">
-                                    Telp: +62 274884 201 Ext. 612
-                                    Fax: +62 274884 208
-                                    E-Mail: io@amikom.ac.id
+                                    Kampus Terpadu : Jl. Ring Road Utara, Condong Catur, Sleman, Yogyakarta
+                                    Telp: (0274) 884201 - 207 | Fax: (0274) 884208 Kodepos: 55283 |
+                                    E-Mail: amikom@amikom.ac.id
                                 </p>
+                            </div>
+                            <div class="row">
+                                <div class="col" style="padding-left: 30px; margin-top: 10px">
+                                    <p class="white"><b>International Office</b></p>
+                                    <p class="white">
+                                        Telp: +62 274884 201 Ext. 612
+                                        Fax: +62 274884 208
+                                        E-Mail: io@amikom.ac.id
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md">
-                    <ul style="text-decoration: none; color: white">
-                        <li class="white"> <a style="text-decoration: none; color: white" href="./award.html">Award</a></li>
-                        <li class="white"> <a style="text-decoration: none; color: white" href="./elearning.html">Elearning</a>
-                        </li>
-                        <li class="white"> <a style="text-decoration: none; color: white" href="./materi.html">Materi</a></li>
-                        <li class="white"> <a style="text-decoration: none; color: white" href="./explore.html">Explore Jogja</a>
-                        </li>
+                    <div class="col-md">
+                        <ul style="text-decoration: none; color: white">
+                            <li class="white"> <a style="text-decoration: none; color: white"
+                                    href="./award.html">Award</a></li>
+                            <li class="white"> <a style="text-decoration: none; color: white"
+                                    href="./elearning.html">Elearning</a>
+                            </li>
+                            <li class="white"> <a style="text-decoration: none; color: white"
+                                    href="./materi.html">Materi</a></li>
+                            <li class="white"> <a style="text-decoration: none; color: white"
+                                    href="./explore.html">Explore Jogja</a>
+                            </li>
 
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+    <div class="bottom-footer text-center">
+        <p class="white" style="padding-top: 10px">
+            copyright &copy; 2019 | Universitas Amikom Yogyakarta
+        </p>
     </div>
-</section>
-<div class="bottom-footer text-center">
-    <p class="white" style="padding-top: 10px">
-        copyright &copy; 2019 | Universitas Amikom Yogyakarta
-    </p>
-</div>
-<!-- endof footer -->
+    <!-- endof footer -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -1,0 +1,61 @@
+.head{
+    width: 100vw;
+}
+
+#perpusatas{
+	width: 100%;
+	border-bottom: solid 1px #FF8900;
+}
+#perpus2{
+	width: 100%;
+	border-bottom: solid 1px #FF8900;
+}
+.selamat{
+	margin-top: 10px;
+	color: #3c0b66;
+}
+.univ{
+	color: #3c0b66;
+	margin-left: 42%;
+}
+#bawahuniv{
+	border-bottom: solid 3px #FF8900;
+	width: 24%;
+	margin-top: 5px;
+}
+.k1{
+	margin-left: 50px;
+	margin-right: 50px;
+}
+.k2{
+	margin-left: 50px;
+	margin-right: 50px;
+}
+.k3{
+	margin-left: 50px;
+	margin-right: 50px;
+}
+.buku{
+	width: 120px;
+	margin-top: 50px;
+}
+.namabuk{
+	margin-top: 30px;
+	color: #3c0b66;
+}
+#bawahbuk{
+	width: 130px;
+	border-bottom: solid 1px #FF8900;
+}
+.gambar1{
+	width: 120px;
+	margin-top: 50px;
+}
+.ket{
+
+	color: #140224;
+}
+.karya{
+
+	color: #aaaaaa;
+}
