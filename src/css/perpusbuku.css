@@ -44,8 +44,9 @@
 	color: #3c0b66;
 }
 #bawahbuk{
-	width: 130px;
-	border-bottom: solid 1px #FF8900;
+	width: 150px;
+	border-bottom: solid 3px #FF8900;
+	margin-top: -5px;
 }
 .gambar1{
 	width: 120px;
@@ -58,4 +59,22 @@
 .karya{
 
 	color: #aaaaaa;
+}
+
+#kolommenu{
+	color: #3c0b66;
+	border: solid 1.5px #3c0b66;
+	margin-left: 5px;
+	padding-top: 5px;
+	border-radius: 3px;
+}
+
+#kolommenu a{
+	color: #3c0b66;
+}
+
+#kolommenu:hover{
+	background-color: #1500272c;
+	cursor: pointer;
+	text-decoration: none;
 }
