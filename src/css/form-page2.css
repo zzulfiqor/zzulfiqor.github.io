@@ -1,0 +1,73 @@
+section {
+	padding-top: 20px;
+}
+
+body{
+	background-color: #3C0B66;
+}
+
+.base{
+	padding-top: 150px;
+	height: 1100px;
+	width: 100%;
+	background-color: #3C0B66;
+	justify-content: center;
+}
+
+.head-icon{
+	margin-top: -150px;
+	height: 70px;
+}
+
+.form-base{
+	margin-left: -75px;
+	padding-left: 20px;
+	padding-top: 30px;
+	background-color: white;
+	height: 900px;
+	width: 1250px;
+	color: black;
+}
+
+#formpen{
+	color: #3C0B66;
+}
+
+#kiri{
+	margin-top: 20px;
+	margin-left: -20px;
+	padding-left: -20px;
+}
+
+.biodata{
+	color: #3C0B66;
+	margin-left: -30px;
+}
+
+.pendidikan{
+	margin-top: 50px;
+	color: #3C0B66;
+	margin-left: -30px;
+}
+
+.form-group{
+	margin-top: 15px;
+}
+
+#kanan{
+	margin-top: 20px;
+}
+
+.pilihan{
+	color: #3C0B66;
+}
+
+.form-group2{
+	margin-top: 15px;
+	padding-left: 30px;
+}
+
+#btn-daftar{
+	margin-top: 215px;
+	margin-left: 30px;
+}
