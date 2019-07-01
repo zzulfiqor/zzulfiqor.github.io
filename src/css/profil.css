@@ -13,16 +13,14 @@ hr {
 }
 
 .pak_yanto {
-	overflow: hidden;
 	margin-top: -16px;
-	height: 400px;
+	height:auto;
 	width: 100%;
 	background-color: #3C0B66;
 }
 
 .foto {
-	margin-left: 150px;
-	margin-top: 50px;
+
 	height: 350px;
 }
 
