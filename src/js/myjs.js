@@ -133,5 +133,10 @@ $(document).ready(function () {
         $('#form-satu').addClass('not-selected');
     })
 
+    $('.item-each').click(function(){
+        var tes = $('.item-each img').attr(src);
+        alert(tes);
+    })
+
 
 });

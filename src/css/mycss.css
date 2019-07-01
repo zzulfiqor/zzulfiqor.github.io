@@ -151,3 +151,8 @@ nav {
   font-size: 9pt;
 }
 /* endof footer */
+
+.vertical-center{
+    display: flex;
+    align-items: center;
+}
