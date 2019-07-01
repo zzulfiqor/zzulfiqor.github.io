@@ -1,0 +1,15 @@
+.underline{
+    border-bottom: solid 3px #FF8900;
+    margin-left: 0;
+    margin-top: -5px;
+}
+
+.each{
+    height: 250px;
+    width: 250px;
+}
+
+.each:hover{
+    cursor: pointer;
+}
+
