@@ -67,3 +67,21 @@
 	margin-right: 80px;
 	color: #3c0b66;
 }
+
+#kolommenu{
+	color: #3c0b66;
+	border: solid 1.5px #3c0b66;
+	margin-left: 5px;
+	padding-top: 5px;
+	border-radius: 3px;
+}
+
+#kolommenu a{
+	color: #3c0b66;
+}
+
+#kolommenu:hover{
+	background-color: #1500272c;
+	cursor: pointer;
+	text-decoration: none;
+}
