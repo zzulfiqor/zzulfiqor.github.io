@@ -1,0 +1,22 @@
+.ket{
+    font-size: 9pt;
+    color: gray;
+}
+
+.isi-berita{
+    font-size: 11pt;
+    text-align: justify;
+}
+
+.ungu{
+    color: #23043E;
+}
+
+.hr-berita{
+    border-bottom: solid 5px #FF8900;
+    margin-top: -5px;
+}
+
+.ungu li:hover{
+    cursor: pointer;
+}
