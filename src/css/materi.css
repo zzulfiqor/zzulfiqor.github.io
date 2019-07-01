@@ -1,8 +1,14 @@
 .dosen-container .container{
-    height:250px;
     background-color: #3C0B66;
 }
 
 .container .row .col-dos{
     padding-top: 50px;
+}
+
+.dosen-container{
+    display: inline-block;
+    height: auto;
+    width: 80%;
+    background-color: #3C0B66;
 }
