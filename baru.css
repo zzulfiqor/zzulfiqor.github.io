@@ -17,15 +17,10 @@
     height: 130px;
     width: 300px;
     background-color: #23043E;
-    margin-top: 0px;
+    margin-top: 230px;
     margin-left: 50px;
-    border: 2px solid #FF8900;
-    text-decoration: none;
-}
-
-.kotak:hover{
-    text-decoration: none;
-    cursor: pointer;
+    border: 2px solid orange;
+    
 }
 
 .protak{
@@ -51,7 +46,7 @@ protak :hover{
 }
 
 .grsbaw{
-    background-color: #FF8900;
+    background-color: orange;
     border-width: 2px;
     width: 100px;
     margin-left: 100px;
@@ -64,7 +59,7 @@ protak :hover{
     margin-top: 70px;
     font-weight: 700;
     text-indent: 100px;
-    font-size: 30px
+    font-size: 35px
 }
 
 
@@ -119,7 +114,7 @@ protak :hover{
 }
 
 #grsbaw2{
-    background-color: #FF8900;
+    background-color: orange;
     border-width: 5px;
     width: 300px;
     margin-right: 60px;
@@ -157,7 +152,7 @@ protak :hover{
 }
 
 .gfoot{
-    background-color: #FF8900;
+    background-color: orange;
     border-width: 5px;
     margin-top: 400px;
 }
@@ -253,7 +248,7 @@ protak :hover{
 }
 
 .kotak-exp{
-    color: #FF8900;
+    color: orange;
     width: 300px;
     height: 200px;
     opacity: 0.7;
@@ -265,10 +260,11 @@ protak :hover{
 }
 
 .font-li{
+    font-family: "malgun gothic";
     text-transform: capitalize;
     margin-left: 70px;
     margin-top: 0px;
-    font-size: 12px;
+    font-size: 25px;
     color: black;
 }
 
@@ -281,6 +277,7 @@ protak :hover{
 }
 
 .hrf-sar{
+    font-family: "malgun gothic";
     text-transform: capitalize;
     margin-top: 10px;
     font-weight: 500;
@@ -292,7 +289,7 @@ protak :hover{
     font-size: 16px;
     text-align: justify;
     text-indent: 50px;
-    margin-left: 50px;
+    margin-left: 100px;
     margin-top: 30px;
     margin-right: 70px;
     text-transform: 
@@ -315,10 +312,10 @@ protak :hover{
 }
 
 .grsbaw-pro{
-    border-bottom: solid 3px #FF8900;
-    margin-left: 100px;
-    width: 250px !important;
-    margin-top: 5px !important;
+    background-color: orange;
+    border-width: 4px;
+    width: 300px;
+   margin-left: 100px
 }
 
 .ass-img{
@@ -350,7 +347,7 @@ protak :hover{
     font-family: "malgun gothic";
     text-align: center;
     text-transform: uppercase;
-    color: #FF8900;
+    color: yellow;
 }
 
 #kotakpenel{
@@ -377,12 +374,9 @@ protak :hover{
 }
 
 .headexp{
-    background-color: #FF8900;
+    background-color: orange;
     height: 200px;
     width: 200ox;
     margin-top: -500px;
 }
 
-.btn-jurusan{
-    margin-top: 100px;
-}

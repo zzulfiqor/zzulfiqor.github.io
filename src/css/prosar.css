@@ -1,0 +1,71 @@
+.container-header{
+    background: url('../img/sarjanaheader.jpg');
+    background-size: cover;
+    height: 80vh;
+}
+
+.title-box{
+    display: inline-block;
+    height: auto;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.479);
+    color: white;
+    margin-top: 400px;
+}
+
+.hrf-exp{
+    margin-bottom:10px;
+}
+
+.informatika{
+    background: url(../img/headerti.jpg);
+    background-size: cover;
+    height: 400px;
+}
+
+.si{
+    background: url(../img/headersi.jpg);
+    background-size: cover;
+    height: 400px;
+}
+
+.geo{
+    background: url(../img/headergeo.jpg);
+    background-size: cover;
+    height: 400px;
+}
+
+.ilkom{
+    background: url(../img/headerilkom.jpg);
+    background-size: cover;
+    height: 400px;
+}
+
+.akt{
+    background: url(../img/headeraku.jpg);
+    background-size: cover;
+    height: 400px;
+}
+
+.hi{
+    background: url(../img/headerhi.png);
+    background-size: cover;
+    height: 400px;
+}
+
+.tk{
+    background: url(../img/headertk.jpg);
+    background-size: cover;
+    height: 400px;
+}
+
+.tekin{
+    background: url(../img/headertii.jpg);
+    background-size: cover;
+    height: 400px;
+}
+
+.garis{
+    border-bottom: solid 3px #FF8900;
+    margin-left: 0;
+}

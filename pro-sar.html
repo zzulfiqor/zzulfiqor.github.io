@@ -14,9 +14,6 @@
     <link rel="stylesheet" href="./src/css/home.css">
     <link rel="stylesheet" href="./src/css/baru.css">
 
-    <!-- font poppins -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> 
-
     <!-- title and icon -->
     <link rel="icon" href="./src/img/logoamikomicon.png">
     <title>Program Studi</title>
@@ -24,8 +21,8 @@
 
 <body>
 
- <!-- Navbar Amikom -->
- <div class="topbar">
+    <!-- Navbar Amikom -->
+    <div class="topbar">
         <nav id="topbar" class="navbar navbar-expand-lg navbar-dark">
             <ul id="top-nav" class="navbar-nav ml-auto">
                 <li class="top-item active">
@@ -62,29 +59,21 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="./profil.html">Profil Amikom</a>
-                            <a class="dropdown-item" href="./prof-kel.html">Profil Kelompok</a>
+                            <a class="dropdown-item" href="#">Profil Kelompok</a>
                         </div>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="./organisasi.html">Organisasi</a>
+                        <a class="nav-link" href="#">Organisasi</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="./pro-pen.html">Prodi</a>
+                        <a class="nav-link" href="#">Prodi</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="./sarpras.html">Fasilitas</a>
+                        <a class="nav-link" href="#">Fasilitas</a>
                     </li>
-                    <li class="nav-item dropdown active">
-                            <a class="nav-link " href="./pendaftaran.html" id="navbarDropdownMenuLink" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Pendaftaran
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="./pendaftaran.html">Pendaftaran</a>
-                                <a class="dropdown-item" href="./jadwal-pendaftaran.html">Jadwal Pendaftaran</a>
-                                <a class="dropdown-item" href="#">Form Pendaftaran</a>
-                            </div>
-                        </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./pendaftaran.html">Pendaftaran</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -92,11 +81,21 @@
     </nav>
     <div class="headercurve"></div>
     <!-- Endof Navbar Amikom -->
-    <div style="margin-top: -99px" >
+
+    <div style="margin-top: -99px">
         <div>
-            <img src="./src/img/header-sarjana.png" class="head-pic">
+            <img src="./src/img/sarjanaheader.jpg" class="head-pic" style="width: 100%;">
         </div>
     </div>
+
+    <div class="kotak_pojok">
+        <div>
+            <h1 class="hrf_pojok" style="font-family: 'malgun gothic'; font-weight: 800">
+                Program Sarjana
+            </h1>
+        </div>
+    </div>
+
 
     <table>
         <colgroup>
@@ -108,12 +107,15 @@
                 <ul class="style-ul">
                     <li class="font-li">
                         <a href="">bidang studi</a>
+                        <hr class="grsbaw-prodi">
                     </li>
                     <li class="font-li">
                         <a href="">fakultas</a>
+                        <hr class="grsbaw-prodi">
                     </li>
                     <li class="font-li">
-                        <a href="">program studi</a>
+                        <a href="pro-pen.html">program studi</a>
+                        <hr class="grsbaw-prodi">
                     </li>
                 </ul>
             </div>
@@ -121,16 +123,27 @@
 
         <th>
             <div>
-                <h1 class="hrf-sar">program sarjana</h1>
+                <h1 class="hrf-sar" style="margin-top: 300px; font-size: 35px">program sarjana</h1>
                 <hr class="grsbaw">
                 <h2 class="hrf-exp">
-                    Tahun 2021 menjadi Program Studi Teknik Informatika unggulan Dunia dalam Bidang Teknologi Informasi
-                    dan Komunikasi yang berbasis entrepreneurship. Berdasarkan peringkat Webometrics Juli 2011,
-                    Universitas AMIKOM Yogyakarta berada pada peringkat 2168 dunia, di Asia Tenggara berada pada
-                    peringkat 79 dari seluruh Perguruan Tinggi di Asia Tenggara. Untuk College (Sekolah Tinggi,
-                    Politeknik, Akademi), AMIKOM Yogyakarta berada pada peringkat 2 dari seluruh College di Asia
-                    Tenggara. Saat ini AMIKOM Yogyakarta sebagai Perguruan Tinggi Percontohan Dunia Model Private
-                    Entrepreneur oleh UNESCO sejak 2009.
+                    Program Sarjana merupakan program pendidikan akademik yang bertujuan menyiapkan mahasiswa menjadi
+                    warga negara yang beriman dan bertaqwa kepada Tuhan Yang Maha Esa, berjiwa Pancasila, memiliki
+                    integritas kepribadian yang tinggi, terbuka dan tanggap terhadap perubahan dan kemajuan ilmu
+                    pengetahuan, dan masalah yang dihadapi masyarakat.
+
+                    Program Sarjana diarahkan pada hasil lulusan yang memiliki kualifikasi sebagai berikut:
+                    <ol>
+                        <li class="hrf-exp">Menguasai dasar-dasar ilmiah dan keterampilan dalam bidang keahlian
+                            tertentu, sehingga mampu menemukan, memahami, menjelaskan, dan merumuskan cara penyelesaian
+                            masalah yang ada di dalam kawasan keahliannya.</li>
+                        <li class="hrf-exp">Mampu menerapkan ilmu pengetahuan dan keterampilan yang dimilikinya sesuai
+                            dengan bidang keahliannya dalam kegiatan produktif dan pelayanan kepada masyarakat dengan
+                            sikap dan perilaku yang sesuai dengan tata kehidupan bersama. </li>
+                        <li class="hrf-exp">Mampu bersikap dan berperilaku dalam membawakan diri, berkarya di bidang
+                            keahliannya maupun dalam berkehidupan bersama di masyarakat.</li>
+                        <li class="hrf-exp">Mampu mengikuti perkembangan ilmu pengetahuan,teknologi dan/atau seni yang
+                            merupakan keahliannya.</li>
+                    </ol>
                 </h2>
             </div>
 
@@ -140,8 +153,7 @@
                 </colgroup>
                 <th>
                     <div>
-                        <img src="./src/img/image.png"
-                            class="img-sub">
+                        <img src="./src/img/headerti.jpg" class="img-sub" style="margin-left:-10px">
                     </div>
                 </th>
 
@@ -170,8 +182,7 @@
         </colgroup>
         <th>
             <div>
-                <img src="./src/img/image.png"
-                    class="img-sub2">
+                <img src="./src/img/headersi.jpg" class="img-sub2">
             </div>
         </th>
 
@@ -185,7 +196,136 @@
         </th>
     </table>
 
-    
+    <table>
+        <colgroup>
+            <col span="2">
+        </colgroup>
+        <th>
+            <div>
+                <img src="./src/img/headergeo.jpg" class="img-sub2">
+            </div>
+        </th>
+
+        <th>
+            <div>
+                <h1 class="hrf-pro">geografi</h1>
+                <hr class="grsbaw-pro">
+                <h2 class="hrf-exp">Menjadikan program studi geografi yang mewujudkan dan mengembangkan ilmu geografi
+                    berbasis Sistem Informasi Geografis di bidang ekonomi kreatif yang berwawasan enterpreneurship dalam
+                    rangka mendorong pembangunan berkelanjutan tahun 2025</h2>
+            </div>
+        </th>
+    </table>
+
+    <table>
+        <colgroup>
+            <col span="2">
+        </colgroup>
+        <th>
+            <div>
+                <img src="./src/img/headerilkom.jpg" class="img-sub2">
+            </div>
+        </th>
+
+        <th>
+            <div>
+                <h1 class="hrf-pro">ilmu komunikasi</h1>
+                <hr class="grsbaw-pro">
+                <h2 class="hrf-exp">Menjadikan Program Studi Ilmu Komunikasi Universitas Amikom Yogyakarta sebagai
+                    rujukan pengembangan ilmu dan praktik dalam bidang visual design, marketing communication,
+                    broadcasting, dan cinema di Indonesia pada tahun 2030.</h2>
+            </div>
+        </th>
+    </table>
+
+    <table>
+        <colgroup>
+            <col span="2">
+        </colgroup>
+        <th>
+            <div>
+                <img src="./src/img/headeraku.jpg" class="img-sub2">
+            </div>
+        </th>
+
+        <th>
+            <div>
+                <h1 class="hrf-pro">akuntansi</h1>
+                <hr class="grsbaw-pro">
+                <h2 class="hrf-exp">Visi dan Misi Program Studi Akuntansi Universitas AMIKOM Yogyakarta diturunkan dari
+                    visi dan misi universitas. Oleh karena itu sebelum visi dan misi Program Studi Akuntansi diuraikan,
+                    akan disampaikan terlebih dahulu visi dan misi universitas.Dengan demikian akan terlihat lebih jelas
+                    keterkaitan visi misi universitas dan program studi.</h2>
+            </div>
+        </th>
+    </table>
+
+    <table>
+        <colgroup>
+            <col span="2">
+        </colgroup>
+        <th>
+            <div>
+                <img src="./src/img/headerhi.png" class="img-sub2">
+            </div>
+        </th>
+
+        <th>
+            <div>
+                <h1 class="hrf-pro">hubungan internasional</h1>
+                <hr class="grsbaw-pro">
+                <h2 class="hrf-exp">Menjadi unggul dalam penyelenggaran pendidikan, penelitian dan pengabdian masyarakat
+                    dalam disiplin ilmu hubungan internasional dengan kompetensi diplomasi bisnis internasional berbasis
+                    sociopreneurship dan keamanan global pada tahun 2031.</h2>
+            </div>
+        </th>
+    </table>
+
+    <table>
+        <colgroup>
+            <col span="2">
+        </colgroup>
+        <th>
+            <div>
+                <img src="./src/img/headertk.jpg" class="img-sub2">
+            </div>
+        </th>
+
+        <th>
+            <div>
+                <h1 class="hrf-pro">teknik komputer</h1>
+                <hr class="grsbaw-pro">
+                <h2 class="hrf-exp">Menjadi Prodi Teknik Komputer Unggulan Dunia dalam bidang Cybersecurity dan IoT
+                    berbasis Entrepreneurship pada tahun 2030</h2>
+            </div>
+        </th>
+    </table>
+
+    <table>
+        <colgroup>
+            <col span="2">
+        </colgroup>
+        <th>
+            <div>
+                <img src="./src/img/headertii.jpg" class="img-sub2">
+            </div>
+        </th>
+
+        <th>
+            <div>
+                <h1 class="hrf-pro">teknologi informasi</h1>
+                <hr class="grsbaw-pro">
+                <h2 class="hrf-exp">Pada tahun 2030 menjadi Program Studi Teknologi Informasi unggulan Dunia dalam
+                    Bidang Animasi dan Game yang berbasis Entrepreneurship. Unggulan Dunia berarti program studi secara
+                    institusional mempunyai reputasi di tingkat dunia dari sisi prestasi civitas akademika baik dari
+                    bidang pengajaran, penelitian maupun pengabdian masyarakat. Berbasis Entrepreneurship berarti
+                    lulusan dari Program Studi Teknologi Informasi unggul dalam penguasaan teknologi perangkat keras dan
+                    perangkat lunak dan memiliki jiwa kemandirian dalam menciptakan peluang kerja di dunia industri
+                    kreatif.</h2>
+            </div>
+        </th>
+    </table>
+
     <!-- in association -->
     <section class="inasso mt-5">
         <div class="inasso-container">
@@ -199,70 +339,63 @@
         </div>
     </section>
     <!-- endof association -->
-<!-- Footer -->
-<hr style="border: solid 4px #FF8900; width: 1280x; margin-top: 10px;">
-<section class="footer">
-    <div class="container-footer">
-        <div class="container">
-            <div class="row pt-4">
-                <div class="col-md">
-                    <h5 class="title-footer">Alamat & Kontak :</h5>
-                </div>
-                <div class="col-md"></div>
-                <div class="col-md">
-                    <h5 class="title-footer">Link lain :</h5>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md">
-                    <img style="margin-top: 10px" src="./src/img/maps.png" width="300px" alt="">
-                </div>
-                <div class="col-md">
-                    <div class="row">
-                        <div class="col"></div>
+
+    <!-- Footer -->
+    <hr style="border: solid 4px #FF8900; width: 1280x; margin-top: 10px;">
+    <section class="footer">
+        <div class="container-footer">
+            <div class="container">
+                <div class="row pt-4">
+                    <div class="col-md">
+                        <h5 class="title-footer">Alamat & Kontak :</h5>
                     </div>
-                    <div class="row">
-                        <div class="col">
-                            <p class="white"><b>Universitas Amikom Yogyakarta</b></p>
-                            <p class="white">
-                                Kampus Terpadu : Jl. Ring Road Utara, Condong Catur, Sleman, Yogyakarta
-                                Telp: (0274) 884201 - 207 | Fax: (0274) 884208 Kodepos: 55283 |
-                                E-Mail: amikom@amikom.ac.id
-                            </p>
+                    <div class="col-md"></div>
+                    <div class="col-md">
+                        <h5 class="title-footer">Lain-lain :</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md">
+                        <img style="margin-top: 10px" src="./src/img/maps.png" width="300px" alt="">
+                    </div>
+                    <div class="col-md">
+                        <div class="row">
+                            <div class="col"></div>
                         </div>
                         <div class="row">
-                            <div class="col" style="padding-left: 30px; margin-top: 10px">
-                                <p class="white"><b>International Office</b></p>
+                            <div class="col">
+                                <p class="white"><b>Universitas Amikom Yogyakarta</b></p>
                                 <p class="white">
-                                    Telp: +62 274884 201 Ext. 612
-                                    Fax: +62 274884 208
-                                    E-Mail: io@amikom.ac.id
+                                    Kampus Terpadu : Jl. Ring Road Utara, Condong Catur, Sleman, Yogyakarta
+                                    Telp: (0274) 884201 - 207 | Fax: (0274) 884208 Kodepos: 55283 |
+                                    E-Mail: amikom@amikom.ac.id
                                 </p>
+                            </div>
+                            <div class="row">
+                                <div class="col" style="padding-left: 30px; margin-top: 10px">
+                                    <p class="white"><b>International Office</b></p>
+                                    <p class="white">
+                                        Telp: +62 274884 201 Ext. 612
+                                        Fax: +62 274884 208
+                                        E-Mail: io@amikom.ac.id
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md">
-                    <ul style="text-decoration: none; color: white">
-                        <li class="white"> <a style="text-decoration: none; color: white" href="./award.html">Award</a></li>
-                        <li class="white"> <a style="text-decoration: none; color: white" href="./elearning.html">Elearning</a>
-                        </li>
-                        <li class="white"> <a style="text-decoration: none; color: white" href="./materi.html">Materi</a></li>
-                        <li class="white"> <a style="text-decoration: none; color: white" href="./explore.html">Explore Jogja</a>
-                        </li>
+                    <div class="col-md">
 
-                    </ul>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+    <div class="bottom-footer text-center">
+        <p class="white" style="padding-top: 10px">
+            copyright &copy; 2019 | Universitas Amikom Yogyakarta
+        </p>
     </div>
-</section>
-<div class="bottom-footer text-center">
-    <p class="white" style="padding-top: 10px">
-        copyright &copy; 2019 | Universitas Amikom Yogyakarta
-    </p>
-</div>
-<!-- endof footer -->
+    <!-- endof footer -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
