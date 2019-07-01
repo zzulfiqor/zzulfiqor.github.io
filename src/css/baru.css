@@ -253,10 +253,11 @@ protak :hover{
 }
 
 .kotak-exp{
-    color: #FF8900;
+    background-color: rgba(255, 136, 0, 0.705);
     width: 300px;
-    height: 200px;
-    opacity: 0.7;
+    height: auto;
+    padding: 10px;
+    margin-left: 35%;
 }
 
 .style-ul{
@@ -288,14 +289,7 @@ protak :hover{
 }
 
 .hrf-exp{
-    font-family: "malgun gothic";
-    font-size: 16px;
-    text-align: justify;
-    text-indent: 50px;
-    margin-left: 50px;
-    margin-top: 30px;
-    margin-right: 70px;
-    text-transform: 
+    font-size: 15px;
 }
 
 .img-sub{
@@ -306,7 +300,6 @@ protak :hover{
 }
 
 .hrf-pro{
-    font-family: "malgun gothic";
     text-transform: capitalize;
     font-weight: 500;
     text-indent: 100px;
@@ -372,17 +365,30 @@ protak :hover{
 .img_penel{
     height: 300px;
     width: 300px;
-    margin-top: 300px;
-    margin-left: 100px;
 }
 
 .headexp{
     background-color: #FF8900;
     height: 200px;
-    width: 200ox;
+    width: 200px;
     margin-top: -500px;
 }
 
 .btn-jurusan{
     margin-top: 100px;
 }
+
+.exhead{
+    background: url(../img/exploretab.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#kotak_ungu{
+    background-color: rgba(35, 4, 62, 0.438);
+    padding: 10px;
+    color: white;
+}
+
