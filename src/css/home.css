@@ -97,12 +97,18 @@
 .newsphoto-container{
     width: 100%;
     height: 305px;
-    background: url(../img/berita-1-2.jpg);
-    background-size: contain;
+    overflow: hidden;
+}
+
+.newsphoto-container picture,
+.newsphoto-container img{
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .newsphoto-container img{
-    width: 130%;
+    object-fit: cover;
 }
 
 .berita-kecil{
