@@ -1,0 +1,118 @@
+.faq-hero {
+    background-image: url('../img/bgjumbotron.png');
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    min-height: 360px;
+}
+
+.faq-hero-overlay {
+    background: linear-gradient(90deg, rgba(60, 11, 102, 0.92) 0%, rgba(60, 11, 102, 0.76) 55%, rgba(255, 137, 0, 0.62) 100%);
+    min-height: 360px;
+    padding: 86px 0;
+}
+
+.faq-eyebrow {
+    background-color: #FF8900;
+    border-radius: 18px;
+    display: inline-block;
+    font-size: 10pt;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    padding: 7px 18px;
+    text-transform: uppercase;
+}
+
+.faq-hero h1 {
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.faq-hero p {
+    font-size: 12pt;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+.faq-hero-button {
+    background-color: #FF8900 !important;
+    border: none;
+    border-radius: 24px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    padding: 12px 26px;
+}
+
+.faq-content {
+    background-color: #f7f5fb;
+    padding: 56px 0;
+}
+
+.faq-contact-card {
+    background-color: #fff;
+    border-top: solid 5px #FF8900;
+    box-shadow: 0 12px 28px rgba(60, 11, 102, 0.12);
+    padding: 28px;
+}
+
+.faq-contact-card h4 {
+    color: #3C0B66;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.faq-contact-card p,
+.faq-contact-card li {
+    color: #555;
+    font-size: 11pt;
+    line-height: 1.7;
+}
+
+.faq-contact-card ul {
+    margin-bottom: 0;
+    padding-left: 20px;
+}
+
+.faq-accordion .card {
+    border: none;
+    box-shadow: 0 8px 24px rgba(60, 11, 102, 0.1);
+    margin-bottom: 16px;
+}
+
+.faq-accordion .card-header {
+    background-color: #fff;
+    border-bottom: solid 1px rgba(60, 11, 102, 0.08);
+    padding: 0;
+}
+
+.faq-accordion .btn-link {
+    color: #3C0B66;
+    font-size: 12pt;
+    font-weight: 700;
+    padding: 18px 22px;
+    text-align: left;
+    text-decoration: none;
+    width: 100%;
+}
+
+.faq-accordion .btn-link:hover,
+.faq-accordion .btn-link:focus {
+    color: #FF8900;
+    text-decoration: none;
+}
+
+.faq-accordion .card-body {
+    color: #555;
+    font-size: 11pt;
+    line-height: 1.8;
+    padding: 22px;
+}
+
+@media (max-width: 767.98px) {
+    .faq-hero-overlay {
+        padding: 54px 0;
+    }
+
+    .faq-hero-button {
+        margin-top: 24px;
+    }
+}
