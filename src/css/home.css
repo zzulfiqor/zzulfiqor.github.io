@@ -113,19 +113,21 @@
 
 .berita-kecil{
     cursor: pointer;
-    width: 250px;
+    width: 100%;
     height: 185px;
     overflow: hidden;
 }
 
 .thumbnail_kecil{
-    width: 250px;
+    width: 100%;
     height: 185px;
+    object-fit: cover;
+    display: block;
 }
 
 .judulberita-kecil{
     background: rgba(0,0,0,0.5);
-    width: 250px;
+    width: 100%;
     height: 40px;
     margin-top: -40px;
     z-index: 997;
