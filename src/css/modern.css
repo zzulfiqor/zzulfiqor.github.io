@@ -1,0 +1,233 @@
+/* ==========================================================
+   Modern theme — dimuat paling akhir, menimpa gaya lama.
+   Arah: editorial & tenang. Satu aksen (oranye), tipografi serif
+   untuk judul, garis tipis, sudut tegas, tanpa gradien/pil/bayangan.
+   ========================================================== */
+:root {
+    --ink: #1c1233;
+    --ink-2: #2b1d4a;
+    --paper: #faf7f2;
+    --paper-2: #f1ece3;
+    --line: rgba(28, 18, 51, .16);
+    --muted: #675f78;
+    --accent: #e8590c;
+    --accent-d: #c24a08;
+    --serif: "Fraunces", "Iowan Old Style", Georgia, serif;
+    --sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+* { font-family: inherit; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+}
+p { font-size: 1rem !important; }
+a { color: var(--ink); }
+a:hover { color: var(--accent-d); }
+::selection { background: var(--accent); color: #fff; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+h1, h2, h3, h4, h5, h6, .section-title {
+    font-family: var(--serif);
+    font-weight: 600;
+    letter-spacing: -.015em;
+    line-height: 1.15;
+    color: var(--ink);
+}
+h3, .section-title { font-size: clamp(1.75rem, 3.2vw, 2.5rem); }
+
+/* ---------- Navbar ---------- */
+#topbar { background: var(--ink) !important; padding: 4px 12px; }
+.top-item { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; }
+.top-item .nav-link { color: rgba(255,255,255,.7) !important; padding: .35rem .5rem; }
+.top-item .nav-link:hover { color: #fff !important; }
+
+.bg-dark, .bg-dark.scrolled {
+    background-color: var(--ink-2) !important;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.bg-dark.scrolled { position: fixed; top: 0; left: 0; width: 100%; }
+.navbar a img { height: 2.4em; }
+.nav-item { font-size: .8rem; letter-spacing: .07em; font-weight: 500; }
+.nav-item .nav-link { color: rgba(255,255,255,.82) !important; padding: .9rem .7rem; }
+.nav-item a:hover { color: #fff !important; }
+.nav-item a.nav-link:hover::after {
+    width: 100%; border-bottom: 2px solid var(--accent);
+    padding-bottom: 0; margin: 0 0 -.9rem; position: relative; top: .9rem;
+}
+.headercurve, .headercurve.scrolled { display: none !important; }
+.dropdown-menu { background: var(--ink-2); border: 1px solid rgba(255,255,255,.1); padding: 6px 0; }
+.dropdown-item { color: rgba(255,255,255,.85); letter-spacing: .02em; }
+.dropdown-item:hover { background: var(--accent); color: #fff; }
+
+/* ---------- Hero ---------- */
+.header, .header.scrolled { margin-top: 0; }
+.carousel-item { max-height: 72vh; }
+.carousel-item img { width: 100%; height: 72vh; max-height: 640px; object-fit: cover; }
+.carousel-control-prev, .carousel-control-next { width: 8%; opacity: .9; }
+
+/* ---------- Seksi ---------- */
+.wcu-container { padding: 88px 0 24px; }
+#wcu img#descpic { border-radius: 0; display: block; }
+#wcu p { text-align: left !important; color: #3a3350; max-width: 62ch; }
+#wcu .col-md:last-child .section-title { margin-bottom: .5rem; }
+
+/* judul seksi: tanda kecil, bukan garis oranye */
+.section-title { position: relative; }
+#wcu .col-md hr, #amikomnow .col-md hr, .col-md hr { display: none; }
+.row .col hr, .container .row .col > hr {
+    border: 0; border-top: 1px solid var(--line); opacity: 1; margin: 56px 0 8px;
+}
+.section-title::before {
+    content: ""; display: block; width: 28px; height: 3px;
+    background: var(--accent); margin-bottom: 16px;
+}
+
+/* ---------- Tombol ---------- */
+.btn-container { width: auto !important; }
+.btn-container .btn.btn-primary, .btn-primary, .btn-readmore,
+#btn-pengumuman-lanjut, #btn-berita-lanjut, .btn-pengumuman-lanjut {
+    background: var(--ink) !important; color: #fff !important;
+    border: 1px solid var(--ink) !important; border-radius: 0 !important;
+    padding: .65rem 1.4rem; font-size: .85rem !important; font-weight: 600;
+    letter-spacing: .06em; text-transform: uppercase; box-shadow: none !important;
+    transition: background .2s, border-color .2s, transform .2s;
+}
+.btn-container .btn.btn-primary:hover, .btn-primary:hover, .btn-readmore:hover,
+#btn-pengumuman-lanjut:hover, #btn-berita-lanjut:hover {
+    background: var(--accent) !important; border-color: var(--accent) !important;
+    transform: translateY(-1px);
+}
+
+/* ---------- Amikom Now ---------- */
+.amikomnow, .amikomnow-container { padding-top: 24px; }
+.news-container {
+    background: transparent; padding: 22px 0 0; border-top: 2px solid var(--ink);
+}
+.tgl-berita { color: var(--accent-d); font-size: .8rem !important; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+.judul-berita { font-family: var(--serif); font-size: 1.5rem; line-height: 1.25; margin: .25rem 0 1rem; }
+.isi-berita { font-size: 1rem !important; color: #3a3350; }
+.newsphoto-container { width: 100%; height: 320px; }
+.newsphoto-container img { transition: transform .6s ease; }
+.newsphoto-container:hover img { transform: scale(1.03); }
+
+.berita-kecil { height: 200px; background: var(--paper-2); }
+.thumbnail_kecil { height: 200px; transition: transform .5s ease; }
+.berita-kecil:hover .thumbnail_kecil { transform: scale(1.05); }
+.judulberita-kecil {
+    background: linear-gradient(transparent, rgba(28,18,51,.88)) !important;
+    height: 64px; margin-top: -64px; display: flex; align-items: flex-end;
+}
+.judulberita-kecil p { margin: 0; padding: 0 14px 12px; font-size: .85rem !important; font-weight: 500; letter-spacing: .02em; }
+
+/* ---------- Pengumuman / Berita ---------- */
+.pengumuman { margin-top: 40px; }
+#pengumuman { border-top: 2px solid var(--ink); }
+#col-pengumuman, #col-berita {
+    background: transparent !important; padding: 28px 32px 8px !important; display: block;
+}
+#col-berita { border-left: 1px solid var(--line); }
+#col-pengumuman .text-center, #col-berita .text-center { text-align: left !important; }
+#judul-pengumuman { color: var(--ink) !important; font-size: 1.6rem; margin: 0 0 8px; }
+.pengumuman-list, .berita-list { padding: 0; margin: 0 0 12px; color: var(--ink); }
+.pengumuman-item { list-style: none; }
+.pengumuman-item p { color: var(--ink) !important; margin: 0 !important; }
+.pengumuman-item p:first-child { color: var(--muted) !important; font-size: .78rem !important; letter-spacing: .08em; text-transform: uppercase; padding-top: 14px; }
+.pengumuman-item p + p { font-size: 1rem !important; margin-top: 2px !important; font-weight: 500; }
+.pengumuman-item:hover p + p { color: var(--accent-d) !important; }
+#list-divider, #list-divider-berita {
+    display: block !important; width: 100%; margin: 14px 0 0; border: 0; border-top: 1px solid var(--line); opacity: 1;
+}
+#col-pengumuman .text-center.col, #col-berita .col-md.text-center { text-align: left !important; }
+#btn-pengumuman-lanjut, #btn-berita-lanjut { margin: 8px 0 12px; }
+
+/* ---------- FAQ ---------- */
+.faq-preview {
+    background: var(--ink); background-image: none; margin-top: 72px; padding: 64px 0;
+}
+.faq-preview .section-title { color: #fff; margin-top: 10px; max-width: 20ch; }
+.faq-preview .section-title::before { display: none; }
+.faq-preview-label {
+    background: none; padding: 0; border-radius: 0; color: var(--accent);
+    font-size: .78rem; font-weight: 600; letter-spacing: .14em;
+}
+.faq-preview-text { color: rgba(255,255,255,.72); max-width: 56ch; font-size: 1rem !important; }
+.faq-preview .btn-readmore { background: var(--accent) !important; border-color: var(--accent) !important; }
+.faq-preview .btn-readmore:hover { background: #fff !important; color: var(--ink) !important; border-color: #fff !important; }
+
+/* ---------- Mitra ---------- */
+.inasso-container { padding: 40px 0 24px; background: #fff; }
+.inasso img { filter: grayscale(1); opacity: .75; transition: filter .3s, opacity .3s; }
+.inasso img:hover { filter: none; opacity: 1; }
+
+/* ---------- Footer ---------- */
+#footer + .bottom-footer, .bottom-footer { background: #130b24; color: rgba(255,255,255,.6); height: auto; padding: 14px 0; font-size: .8rem; }
+.bottom-footer p { padding: 0 !important; margin: 0; font-size: .8rem !important; color: rgba(255,255,255,.6); }
+hr[style*="FF8900"] { border: 0 !important; border-top: 1px solid var(--line) !important; width: 100% !important; margin: 0 !important; }
+.container-footer { margin-top: 0; padding: 56px 0 40px; background: var(--ink); }
+.container-footer h6 { visibility: visible; }
+.title-footer {
+    font-family: var(--sans); font-size: .75rem; font-weight: 600; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 16px;
+}
+.container-footer .white, .container-footer p, .container-footer li { color: rgba(255,255,255,.78); font-size: .95rem !important; }
+.container-footer b { color: #fff; }
+.container-footer ul { list-style: none; padding: 0; }
+.container-footer li { margin-bottom: 8px; }
+.container-footer a { color: rgba(255,255,255,.85) !important; text-decoration: none; border-bottom: 1px solid transparent; }
+.container-footer a:hover { color: #fff !important; border-bottom-color: var(--accent); }
+.container-footer iframe { filter: grayscale(.4) contrast(1.05); }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 991.98px) {
+    .navbar-collapse { background: var(--ink-2); margin: 0 -15px; padding: 8px 15px 14px; border-top: 1px solid rgba(255,255,255,.08); }
+    .nav-item .nav-link { padding: .7rem 0; }
+    .nav-item a.nav-link:hover::after { display: none; }
+}
+@media (max-width: 767.98px) {
+    .carousel-item img { height: 220px; }
+    .wcu-container { padding-top: 48px; }
+    #wcu .col-md:first-child { margin-bottom: 32px; }
+    #col-berita { border-left: 0; border-top: 1px solid var(--line); }
+    #col-pengumuman, #col-berita { padding: 24px 4px 4px !important; }
+    .faq-preview { padding: 44px 0; margin-top: 48px; }
+    .container-footer { padding: 40px 0 28px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* ---------- Halaman Profil ---------- */
+.pak_yanto { background: var(--ink); margin-top: 0; border-top: 3px solid var(--accent); }
+.sambutan { font-size: clamp(1.75rem, 3vw, 2.4rem); }
+.kata { text-align: left !important; color: rgba(255,255,255,.82); }
+#kedua, #keempat { display: none; }
+#ketiga, #kelima, #bawah { border: 0 !important; border-top: 1px solid var(--line) !important; margin-top: 56px; }
+#kolom_visi { background: var(--paper-2); }
+#kolom_misi { background: transparent; }
+.visi, .misi { color: var(--ink); }
+#histori { text-align: left !important; max-width: 75ch; }
+.amikom { font-size: clamp(1.6rem, 2.6vw, 2.2rem); }
+.asosi { margin-left: auto; margin-right: auto; }
+
+/* ---------- Halaman FAQ ---------- */
+.faq-hero { background-image: none; background: var(--ink); }
+.faq-hero-overlay { background: none; }
+.faq-hero h1 { color: #fff; font-size: clamp(2rem, 4vw, 3.2rem); }
+.faq-eyebrow { background: none !important; border-radius: 0 !important; padding: 0 !important; color: var(--accent) !important; letter-spacing: .14em; font-size: .78rem; font-weight: 600; }
+.faq-hero-button { border-radius: 0 !important; box-shadow: none !important; background: var(--accent) !important; border-color: var(--accent) !important; }
+.faq-content { background: var(--paper); }
+.faq-contact-card, .faq-accordion .card { border-radius: 0 !important; box-shadow: none !important; border: 1px solid var(--line) !important; background: #fff; }
+.faq-contact-card { border-top: 3px solid var(--ink) !important; }
+.faq-accordion .card { margin-bottom: -1px; }
+.faq-accordion .btn-link { color: var(--ink) !important; font-weight: 500; text-decoration: none; }
+.faq-accordion .btn-link:hover { color: var(--accent-d) !important; }
+.faq-contact-card h4 { color: var(--ink); }
+
+/* Global: matikan bayangan & sudut bulat sisa gaya lama */
+.card, .btn, .form-control, .alert { border-radius: 0 !important; box-shadow: none; }
