@@ -8,6 +8,7 @@ import {
   validateContactForm,
   buildMailtoHref,
   formatContactDraft,
+  resolveActiveSectionId,
 } from "../js/utils.js";
 import { ARCHITECTURE_PIPELINE, EXPERIENCE, PROJECTS } from "../js/data.js";
 
@@ -95,4 +96,56 @@ test("formatContactDraft applies fallback placeholders and formats body", () => 
   assert.ok(draft.includes("Subject: Portfolio Inquiry"));
   assert.ok(draft.includes("From: (Your Name) ((Your Email))"));
   assert.ok(draft.endsWith("Hello Ahmad"));
+});
+
+test("resolveActiveSectionId resolves top, mid-scroll, bottom, and empty sections", () => {
+  const sections = [
+    { id: "home", top: 0 },
+    { id: "about", top: 700 },
+    { id: "skills", top: 1350 },
+    { id: "projects", top: 2050 },
+    { id: "experience", top: 2900 },
+    { id: "contact", top: 3800 },
+  ];
+
+  assert.equal(resolveActiveSectionId([]), null);
+  assert.equal(resolveActiveSectionId(null), null);
+
+  assert.equal(
+    resolveActiveSectionId(sections, {
+      scrollY: 0,
+      viewportHeight: 800,
+      documentHeight: 4200,
+    }),
+    "home"
+  );
+
+  assert.equal(
+    resolveActiveSectionId(sections, {
+      scrollY: 16,
+      viewportHeight: 800,
+      documentHeight: 4200,
+    }),
+    "home"
+  );
+
+  // readingLine = 1800 + 92 + 200 = 2092 -> >= 2050 ("projects"), < 2900
+  assert.equal(
+    resolveActiveSectionId(sections, {
+      scrollY: 1800,
+      viewportHeight: 800,
+      documentHeight: 4200,
+    }),
+    "projects"
+  );
+
+  // Near bottom of document activates final short section ("contact")
+  assert.equal(
+    resolveActiveSectionId(sections, {
+      scrollY: 3390,
+      viewportHeight: 800,
+      documentHeight: 4200,
+    }),
+    "contact"
+  );
 });

@@ -84,6 +84,11 @@ textarea {
   padding-top: var(--section-gap);
 }
 
+main section[id],
+#skills {
+  scroll-margin-top: var(--header-offset);
+}
+
 .section-title {
   margin: 0;
   font-size: clamp(1.5rem, 2.6vw, 2rem);

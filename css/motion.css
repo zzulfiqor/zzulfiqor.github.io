@@ -150,7 +150,7 @@
     transform: none;
   }
 
-  .scroll-progress {
+  .scroll-progress-track {
     display: none;
   }
 
@@ -163,9 +163,12 @@
 }
 
 @media (prefers-reduced-transparency: reduce) {
-  .site-header {
-    background: var(--bg-canvas);
+  .header-shell,
+  .site-header.is-scrolled .header-shell,
+  .mobile-drawer {
+    background: var(--bg-surface);
     backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 
   .floating-badge {

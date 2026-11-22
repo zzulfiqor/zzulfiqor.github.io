@@ -118,3 +118,31 @@ export function formatContactDraft(recipientEmail, { name, email, subject, messa
   const safeMessage = (message || "").trim();
   return `To: ${recipientEmail}\nSubject: ${safeSubject}\nFrom: ${safeName} (${safeEmail})\n\n${safeMessage}`;
 }
+
+/**
+ * Resolves which section ID is active based on current scroll position and section offsets.
+ * @param {Array<{id: string, top: number}>} sections
+ * @param {{scrollY?: number, viewportHeight?: number, documentHeight?: number, offset?: number}} [viewport]
+ * @returns {string|null}
+ */
+export function resolveActiveSectionId(
+  sections,
+  { scrollY = 0, viewportHeight = 800, documentHeight = 0, offset = 92 } = {}
+) {
+  if (!Array.isArray(sections) || sections.length === 0) return null;
+  if (scrollY <= 16) return sections[0].id;
+  if (documentHeight > 0 && scrollY + viewportHeight >= documentHeight - 24) {
+    return sections[sections.length - 1].id;
+  }
+
+  const readingLine = scrollY + offset + viewportHeight * 0.25;
+  let activeId = sections[0].id;
+  for (const section of sections) {
+    if (section.top <= readingLine) {
+      activeId = section.id;
+    } else {
+      break;
+    }
+  }
+  return activeId;
+}

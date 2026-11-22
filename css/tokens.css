@@ -3,7 +3,10 @@
   --bg-canvas: #090c15;
   --bg-surface: #101423;
   --bg-elevated: #161c30;
-  --bg-header: rgba(9, 12, 21, 0.86);
+  --bg-header: rgba(16, 20, 35, 0.72);
+  --bg-header-scrolled: rgba(11, 15, 28, 0.9);
+  --bg-nav-rail: rgba(9, 12, 21, 0.56);
+  --bg-mobile-drawer: rgba(14, 18, 33, 0.96);
 
   --border-subtle: rgba(148, 163, 184, 0.16);
   --border-accent: rgba(129, 140, 248, 0.42);
@@ -34,8 +37,12 @@
 
   /* Spacing, Elevation & Motion */
   --container-max: 1180px;
+  --header-offset: 92px;
   --section-gap: clamp(3.5rem, 6vw, 5.5rem);
   --shadow-card: 0 18px 40px -24px rgba(2, 6, 23, 0.9);
+  --shadow-header: 0 18px 42px -18px rgba(2, 6, 23, 0.92),
+    0 0 0 1px rgba(129, 140, 248, 0.1);
+  --shadow-drawer: 0 24px 48px -16px rgba(2, 6, 23, 0.92);
   --ease-calm: cubic-bezier(0.23, 1, 0.32, 1);
   --transition-fast: 160ms var(--ease-calm);
   --transition-mid: 260ms var(--ease-calm);
