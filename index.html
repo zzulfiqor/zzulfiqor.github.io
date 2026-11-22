@@ -1,533 +1,999 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ahmad Zuhair Dzulfiqor — Flutter &amp; Mobile Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Ahmad Zuhair Dzulfiqor, Flutter & Mobile Developer based in South Jakarta. Experienced in Flutter, Flutter Web frameworks, Spring Boot backend services, SQL Server/MySQL reporting, Docker, and Nginx."
+    />
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <header class="site-header" id="top">
+      <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Ahmad Zuhair Dzulfiqor home">
+          <svg
+            class="brand-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+          <span>Ahmad <span class="brand-accent">Zuhair</span></span>
+        </a>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./src/css/bootstrap.min.css">
-
-    <!-- My CSS -->
-    <link rel="stylesheet" href="./src/css/mycss.css">
-    <link rel="stylesheet" href="./src/css/home.css">
-
-    <!-- font poppins -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-
-    <!-- title and icon -->
-    <link rel="icon" href="./src/img/logoamikomicon.png">
-    <title>Universitas Amikom Yogyakarta</title>
-</head>
-
-<body>
-    <!-- Navbar Amikom -->
-    <div class="topbar">
-        <nav id="topbar" class="navbar navbar-expand-lg navbar-dark">
-            <ul id="top-nav" class="navbar-nav ml-auto">
-                <li class="top-item active">
-                    <a href="./prof-kel.html" class="nav-link">Tentang Kami</a>
-                </li>
-                <li class="top-item active">
-                    <a href="#footer" class="nav-link">Alamat</a>
-                </li>
-                <li class="top-item active">
-                    <a href="./loginpage.html" class="nav-link">Login</a>
-                </li>
-            </ul>
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="#home">Home</a></li>
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#skills">Skills</a></li>
+            <li><a class="nav-link" href="#projects">Projects</a></li>
+            <li><a class="nav-link" href="#experience">Experience</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
         </nav>
-    </div>
-    </div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="./src/img/logoamikom.png" class="d-inline-block align-top" alt="">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+
+        <div class="header-actions">
+          <button
+            type="button"
+            class="btn btn-secondary btn-sm"
+            id="open-cv-btn"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+            <span>View CV</span>
+          </button>
+
+          <button
+            type="button"
+            class="mobile-menu-btn"
+            id="mobile-menu-toggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-nav-drawer"
+          >
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-drawer" id="mobile-nav-drawer" hidden>
+        <nav aria-label="Mobile navigation">
+          <ul class="mobile-nav-list">
+            <li><a class="mobile-nav-link" href="#home">Home</a></li>
+            <li><a class="mobile-nav-link" href="#about">About</a></li>
+            <li><a class="mobile-nav-link" href="#skills">Skills</a></li>
+            <li><a class="mobile-nav-link" href="#projects">Projects</a></li>
+            <li><a class="mobile-nav-link" href="#experience">Experience</a></li>
+            <li><a class="mobile-nav-link" href="#contact">Contact</a></li>
+          </ul>
+          <div class="mobile-drawer-footer">
+            <button
+              type="button"
+              class="btn btn-primary btn-full"
+              id="mobile-open-cv-btn"
+            >
+              View Printable CV
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./index.html">Home</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./profil.html">Profil</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./organisasi.html">Organisasi</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./pro-pen.html">Prodi</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./sarpras.html">Fasilitas</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./galeri.html">Galeri</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./faq.html">FAQ</a>
-                    </li>
-                    <li class="nav-item active">
-                            <a class="nav-link" href="./award.html">Award</a>
-                        </li>
-                    <li class="nav-item dropdown active">
-                        <a class="nav-link " href="./pendaftaran.html" id="navbarDropdownMenuLink" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Pendaftaran
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="./jadwal-pendaftaran.html">Jadwal Pendaftaran</a>
-                            <a class="dropdown-item" href="#">Form Pendaftaran</a>
-                        </div>
-                    </li>
-                </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section" id="home" aria-labelledby="hero-heading">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="status-pill">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>South Jakarta, Indonesia</span>
             </div>
+
+            <h1 class="hero-title" id="hero-heading">
+              Ahmad Zuhair <span class="text-accent">Dzulfiqor</span>
+            </h1>
+
+            <p class="hero-role">Flutter Developer | Mobile Developer</p>
+
+            <p class="hero-summary">
+              Building mobile and web applications with Flutter, Dart, Spring
+              Boot, and SQL-driven reporting workflows. Focused on reusable
+              Flutter Web architecture, reliable backend integration, and
+              human-centered interface design.
+            </p>
+
+            <div class="hero-cta-row">
+              <a class="btn btn-primary" href="#contact">
+                <span>Get In Touch</span>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+
+              <a class="btn btn-secondary" href="#projects">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+                <span>View Projects</span>
+              </a>
+            </div>
+
+            <div class="hero-socials">
+              <span class="social-label">Connect</span>
+              <div class="social-links">
+                <a
+                  class="social-chip"
+                  href="https://github.com/zzulfiqor"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                  <span>github.com/zzulfiqor</span>
+                </a>
+
+                <a class="social-chip" href="mailto:zzulfiqor@gmail.com">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    ></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span>zzulfiqor@gmail.com</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="portrait-stage" id="portrait-stage">
+              <div class="dot-grid" aria-hidden="true"></div>
+              <div class="portrait-orb" aria-hidden="true"></div>
+              <div class="portrait-ring" aria-hidden="true"></div>
+              <div class="portrait-frame">
+                <img
+                  src="assets/ahmad-portrait-cutout.png"
+                  alt="Portrait of Ahmad Zuhair Dzulfiqor, Flutter and Mobile Developer"
+                  class="portrait-img"
+                  width="670"
+                  height="929"
+                />
+              </div>
+
+              <div class="floating-badge badge-left">
+                <span class="badge-icon" aria-hidden="true">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                  </svg>
+                </span>
+                <div>
+                  <div class="badge-title">Flutter &amp; Dart</div>
+                  <div class="badge-sub">Mobile &amp; Web UI</div>
+                </div>
+              </div>
+
+              <div class="floating-badge badge-right">
+                <span class="badge-icon" aria-hidden="true">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  </svg>
+                </span>
+                <div>
+                  <div class="badge-title">Spring Boot &amp; SQL</div>
+                  <div class="badge-sub">Reporting Systems</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-    </nav>
-    <div class="headercurve"></div>
-    <!-- Endof Navbar Amikom -->
-
-    
-    <!-- header -->
-    <section class="header">
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./src/img/bgjumbotron-2.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="./src/img/bgjumbotron.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="./src/img/bgjumbotron-3.png" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </section>
-    <!-- endof header -->
-
-    <!-- wcu -->
-    <section class="wcu">
-        <div class="wcu-container">
-            <div class="container">
-                <div id="wcu" class="row">
-                    <div class="col-md">
-                        <div class="descpic-container">
-                            <img id="descpic" src="./src/img/descpic.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md">
-                        <h3 class="section-title">World Class University</h3>
-                        <hr width="50%">
-                        <p style="text-align: justify; font-size: 10pt"> University of AMIKOM Yogyakarta is a kind
-                            of ‘academy’ in the four-tier post-secondary system of universities, institutes, academies
-                            and polytechnics. STMIK stands for ‘schools for technology, management, information and
-                            computers’. The academy concentrates on innovative technologies. It has an enrollment of
-                            more than 7,600 students, which compares strongly with nearby institutions that are closing
-                            because of a shortage of students. The academy produces graduates who are very popular in
-                            the labour market. The academy also runs several commercial enterprises: television
-                            channels, radio channels, cartoon production, software design, internet services,
-                            advertising, computer systems, consultancy and mobile networks. These commercial setups also
-                            provide valuable ground for student internships. The academy claims to produce ‘graduates
-                            with global qualities, productive, entrepreneurial, professionals, especially in knowledge
-                            based on computer and informatics’.
-                        </p>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="btn-container ml-auto" style="width: 100px">
-                                    <a href="./profil.html"><button class="btn btn-primary btn-readmore"
-                                            type="button">See Profile ></button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <hr>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <!-- endof wcu -->
-
-    <!-- Amikom now -->
-    <section class="amikomnow">
-        <div class="amikomnow-container">
-            <div class="container">
-                <div id="amikomnow" class="row">
-                    <div class="col-md">
-                        <h3 class="section-title">Amikom Now</h3>
-                        <hr class="underline" width="170px;">
-                    </div>
-                </div>
-                <div class="row" style="margin-bottom: 20px;">
-                    <div class="col-md-6">
-                        <div class="news-container">
-                            <p class="tgl-berita">18 Maret 2019</p>
-                            <h6 class="judul-berita"> AMCC AMIKOM Yogyakarta Meraih juara pertama dalam Hackathon
-                                Cybertech Politeknik Negeri Padang
-                            </h6>
-                            <p class="isi-berita mt-2">
-                                Padang, Sumatera Barat, 16 Juni 2019. 6 tim berkumpul di Politeknik Negeri Padang untuk
-                                mengikuti Hackathon Cybertech Politeknik Negeri Padang 2019 Yang diselenggarakan oleh
-                                UKM Cybertech Politeknik Negeri Padang. Hingga saat ini Hackathon Cybertech Politeknik
-                                Negeri Padang sudah berjalan untuk tahun kedua.
-
-                                Seperti tahun sebelumnya, Hackathon Cybertech Politeknik Negeri Padang diikuti oleh
-                                berbagai kalangan mulai dari Pelajar [...]
-                            </p>
-                            <div class="row">
-                                <div class="col-md">
-                                    <div class="btn-container ml-auto" style="width: 100px">
-                                        <a href="./berita-show.html"> <button class="btn btn-primary btn-readmore"
-                                                type="button">Read more ></button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="newsphoto-container">
-                            <picture>
-                                <source srcset="./src/img/berita-1-2.jpg 1280w" sizes="(max-width: 767px) 100vw, 50vw">
-                                <img src="./src/img/berita-1-2.jpg" alt="AMCC AMIKOM Yogyakarta meraih juara pertama Hackathon Cybertech Politeknik Negeri Padang" loading="lazy" decoding="async">
-                            </picture>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md">
-                        <div class="berita-kecil">
-                            <img class="thumbnail_kecil" src="./src/img/berita-1.jpg" alt="">
-                        </div>
-                        <div class="judulberita-kecil">
-                            <p>Judul Berita 1</p>
-                        </div>
-                    </div>
-                    <div class="col-md">
-                        <div class="berita-kecil">
-                            <img class="thumbnail_kecil" src="./src/img/berita-2.jpg" alt="">
-                        </div>
-                        <div class="judulberita-kecil">
-                            <p>Judul Berita 2</p>
-                        </div>
-                    </div>
-                    <div class="col-md">
-                        <div class="berita-kecil">
-                            <img class="thumbnail_kecil" src="./src/img/berita-3.jpg" alt="">
-                        </div>
-                        <div class="judulberita-kecil">
-                            <p>Judul Berita 3</p>
-                        </div>
-                    </div>
-                    <div class="col-md">
-                        <div class="berita-kecil">
-                            <img class="thumbnail_kecil" src="./src/img/berita-4.jpg" alt="">
-                        </div>
-                        <div class="judulberita-kecil">
-                            <p>Judul Berita 4</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <hr>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- endof amikom now -->
-
-    <!-- pengumuman dan berita lain -->
-    <section class="pengumuman">
-        <div class="container-pengumuman">
-            <div class="container">
-                <div class="row" id="pengumuman">
-                    <div id="col-pengumuman" class="col-md">
-                        <div class="row">
-                            <div class="col-md text-center">
-                                <h4 id="judul-pengumuman" style="color: white">Pengumuman</h4>
-                                <hr>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <ul class="pengumuman-list">
-                                    <li class="pengumuman-item">
-                                        <div class="item-container">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <p style="font-size: 9pt">20 Mei 2019</p>
-                                                    <p style="margin-top: -10px;font-size: 10pt"
-                                                        id="judul-item-pengumuman">Oprec
-                                                        Pengurus KOMA 2019/2020</p>
-                                                    <hr id="list-divider">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="pengumuman-item">
-                                        <div class="item-container">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <p style="font-size: 9pt">20 Mei 2019</p>
-                                                    <p style="margin-top: -10px;font-size: 10pt"
-                                                        id="judul-item-pengumuman">Informasi
-                                                        Uji Kompetensi Sertifikasi BNSP </p>
-                                                    <hr id="list-divider">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="pengumuman-item">
-                                        <div class="item-container">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <p style="font-size: 9pt">20 Mei 2019</p>
-                                                    <p style="margin-top: -10px;font-size: 10pt"
-                                                        id="judul-item-pengumuman">Digitalent
-                                                        National Talk</p>
-                                                    <hr id="list-divider">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row pb-4">
-                            <div class="col text-center">
-                                <button id="btn-pengumuman-lanjut" class="btn-pengumuman-lanjut btn btn-primary"
-                                    type="button" style="font-size: 11pt">Pengumuman Lain ></button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div id="col-berita" class="col-md">
-                        <div class="row">
-                            <div class="col-md text-center">
-                                <h4 id="judul-pengumuman" style="color: #3C0B66">Berita</h4>
-                                <hr>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <ul class="berita-list">
-                                    <li class="pengumuman-item">
-                                        <div class="item-container">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <p style="font-size: 9pt">20 Mei 2019</p>
-                                                    <p style="margin-top: -10px;font-size: 10pt"
-                                                        id="judul-item-pengumuman">Recruitment
-                                                        Student Staff LPM Universitas Amikom Yogyakarta</p>
-                                                    <hr id="list-divider-berita">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="pengumuman-item">
-                                        <div class="item-container">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <p style="font-size: 9pt">20 Mei 2019</p>
-                                                    <p style="margin-top: -10px;font-size: 10pt"
-                                                        id="judul-item-pengumuman">Joint Summer
-                                                        Program "Exploring and Escalating ...</p>
-                                                    <hr id="list-divider-berita">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="pengumuman-item">
-                                        <div class="item-container">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <p style="font-size: 9pt">20 Mei 2019</p>
-                                                    <p style="margin-top: -10px;font-size: 10pt"
-                                                        id="judul-item-pengumuman">Berita Acara
-                                                        Upgrading 1 HMIF 2019</p>
-                                                    <hr id="list-divider-berita">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-
-                            </div>
-                        </div>
-                        <div class="row pb-4">
-                            <div class="col-md text-center">
-                                <button id="btn-berita-lanjut" class="btn-pengumuman-lanjut btn btn-primary"
-                                    type="button" style="font-size: 11pt">Berita Lain ></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <hr>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <!-- endof pengumuman dan berita lain -->
-
-    <!-- FAQ preview -->
-    <section class="faq-preview">
+        <!-- Factual Highlight Strip -->
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-8">
-                    <span class="faq-preview-label">Pusat Bantuan</span>
-                    <h3 class="section-title">Masih punya pertanyaan seputar kampus?</h3>
-                    <p class="faq-preview-text">
-                        Kunjungi halaman FAQ untuk melihat ringkasan informasi pendaftaran, fasilitas,
-                        layanan akademik, dan kehidupan mahasiswa dalam format tanya jawab yang mudah dipahami.
-                    </p>
-                </div>
-                <div class="col-md-4 text-md-right text-center mt-3 mt-md-0">
-                    <a href="./faq.html" class="btn btn-primary btn-readmore">Buka FAQ ></a>
-                </div>
-            </div>
+          <div
+            class="highlights-bar"
+            id="highlights-bar"
+            aria-label="Career summary highlights"
+          ></div>
         </div>
-    </section>
-    <!-- endof FAQ preview -->
+      </section>
 
-
-    <!-- in association -->
-    <section class="inasso">
-        <div class="inasso-container">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md text-center">
-                        <img style="width: 100%" src="./src/img/inasso.jpg" alt="">
-                    </div>
-                </div>
+      <!-- Bento Overview: About, Architecture Pipeline & Technical Skills -->
+      <section class="section-band" id="about" aria-labelledby="about-heading">
+        <div class="container">
+          <div class="section-header-row">
+            <div>
+              <p class="eyebrow-mono">ENGINEERING OVERVIEW</p>
+              <h2 class="section-title" id="about-heading">
+                About &amp; End-to-End Stack
+              </h2>
             </div>
-        </div>
-    </section>
-    <!-- endof association -->
+          </div>
 
-    <!-- Footer -->
-    <hr style="border: solid 4px #FF8900; width: 1280x; margin-top: 10px;">
-    <section id="footer" class="footer">
-        <div class="container-footer">
-            <div class="container">
-                <!-- <div class="row pt-4">
-                    <div class="col-md">
-                        <h5 class="title-footer">Alamat & Kontak :</h5>
-                    </div>
-                    <div class="col-md"></div>
-                    <div class="col-md">
-                        <h5 class="title-footer">Link lain :</h5>
-                    </div>
-                </div> -->
-                <div class="row pt-4 pb-2">
-                    <div class="col-md" style="width: 70px">
-                        <!-- <img style="margin-top: 10px" src="./src/img/maps.png" width="300px" alt=""> -->
-                        <h6 class="title-footer">Alamat & Kontak :</h6>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9402.520031936838!2d110.40846137264033!3d-7.760877541858883!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6f1714b0c4544586!2sUniversitas+Amikom+Yogyakarta!5e0!3m2!1sid!2sid!4v1561772992282!5m2!1sid!2sid"
-                            width="340" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <div class="bento-grid">
+            <!-- Bento Cell 1 (7 cols): Summary + Interactive End-to-End Pipeline -->
+            <article class="bento-card bento-span-7 spotlight-card">
+              <div class="bento-card-header">
+                <span class="bento-kicker">END-TO-END WORKFLOW</span>
+                <span class="bento-tag">Flutter Web · Spring Boot · SQL</span>
+              </div>
+              <p class="about-text" id="about-summary"></p>
 
-                    </div>
+              <div class="pipeline-box" aria-label="End-to-end reporting architecture">
+                <div
+                  class="pipeline-steps"
+                  role="tablist"
+                  aria-label="Select architecture layer"
+                  id="pipeline-tabs"
+                ></div>
+                <div
+                  class="pipeline-detail"
+                  id="pipeline-detail"
+                  role="tabpanel"
+                  aria-live="polite"
+                ></div>
+              </div>
+            </article>
 
+            <!-- Bento Cell 2 (5 cols): Profile Snapshot & Resume Action -->
+            <article class="bento-card bento-span-5 bento-profile spotlight-card">
+              <div class="bento-card-header">
+                <span class="bento-kicker">PROFILE SNAPSHOT</span>
+                <span class="status-pill-inline">
+                  <span class="status-dot" aria-hidden="true"></span>
+                  Active at X/Link
+                </span>
+              </div>
 
-                    <div class="col-md">
-                        <div class="row">
-                            <div class="col"></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <h6> .</h6>
-                                <p class="white" style="font-size: 11pt"><b>Universitas Amikom Yogyakarta</b></p>
-                                <p class="white" style="font-size: 11pt">
-                                    Kampus Terpadu : Jl. Ring Road Utara, Condong Catur, Sleman, Yogyakarta
-                                    Telp: (0274) 884201 - 207 | Fax: (0274) 884208 Kodepos: 55283 |
-                                    E-Mail: amikom@amikom.ac.id
-                                </p>
-
-                                <p class="white" style="font-size: 11pt"><b>International Office</b></p>
-                                <p class="white" style="font-size: 11pt">
-                                    Telp: +62 274884 201 Ext. 612
-                                    Fax: +62 274884 208
-                                    E-Mail: io@amikom.ac.id
-                                </p>
-
-                            </div>
-
-                            <!-- <div class="row">
-                                <div class="col-md" style="padding-left: 30px; margin-top: 10px">
-
-                                </div>
-                            </div> -->
-                        </div>
-                    </div>
-
-
-                    <div class="col-md">
-                        <h6 class="title-footer">Link lain :</h6>
-
-                        <ul style="text-decoration: none; color: white;font-size: 11pt">
-
-                            <li class="white"> <a style="text-decoration: none; color: white"
-                                    href="./elearning.html">Elearning</a>
-                            </li>
-
-                            <li class="white"> <a style="text-decoration: none; color: white"
-                                    href="./explore.html">Explore Jogja</a>
-                            </li>
-                            
-                            <li class="white"> <a style="text-decoration: none; color: white"
-                                    href="./perpus.html">Perpustakaan</a>
-                            </li>
-
-                            <li class="white"> <a style="text-decoration: none; color: white"
-                                    href="./faq.html">FAQ Kampus</a>
-                            </li>
-
-                        </ul>
-                    </div>
+              <div class="snapshot-list">
+                <div class="snapshot-row">
+                  <span class="snapshot-label">Base Location</span>
+                  <span class="snapshot-value">South Jakarta, Indonesia</span>
                 </div>
+                <div class="snapshot-row">
+                  <span class="snapshot-label">Current Role</span>
+                  <span class="snapshot-value">Software Developer · X/Link</span>
+                </div>
+                <div class="snapshot-row">
+                  <span class="snapshot-label">Degree &amp; GPA</span>
+                  <span class="snapshot-value mono-num">B.Informatics · 3.69 / 4.00</span>
+                </div>
+                <div class="snapshot-row">
+                  <span class="snapshot-label">Core Focus</span>
+                  <span class="snapshot-value">Mobile, Flutter Web &amp; Reporting</span>
+                </div>
+              </div>
+
+              <div class="bento-profile-actions">
+                <button
+                  type="button"
+                  class="btn btn-primary btn-full"
+                  id="about-cv-btn"
+                >
+                  <span>View Full Resume</span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Bento Skills Row -->
+          <div class="skills-band" id="skills" aria-labelledby="skills-heading">
+            <div class="skills-band-header">
+              <h2 class="section-subhead" id="skills-heading">Technical Skills Matrix</h2>
+              <span class="eyebrow-mono">6 CORE DOMAINS</span>
             </div>
+            <div class="bento-skills-grid" id="skills-grid"></div>
+          </div>
         </div>
-    </section>
-    <div class="bottom-footer text-center">
-        <p class="white" style="padding-top: 10px">
-            copyright &copy; 2019 | Universitas Amikom Yogyakarta
-        </p>
+      </section>
+
+      <!-- Selected Projects: Editorial 2-Column Archive -->
+      <section class="section-band" id="projects" aria-labelledby="projects-heading">
+        <div class="container">
+          <div class="section-header-row">
+            <div>
+              <p class="eyebrow-mono">MOBILE &amp; ANDROID ARCHIVE</p>
+              <h2 class="section-title" id="projects-heading">Selected Projects</h2>
+              <p class="section-subtitle">
+                Mobile and Android applications built with Flutter and Dart.
+              </p>
+            </div>
+            <a
+              class="text-link"
+              href="https://github.com/zzulfiqor"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Explore GitHub</span>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <div class="projects-grid" id="projects-grid"></div>
+        </div>
+      </section>
+
+      <!-- Experience & Academic Journey: Sticky Editorial Rail + Architectural Timeline -->
+      <section
+        class="section-band"
+        id="experience"
+        aria-labelledby="experience-heading"
+      >
+        <div class="container editorial-split">
+          <div class="editorial-sticky-rail">
+            <div class="surface-card experience-summary-card spotlight-card">
+              <div class="exp-header">
+                <div>
+                  <p class="eyebrow-mono">PROFESSIONAL EXPERIENCE</p>
+                  <h2 class="panel-title" id="experience-heading">
+                    Software Developer · X/Link Software
+                  </h2>
+                </div>
+                <span class="period-pill">May 2023 – Present</span>
+              </div>
+
+              <p class="rail-desc">
+                Building reusable Flutter Web frameworks, reporting workflows,
+                Spring Boot services, SQL Server/MySQL stored procedures, and
+                Docker/Nginx deployments.
+              </p>
+
+              <div
+                class="layer-tabs"
+                role="tablist"
+                aria-label="Filter experience highlights by technical layer"
+                id="exp-layer-tabs"
+              ></div>
+            </div>
+
+            <article class="surface-card edu-card spotlight-card" aria-labelledby="education-heading">
+              <div class="card-top-row">
+                <p class="eyebrow-mono">EDUCATION</p>
+                <span class="gpa-pill">GPA 3.69 / 4.00</span>
+              </div>
+              <h2 class="panel-title" id="education-heading">
+                Bachelor of Informatics
+              </h2>
+              <p class="edu-institution">
+                Universitas Amikom Yogyakarta · 2017 – 2022
+              </p>
+              <p class="edu-location">Yogyakarta, Indonesia</p>
+
+              <div class="coursework-block">
+                <h3 class="sub-label">Relevant Coursework</h3>
+                <div class="pill-wrap" id="coursework-list"></div>
+              </div>
+            </article>
+
+            <article class="surface-card cert-card spotlight-card" aria-labelledby="cert-heading">
+              <p class="eyebrow-mono">CERTIFICATION</p>
+              <div class="cert-row">
+                <span class="cert-icon" aria-hidden="true">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="8" r="7"></circle>
+                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                  </svg>
+                </span>
+                <div>
+                  <h2 class="cert-title" id="cert-heading">
+                    Membuat Aplikasi Flutter untuk Pemula
+                  </h2>
+                  <p class="cert-issuer">Dicoding · 2022</p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="exp-timeline-col">
+            <ol class="exp-timeline" id="exp-highlights-list"></ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact CTA Banner & Composer -->
+      <section class="section-band contact-section" id="contact" aria-labelledby="contact-heading">
+        <div class="container">
+          <div class="contact-banner surface-card">
+            <div class="contact-banner-intro">
+              <div class="contact-icon-box" aria-hidden="true">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h2 class="panel-title" id="contact-heading">
+                  Let&apos;s Work Together
+                </h2>
+                <p class="contact-sub">
+                  Open to discussing Flutter mobile/web applications, reporting
+                  workflows, and backend engineering collaborations.
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-quick-grid">
+              <div class="contact-quick-item">
+                <span class="quick-label">Email</span>
+                <div class="quick-value-row">
+                  <a class="quick-link" href="mailto:zzulfiqor@gmail.com">
+                    zzulfiqor@gmail.com
+                  </a>
+                  <button
+                    type="button"
+                    class="copy-btn"
+                    data-copy="zzulfiqor@gmail.com"
+                    aria-label="Copy email address"
+                  >
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path
+                        d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="contact-quick-item">
+                <span class="quick-label">Phone / WhatsApp</span>
+                <div class="quick-value-row">
+                  <a class="quick-link" href="tel:+6281215819957">
+                    (+62) 812-1581-9957
+                  </a>
+                  <button
+                    type="button"
+                    class="copy-btn"
+                    data-copy="+6281215819957"
+                    aria-label="Copy phone number"
+                  >
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path
+                        d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="contact-quick-item">
+                <span class="quick-label">Location</span>
+                <span class="quick-text">South Jakarta, Indonesia</span>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="toggle-message-form-btn"
+              aria-expanded="false"
+              aria-controls="contact-form-panel"
+            >
+              <span>Send a Message</span>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </div>
+
+          <div
+            class="contact-form-panel surface-card"
+            id="contact-form-panel"
+            hidden
+          >
+            <div class="form-panel-header">
+              <div>
+                <h3 class="panel-title">Compose Email Message</h3>
+                <p class="contact-sub">
+                  Prepares a message directly for your default email app, with a
+                  copyable fallback if no mail client is configured.
+                </p>
+              </div>
+              <button
+                type="button"
+                class="icon-close-btn"
+                id="close-message-form-btn"
+                aria-label="Close message composer"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+
+            <form id="contact-form" novalidate>
+              <div class="form-grid">
+                <div class="form-field">
+                  <label class="form-label" for="sender-name">Your Name</label>
+                  <input
+                    class="form-input"
+                    id="sender-name"
+                    name="name"
+                    type="text"
+                    autocomplete="name"
+                    placeholder="e.g. Budi Santoso"
+                    aria-describedby="error-name"
+                    required
+                  />
+                  <p class="form-error" id="error-name" role="alert"></p>
+                </div>
+
+                <div class="form-field">
+                  <label class="form-label" for="sender-email">Your Email</label>
+                  <input
+                    class="form-input"
+                    id="sender-email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    placeholder="e.g. budi@company.com"
+                    aria-describedby="error-email"
+                    required
+                  />
+                  <p class="form-error" id="error-email" role="alert"></p>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="sender-subject">Subject</label>
+                <input
+                  class="form-input"
+                  id="sender-subject"
+                  name="subject"
+                  type="text"
+                  placeholder="e.g. Flutter Developer Opportunity"
+                />
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="sender-message">Message</label>
+                <textarea
+                  class="form-input form-textarea"
+                  id="sender-message"
+                  name="message"
+                  rows="4"
+                  placeholder="Share details about the role, project scope, or timeline..."
+                  aria-describedby="error-message"
+                  required
+                ></textarea>
+                <p class="form-error" id="error-message" role="alert"></p>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">
+                  Open in Email Client
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  id="copy-draft-btn"
+                >
+                  Copy Message Text
+                </button>
+              </div>
+
+              <div
+                class="form-feedback"
+                id="form-feedback"
+                role="status"
+                aria-live="polite"
+                hidden
+              ></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a class="brand" href="#top">
+            <svg
+              class="brand-icon"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            <span>Ahmad <span class="brand-accent">Zuhair</span></span>
+          </a>
+          <p class="footer-copy">
+            &copy; 2026 Ahmad Zuhair Dzulfiqor · South Jakarta, Indonesia
+          </p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a
+          class="back-to-top"
+          href="#top"
+          aria-label="Back to top"
+        >
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+    <!-- Project Details Modal -->
+    <div
+      class="modal-backdrop"
+      id="project-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-project-title"
+      hidden
+    >
+      <div class="modal-dialog surface-card">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow-mono" id="modal-project-meta"></p>
+            <h2 class="modal-title" id="modal-project-title"></h2>
+          </div>
+          <button
+            type="button"
+            class="icon-close-btn"
+            data-close-modal="project-modal"
+            aria-label="Close project details"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <p class="modal-desc" id="modal-project-summary"></p>
+        <ul class="modal-bullets" id="modal-project-details"></ul>
+        <div class="pill-wrap" id="modal-project-stack"></div>
+
+        <div class="modal-footer">
+          <a
+            class="btn btn-primary"
+            href="https://github.com/zzulfiqor"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>Visit GitHub Profile</span>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-close-modal="project-modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
     </div>
-    <!-- endof footer -->
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="./src/js/jquery.js"></script>
-    <script src="./src/js/bootstrap.min.js"></script>
-    <script src="./src/js/popper.js"></script>
+    <!-- Printable CV Modal -->
+    <div
+      class="modal-backdrop"
+      id="cv-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="cv-modal-title"
+      hidden
+    >
+      <div class="modal-dialog modal-dialog-lg surface-card">
+        <div class="modal-header no-print">
+          <div>
+            <p class="eyebrow-mono">CURRICULUM VITAE</p>
+            <h2 class="modal-title" id="cv-modal-title">
+              Ahmad Zuhair Dzulfiqor
+            </h2>
+          </div>
+          <div class="modal-header-actions">
+            <button type="button" class="btn btn-primary btn-sm" id="print-cv-btn">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                <path
+                  d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"
+                ></path>
+                <rect x="6" y="14" width="12" height="8"></rect>
+              </svg>
+              <span>Print / Save PDF</span>
+            </button>
+            <button
+              type="button"
+              class="icon-close-btn"
+              data-close-modal="cv-modal"
+              aria-label="Close resume view"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
 
-    <!-- my script -->
-    <script src="./src/js/myjs.js"></script>
-</body>
+        <div class="cv-sheet" id="cv-sheet-content"></div>
+      </div>
+    </div>
 
+    <!-- Live Toast -->
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
 </html>
