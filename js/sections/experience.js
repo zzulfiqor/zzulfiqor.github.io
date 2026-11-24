@@ -107,7 +107,7 @@ function renderCvSheet() {
         (p) =>
           `<li><strong>${escapeHtml(p.role)} | ${escapeHtml(
             p.title
-          )}</strong> (${escapeHtml(p.period)}) — ${p.details
+          )}</strong> (${escapeHtml(p.period)}): ${p.details
             .map(escapeHtml)
             .join(" ")}</li>`
       ).join("")}

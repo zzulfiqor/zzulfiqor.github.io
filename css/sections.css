@@ -253,7 +253,7 @@
 .project-card:hover {
   border-color: var(--border-accent);
   transform: translateY(-3px);
-  box-shadow: 0 18px 40px -22px rgba(79, 70, 229, 0.38);
+  box-shadow: 0 22px 44px -24px rgba(2, 6, 23, 0.95);
 }
 
 .project-body {

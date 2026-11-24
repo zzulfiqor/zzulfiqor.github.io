@@ -500,22 +500,6 @@
   padding-top: 0.75rem;
 }
 
-.dot-grid {
-  position: absolute;
-  top: 12px;
-  left: 24px;
-  width: 96px;
-  height: 96px;
-  background-image: radial-gradient(
-    rgba(148, 163, 184, 0.28) 1.5px,
-    transparent 1.5px
-  );
-  background-size: 14px 14px;
-  z-index: 0;
-  transform: translate3d(calc(var(--px) * -0.4), calc(var(--py) * -0.4), 0);
-  transition: transform var(--transition-mid);
-}
-
 .portrait-orb {
   position: absolute;
   top: 48px;
@@ -588,8 +572,7 @@
   width: 100%;
   padding: 0.7rem 0.95rem;
   border-radius: var(--radius-md);
-  background: rgba(16, 20, 35, 0.8);
-  backdrop-filter: blur(12px);
+  background: rgba(16, 20, 35, 0.94);
   border: 1px solid rgba(148, 163, 184, 0.22);
   box-shadow: var(--shadow-card);
   transition: transform var(--transition-mid), border-color var(--transition-fast);
@@ -792,11 +775,6 @@
   .portrait-stage {
     width: 450px;
     padding-top: 1.25rem;
-  }
-
-  .dot-grid {
-    top: 10px;
-    left: 34px;
   }
 
   .portrait-orb {

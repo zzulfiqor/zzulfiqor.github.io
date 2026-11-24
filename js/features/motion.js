@@ -1,16 +1,39 @@
 import { prefersReducedMotion } from "../ui/toast.js";
 
+const clamp01 = (value) => Math.min(1, Math.max(0, value));
+
+/** Scroll-linked motion: page progress bar, hero exit depth, experience timeline fill. */
 function initScrollProgress() {
   const progressBar = document.getElementById("scroll-progress");
-  if (!progressBar) return;
+  const hero = document.getElementById("home");
+  const heroVisual = hero?.querySelector(".hero-visual");
+  const timeline = document.getElementById("exp-highlights-list");
 
   let ticking = false;
   const updateProgress = () => {
     const scrollable =
       document.documentElement.scrollHeight - window.innerHeight;
-    const ratio =
-      scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
-    progressBar.style.transform = `scaleX(${ratio})`;
+    const ratio = scrollable > 0 ? clamp01(window.scrollY / scrollable) : 0;
+    if (progressBar) progressBar.style.transform = `scaleX(${ratio})`;
+
+    if (hero && heroVisual) {
+      const exit = clamp01(window.scrollY / hero.offsetHeight);
+      heroVisual.style.setProperty("--exit", exit.toFixed(3));
+    }
+
+    if (timeline) {
+      // The line "arrives" at 60% of the viewport height; nodes above it are lit.
+      const line = window.innerHeight * 0.6;
+      const rect = timeline.getBoundingClientRect();
+      timeline.style.setProperty(
+        "--tl",
+        clamp01((line - rect.top) / rect.height).toFixed(3)
+      );
+      timeline.querySelectorAll(".timeline-node").forEach((node) => {
+        const box = node.getBoundingClientRect();
+        node.classList.toggle("is-lit", box.top + box.height / 2 < line);
+      });
+    }
     ticking = false;
   };
 
@@ -23,6 +46,9 @@ function initScrollProgress() {
     },
     { passive: true }
   );
+
+  // Layer-tab filtering re-renders the timeline; re-light nodes without waiting for a scroll.
+  if (timeline) new MutationObserver(updateProgress).observe(timeline, { childList: true });
 
   updateProgress();
 }
@@ -58,7 +84,84 @@ function initSpotlightHover() {
     const rect = card.getBoundingClientRect();
     card.style.setProperty("--mx", `${(event.clientX - rect.left).toFixed(0)}px`);
     card.style.setProperty("--my", `${(event.clientY - rect.top).toFixed(0)}px`);
+    if (card.classList.contains("project-card")) {
+      const nx = (event.clientX - rect.left) / rect.width - 0.5;
+      const ny = (event.clientY - rect.top) / rect.height - 0.5;
+      card.style.setProperty("--tilt-y", `${(nx * 7).toFixed(2)}deg`);
+      card.style.setProperty("--tilt-x", `${(ny * -7).toFixed(2)}deg`);
+    }
   });
+
+  document.querySelectorAll(".project-card").forEach((card) => {
+    card.addEventListener("pointerleave", () => {
+      card.style.setProperty("--tilt-x", "0deg");
+      card.style.setProperty("--tilt-y", "0deg");
+    });
+  });
+}
+
+/** Primary CTAs lean toward the pointer, then spring back on leave. */
+function initMagneticButtons() {
+  document.querySelectorAll("[data-magnetic]").forEach((btn) => {
+    btn.addEventListener("pointermove", (event) => {
+      const rect = btn.getBoundingClientRect();
+      const dx = event.clientX - (rect.left + rect.width / 2);
+      const dy = event.clientY - (rect.top + rect.height / 2);
+      btn.style.setProperty("--mag-x", `${(dx * 0.22).toFixed(1)}px`);
+      btn.style.setProperty("--mag-y", `${(dy * 0.32).toFixed(1)}px`);
+    });
+    btn.addEventListener("pointerleave", () => {
+      btn.style.setProperty("--mag-x", "0px");
+      btn.style.setProperty("--mag-y", "0px");
+    });
+  });
+}
+
+const DECODE_GLYPHS = "01<>/{}[]=+_;:#";
+
+/**
+ * Mono eyebrow labels "decode" from code glyphs the first time they scroll in.
+ * Screen readers get the real text via .sr-only; the animated copy is aria-hidden.
+ */
+function decodeText(el) {
+  const text = el.textContent.trim();
+  if (!text) return;
+  const real = document.createElement("span");
+  real.className = "sr-only";
+  real.textContent = text;
+  const shown = document.createElement("span");
+  shown.setAttribute("aria-hidden", "true");
+  el.replaceChildren(real, shown);
+
+  const duration = 650;
+  const start = performance.now();
+  const frame = (now) => {
+    const progress = Math.min(1, (now - start) / duration);
+    const settled = Math.floor(progress * text.length);
+    let out = text.slice(0, settled);
+    for (let i = settled; i < text.length; i += 1) {
+      out += text[i] === " " ? " " : DECODE_GLYPHS[(Math.random() * DECODE_GLYPHS.length) | 0];
+    }
+    shown.textContent = out;
+    if (progress < 1) requestAnimationFrame(frame);
+    else el.textContent = text;
+  };
+  requestAnimationFrame(frame);
+}
+
+function initDecodeLabels() {
+  if (!("IntersectionObserver" in window)) return;
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        observer.unobserve(entry.target);
+        decodeText(entry.target);
+      });
+    },
+    { threshold: 0.6 }
+  );
+  document.querySelectorAll("main .eyebrow-mono").forEach((el) => observer.observe(el));
 }
 
 function initScrollReveals() {
@@ -119,9 +222,11 @@ export function initMotion() {
 
   initScrollProgress();
   initScrollReveals();
+  initDecodeLabels();
 
   if (window.matchMedia("(pointer: fine)").matches) {
     initPortraitParallax();
     initSpotlightHover();
+    initMagneticButtons();
   }
 }

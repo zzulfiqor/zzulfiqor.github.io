@@ -52,6 +52,29 @@ textarea {
   outline-offset: 2px;
 }
 
+a[href],
+button:not(:disabled),
+summary,
+select,
+label[for],
+[role="button"],
+[role="tab"] {
+  cursor: pointer;
+}
+
+:disabled {
+  cursor: not-allowed;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 [hidden] {
   display: none !important;
 }

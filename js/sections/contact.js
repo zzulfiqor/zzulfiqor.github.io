@@ -90,7 +90,7 @@ export function initContactSection() {
       await navigator.clipboard.writeText(draft);
       showToast("Message text copied to clipboard.");
     } catch {
-      showToast(`Copy unavailable — send directly to ${PROFILE.email}.`);
+      showToast(`Copy unavailable, send directly to ${PROFILE.email}.`);
     }
   });
 
