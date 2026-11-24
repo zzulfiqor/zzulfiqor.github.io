@@ -10,6 +10,7 @@ export const PROFILE = {
   email: "zzulfiqor@gmail.com",
   githubDisplay: "github.com/zzulfiqor",
   githubUrl: "https://github.com/zzulfiqor",
+  linkedinDisplay: "linkedin.com/in/zuhairdzulfiqor",
   summary:
     "Flutter Developer with experience building mobile and web applications using Flutter, Dart, and supporting backend/database technologies. Experienced in developing Flutter Web reporting applications, creating reusable Flutter Web frameworks, building Spring Boot backend services, and maintaining stored procedures/functions for database-driven reporting workflows. Strong foundation in problem solving, mobile development, teamwork, and human-computer interaction.",
 };

@@ -74,7 +74,9 @@ function renderCvSheet() {
       <p class="cv-sheet-contact">
         ${escapeHtml(PROFILE.location)} | ${escapeHtml(
     PROFILE.phoneDisplay
-  )} | ${escapeHtml(PROFILE.email)} | ${escapeHtml(PROFILE.githubDisplay)}
+  )} | ${escapeHtml(PROFILE.email)} | ${escapeHtml(PROFILE.githubDisplay)} | ${escapeHtml(
+    PROFILE.linkedinDisplay
+  )}
       </p>
     </div>
 
