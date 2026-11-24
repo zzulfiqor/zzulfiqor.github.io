@@ -131,6 +131,7 @@
                   <li><a class="nav-link" href="#skills">Skills</a></li>
                   <li><a class="nav-link" href="#projects">Projects</a></li>
                   <li><a class="nav-link" href="#experience">Experience</a></li>
+                  <li><a class="nav-link" href="#writing">Writing</a></li>
                   <li><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
                 <span
@@ -229,8 +230,15 @@
                 </a>
               </li>
               <li>
-                <a class="mobile-nav-link" href="#contact">
+                <a class="mobile-nav-link" href="#writing">
                   <span class="mobile-nav-index" aria-hidden="true">06</span>
+                  <span class="mobile-nav-label">Writing</span>
+                  <span class="mobile-nav-dot" aria-hidden="true"></span>
+                </a>
+              </li>
+              <li>
+                <a class="mobile-nav-link" href="#contact">
+                  <span class="mobile-nav-index" aria-hidden="true">07</span>
                   <span class="mobile-nav-label">Contact</span>
                   <span class="mobile-nav-dot" aria-hidden="true"></span>
                 </a>
@@ -260,7 +268,7 @@
                   <line x1="16" y1="13" x2="8" y2="13"></line>
                   <line x1="16" y1="17" x2="8" y2="17"></line>
                 </svg>
-                <span>View Printable CV</span>
+                <span>View CV</span>
               </button>
             </div>
           </nav>
@@ -552,7 +560,7 @@
                   class="btn btn-primary btn-full"
                   id="about-cv-btn"
                 >
-                  <span>View Full Resume</span>
+                  <span>View CV</span>
                   <svg
                     width="16"
                     height="16"
@@ -574,9 +582,11 @@
 
           <!-- Bento Skills Row -->
           <div class="skills-band" id="skills" aria-labelledby="skills-heading">
-            <div class="skills-band-header">
-              <h2 class="section-subhead" id="skills-heading">Technical Skills Matrix</h2>
-              <span class="eyebrow-mono">6 CORE DOMAINS</span>
+            <div class="section-header-row">
+              <div>
+                <p class="eyebrow-mono">6 CORE DOMAINS</p>
+                <h2 class="section-title" id="skills-heading">Technical Skills</h2>
+              </div>
             </div>
             <div class="bento-skills-grid" id="skills-grid"></div>
           </div>
@@ -594,10 +604,10 @@
             <div class="container">
               <div class="section-header-row">
                 <div>
-                  <p class="eyebrow-mono">MOBILE &amp; ANDROID ARCHIVE</p>
+                  <p class="eyebrow-mono">CAREER TIMELINE · 2020 TO NOW</p>
                   <h2 class="section-title" id="projects-heading">Selected Projects</h2>
                   <p class="section-subtitle">
-                    From the first Flutter apps in 2021 to Flutter Web frameworks today.
+                    From an Android internship in 2020 to Flutter Web frameworks today.
                   </p>
                 </div>
                 <a
@@ -644,15 +654,24 @@
         id="experience"
         aria-labelledby="experience-heading"
       >
+        <div class="container">
+          <div class="section-header-row">
+            <div>
+              <p class="eyebrow-mono">CAREER &amp; EDUCATION</p>
+              <h2 class="section-title" id="experience-heading">Experience</h2>
+            </div>
+          </div>
+        </div>
         <div class="container editorial-split">
           <div class="editorial-sticky-rail">
             <div class="surface-card experience-summary-card spotlight-card">
               <div class="exp-header">
                 <div>
                   <p class="eyebrow-mono">PROFESSIONAL EXPERIENCE</p>
-                  <h2 class="panel-title" id="experience-heading">
-                    Software Developer · X/Link Software
-                  </h2>
+                  <h3 class="panel-title" id="experience-role-heading">
+                    <span class="nowrap">Software Developer ·</span>
+                    <span class="nowrap">X/Link Software</span>
+                  </h3>
                 </div>
                 <span class="period-pill">May 2023 – Present</span>
               </div>
@@ -676,11 +695,11 @@
                 <p class="eyebrow-mono">EDUCATION</p>
                 <span class="gpa-pill">GPA 3.69 / 4.00</span>
               </div>
-              <h2 class="panel-title" id="education-heading">
+              <h3 class="panel-title" id="education-heading">
                 Bachelor of Informatics
-              </h2>
+              </h3>
               <p class="edu-institution">
-                Universitas Amikom Yogyakarta · Sep 2017 – Dec 2022
+                Universitas Amikom Yogyakarta · <span class="nowrap">Sep 2017 – Dec 2022</span>
               </p>
               <p class="edu-location">Yogyakarta, Indonesia</p>
 
@@ -697,7 +716,7 @@
 
             <article class="surface-card cert-card spotlight-card" aria-labelledby="cert-heading">
               <p class="eyebrow-mono">CREDENTIALS</p>
-              <h2 class="panel-title" id="cert-heading">Certifications &amp; Assessments</h2>
+              <h3 class="panel-title" id="cert-heading">Certifications &amp; Assessments</h3>
               <ul class="cert-list" id="cert-list"></ul>
             </article>
           </div>
@@ -1043,6 +1062,7 @@
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#experience">Experience</a>
+          <a href="#writing">Writing</a>
           <a href="#contact">Contact</a>
         </nav>
 

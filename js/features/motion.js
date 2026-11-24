@@ -216,9 +216,10 @@ function initScrollReveals() {
 
 /**
  * Projects timeline: the section pins while normal vertical scrolling slides the
- * track sideways. Below MIN_PIN_HEIGHT the frame cannot fit, so it stays a swipeable row.
+ * track sideways. If the track is taller than the frame it first goes compact, then
+ * scales down a little; below MIN_TRACK_SCALE it stays a plain swipeable row.
  */
-const MIN_PIN_HEIGHT = 620;
+const MIN_TRACK_SCALE = 0.8;
 
 function initProjectTimeline() {
   const section = document.getElementById("projects");
@@ -228,7 +229,9 @@ function initProjectTimeline() {
   if (!section || !pin || !viewport || !track) return;
 
   let distance = 0;
+  let scale = 1;
   let ticking = false;
+  let measuredSize = "";
 
   const update = () => {
     ticking = false;
@@ -238,8 +241,9 @@ function initProjectTimeline() {
     section.classList.toggle("is-travelling", travelled > 24);
 
     // Rail fill leads at 62% of the window, sweeping to the far edge as travel completes.
+    // reach is in the track's own (unscaled) coordinates, like the rail and the dots.
     const progress = distance > 0 ? travelled / distance : 1;
-    const reach = travelled + viewport.clientWidth * (0.62 + 0.38 * progress);
+    const reach = (travelled + viewport.clientWidth * (0.62 + 0.38 * progress)) / scale;
     track.style.setProperty("--fill", `${reach.toFixed(0)}px`);
     track.querySelectorAll(".tl-dot").forEach((dot) => {
       const x = dot.parentElement.offsetLeft + dot.offsetLeft;
@@ -248,15 +252,28 @@ function initProjectTimeline() {
   };
 
   const measure = () => {
-    const pinned = window.innerHeight >= MIN_PIN_HEIGHT;
+    // Lay out as pinned first, then step down until the track fits the frame's height.
+    section.classList.add("is-pinned");
+    section.classList.remove("tl-compact");
+    track.style.removeProperty("--tl-scale");
+    let fit = viewport.clientHeight / track.offsetHeight;
+    if (fit < 1) {
+      section.classList.add("tl-compact");
+      fit = viewport.clientHeight / track.offsetHeight;
+    }
+    const pinned = fit >= MIN_TRACK_SCALE;
+    scale = pinned ? Math.min(1, fit) : 1;
     section.classList.toggle("is-pinned", pinned);
-    distance = pinned ? Math.max(0, track.scrollWidth - viewport.clientWidth) : 0;
+    if (scale < 1) track.style.setProperty("--tl-scale", scale.toFixed(3));
+    distance = pinned ? Math.max(0, track.offsetWidth * scale - viewport.clientWidth) : 0;
     pin.style.height = pinned ? `${window.innerHeight + distance}px` : "";
     if (!pinned) {
+      section.classList.remove("tl-compact");
       track.style.removeProperty("--tx");
       track.style.removeProperty("--fill");
       track.querySelectorAll(".tl-dot.is-lit").forEach((dot) => dot.classList.remove("is-lit"));
     }
+    measuredSize = `${track.offsetWidth}x${track.offsetHeight}`;
     update();
   };
 
@@ -268,7 +285,10 @@ function initProjectTimeline() {
 
   window.addEventListener("scroll", requestUpdate, { passive: true });
   window.addEventListener("resize", measure);
-  new ResizeObserver(measure).observe(track);
+  // measure() itself resizes the track (compact mode); only react to outside changes like fonts.
+  new ResizeObserver(() => {
+    if (`${track.offsetWidth}x${track.offsetHeight}` !== measuredSize) measure();
+  }).observe(track);
 
   // The viewport clips with overflow:hidden; focus would otherwise scroll it sideways.
   viewport.addEventListener("scroll", () => {
@@ -282,7 +302,7 @@ function initProjectTimeline() {
     if (!item) return;
     const box = item.getBoundingClientRect();
     if (box.left >= 0 && box.right <= viewport.clientWidth) return;
-    const progress = clamp01((item.offsetLeft - viewport.clientWidth * 0.15) / distance);
+    const progress = clamp01((item.offsetLeft * scale - viewport.clientWidth * 0.15) / distance);
     // Next frame: the browser's own focus scrolling runs after focusin and would undo ours.
     requestAnimationFrame(() => {
       viewport.scrollLeft = 0;

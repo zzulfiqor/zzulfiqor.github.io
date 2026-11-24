@@ -66,6 +66,10 @@ label[for],
   cursor: not-allowed;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -124,7 +128,7 @@ main section[id],
 .section-subtitle {
   margin: 0.45rem 0 0;
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 0.9375rem;
 }
 
 .section-header-row {
@@ -134,13 +138,6 @@ main section[id],
   justify-content: space-between;
   gap: 1rem;
   margin-bottom: 1.5rem;
-}
-
-.section-subhead {
-  margin: 0;
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--text-primary);
 }
 
 .eyebrow-mono {
@@ -154,7 +151,7 @@ main section[id],
 
 .panel-title {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.3;
   text-wrap: balance;

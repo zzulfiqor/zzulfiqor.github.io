@@ -11,11 +11,12 @@
   content: "";
   position: absolute;
   inset: 0 0 auto 0;
-  height: 36px;
+  height: 52px;
   background: linear-gradient(
     to bottom,
     var(--bg-canvas) 0%,
-    rgba(9, 12, 21, 0.72) 55%,
+    var(--bg-canvas) 40%,
+    rgba(9, 12, 21, 0.75) 70%,
     transparent 100%
   );
   opacity: 0;
@@ -91,7 +92,7 @@
   align-items: center;
   gap: 0.6rem;
   font-weight: 700;
-  font-size: 1.02rem;
+  font-size: 1rem;
   letter-spacing: -0.02em;
   white-space: nowrap;
 }
@@ -467,8 +468,8 @@
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  min-height: 38px;
-  padding: 0.4rem 0.8rem;
+  min-height: 44px;
+  padding: 0.4rem 0.9rem;
   border-radius: var(--radius-pill);
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
@@ -595,7 +596,7 @@
 }
 
 .badge-title {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.25;
@@ -670,7 +671,7 @@
 
 .footer-copy {
   margin: 0.35rem 0 0;
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   color: var(--text-secondary);
 }
 
@@ -678,14 +679,14 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem 0.75rem;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: var(--text-secondary);
 }
 
 .footer-nav a {
   display: inline-flex;
   align-items: center;
-  min-height: 36px;
+  min-height: 44px;
   padding: 0.25rem 0.45rem;
   border-radius: var(--radius-sm);
 }
@@ -829,6 +830,6 @@
 @media (min-width: 1080px) {
   .nav-link {
     padding: 0.45rem 0.85rem;
-    font-size: 0.9125rem;
+    font-size: 0.9375rem;
   }
 }

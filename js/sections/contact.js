@@ -20,6 +20,13 @@ function showValidationErrors(errors) {
   ["name", "email", "message"].forEach((field) => {
     const errorEl = document.getElementById(`error-${field}`);
     if (errorEl) errorEl.textContent = errors[field] || "";
+    // Mark the field itself so the error is visible on the input and announced by screen readers.
+    const input = document.querySelector(`#contact-form [name="${field}"]`);
+    if (input) {
+      if (errors[field]) input.setAttribute("aria-invalid", "true");
+      else input.removeAttribute("aria-invalid");
+      if (errorEl) input.setAttribute("aria-describedby", errorEl.id);
+    }
   });
 }
 

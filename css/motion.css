@@ -282,6 +282,29 @@
     box-shadow var(--transition-fast), translate 320ms var(--ease-calm);
 }
 
+/* Mobile drawer: dim what is behind it so the menu reads as a layer */
+.site-header::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: rgba(5, 7, 14, 0.62);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-mid);
+}
+
+.site-header:has(.mobile-drawer[data-state="open"])::after {
+  opacity: 1;
+}
+
+/* #9 on narrow screens the hero buttons stack at full width instead of two ragged widths */
+@media (max-width: 480px) {
+  .hero-cta-row .btn {
+    flex: 1 1 100%;
+  }
+}
+
 /* Cards lift gently on hover */
 .bento-card,
 .skill-group,

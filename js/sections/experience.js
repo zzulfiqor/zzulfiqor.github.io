@@ -88,7 +88,7 @@ function renderCvSheet() {
       return `<li class="cert-row">
           <span class="cert-icon" aria-hidden="true">${renderIcon("award", 18)}</span>
           <div>
-            <h3 class="cert-title">${title}</h3>
+            <h4 class="cert-title">${title}</h4>
             <p class="cert-issuer">${escapeHtml(c.issuer)} · ${escapeHtml(c.year)}</p>
           </div>
         </li>`;
