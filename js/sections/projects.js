@@ -28,13 +28,38 @@ function openProjectModal(projectId, triggerEl) {
       .map((tag) => `<span class="tech-pill">${escapeHtml(tag)}</span>`)
       .join("");
   }
+  const linkEl = document.getElementById("modal-project-link");
+  const linkLabelEl = document.getElementById("modal-project-link-label");
+  if (linkEl && linkLabelEl) {
+    linkEl.href = project.link?.href ?? PROFILE.githubUrl;
+    linkLabelEl.textContent = project.link?.label ?? "Visit GitHub Profile";
+  }
 
   openModal("project-modal", triggerEl);
 }
 
-const yearOf = (period) => period.match(/\d{4}/)?.[0] ?? "";
+function renderProjectLink(project) {
+  // A project's own destination (store page, repo) wins over the generic GitHub profile.
+  const link = project.link ?? {
+    href: PROFILE.githubUrl,
+    label: "Open Ahmad's GitHub profile",
+    icon: "github",
+  };
+  return `
+    <a
+      class="icon-link-btn"
+      href="${escapeHtml(link.href)}"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="${escapeHtml(link.label)}"
+      title="${escapeHtml(link.label)}"
+    >
+      ${renderIcon(link.icon, 16)}
+    </a>`;
+}
 
 function renderProjectCard(project, number) {
+  const meta = project.client ? `${project.role} · ${project.client}` : project.role;
   return `
     <article class="project-card spotlight-card">
       <div class="project-body">
@@ -42,7 +67,7 @@ function renderProjectCard(project, number) {
           <span class="project-index">${number}</span>
           <span class="project-category-pill">${escapeHtml(project.category)}</span>
         </div>
-        <p class="project-meta">${escapeHtml(project.role)}</p>
+        <p class="project-meta">${escapeHtml(meta)}</p>
         <h3 class="project-title">${escapeHtml(project.title)}</h3>
         <p class="project-desc">${escapeHtml(project.shortDescription)}</p>
         <div class="pill-wrap">
@@ -59,26 +84,40 @@ function renderProjectCard(project, number) {
             <span>View Details</span>
             ${renderIcon("arrowRight", 15)}
           </button>
-          <a
-            class="icon-link-btn"
-            href="${escapeHtml(PROFILE.githubUrl)}"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Open Ahmad's GitHub profile"
-          >
-            ${renderIcon("github", 16)}
-          </a>
+          ${renderProjectLink(project)}
         </div>
       </div>
     </article>
   `;
 }
 
-function renderPhase(number, year, label) {
+function renderRoleCard() {
+  return `
+    <article class="project-card tl-now-card">
+      <div class="project-body">
+        <div class="project-card-top">
+          <span class="tl-now-badge"><span class="status-dot" aria-hidden="true"></span>Current role</span>
+        </div>
+        <p class="project-meta">${escapeHtml(EXPERIENCE.company)}</p>
+        <h3 class="project-title">${escapeHtml(EXPERIENCE.role)}</h3>
+        <p class="project-desc">
+          Redeveloping reporting software with Flutter Web, a reusable internal Flutter Web framework, and Spring Boot services.
+        </p>
+        <div class="project-footer">
+          <a class="project-detail-btn" href="#experience">
+            <span>See Experience</span>
+            ${renderIcon("arrowRight", 15)}
+          </a>
+        </div>
+      </div>
+    </article>`;
+}
+
+function renderPhase(number, year) {
   return `
     <li class="tl-phase">
       <span class="tl-phase-year" aria-hidden="true">${escapeHtml(year)}</span>
-      <span class="tl-phase-label">Phase ${String(number).padStart(2, "0")} · ${escapeHtml(label)}</span>
+      <span class="tl-phase-label">Phase ${String(number).padStart(2, "0")} · ${escapeHtml(year)}</span>
       <span class="tl-stem" aria-hidden="true"></span>
       <span class="tl-dot tl-dot--phase" aria-hidden="true"></span>
       <span class="tl-date" aria-hidden="true"></span>
@@ -86,60 +125,48 @@ function renderPhase(number, year, label) {
   `;
 }
 
-/** Projects as a left-to-right chronological timeline, grouped into yearly phases, ending at the current role. */
+/** Projects and the current role as a left-to-right timeline, grouped into yearly phases. */
 function renderProjects() {
   const track = document.getElementById("projects-grid");
   if (!track) return;
 
-  // PROJECTS is stored newest-first; the timeline reads oldest to newest.
-  const chronological = [...PROJECTS].reverse();
+  const entries = [
+    ...PROJECTS.map((project) => ({ start: project.start, project })),
+    { start: EXPERIENCE.start, role: true },
+  ].sort((a, b) => a.start.localeCompare(b.start));
+
   let currentYear = "";
   let phase = 0;
-  const items = chronological.map((project, index) => {
-    const year = yearOf(project.period);
+  let number = 0;
+  const items = entries.map((entry, index) => {
+    const year = entry.start.slice(0, 4);
     let html = "";
     if (year !== currentYear) {
       currentYear = year;
       phase += 1;
-      html += renderPhase(phase, year, year);
+      html += renderPhase(phase, year);
     }
     const tall = index % 2 === 1 ? " tl-entry--tall" : "";
+    if (entry.role) {
+      html += `
+        <li class="tl-entry tl-entry--now${tall}">
+          ${renderRoleCard()}
+          <span class="tl-stem" aria-hidden="true"></span>
+          <span class="tl-dot tl-dot--now" aria-hidden="true"></span>
+          <span class="tl-date">${escapeHtml(EXPERIENCE.period)}</span>
+        </li>`;
+      return html;
+    }
+    number += 1;
     html += `
       <li class="tl-entry${tall}">
-        ${renderProjectCard(project, String(index + 1).padStart(2, "0"))}
+        ${renderProjectCard(entry.project, String(number).padStart(2, "0"))}
         <span class="tl-stem" aria-hidden="true"></span>
         <span class="tl-dot" aria-hidden="true"></span>
-        <span class="tl-date">${escapeHtml(project.period)}</span>
+        <span class="tl-date">${escapeHtml(entry.project.period)}</span>
       </li>`;
     return html;
   });
-
-  const nowYear = yearOf(EXPERIENCE.period);
-  items.push(renderPhase(phase + 1, nowYear, `${nowYear} to now`));
-  items.push(`
-    <li class="tl-entry tl-entry--now">
-      <article class="project-card tl-now-card">
-        <div class="project-body">
-          <div class="project-card-top">
-            <span class="tl-now-badge"><span class="status-dot" aria-hidden="true"></span>Now</span>
-          </div>
-          <p class="project-meta">${escapeHtml(EXPERIENCE.company)}</p>
-          <h3 class="project-title">${escapeHtml(EXPERIENCE.role)}</h3>
-          <p class="project-desc">
-            Building reusable Flutter Web frameworks, Spring Boot services, and SQL reporting workflows.
-          </p>
-          <div class="project-footer">
-            <a class="project-detail-btn" href="#experience">
-              <span>See Experience</span>
-              ${renderIcon("arrowRight", 15)}
-            </a>
-          </div>
-        </div>
-      </article>
-      <span class="tl-stem" aria-hidden="true"></span>
-      <span class="tl-dot tl-dot--now" aria-hidden="true"></span>
-      <span class="tl-date">${escapeHtml(EXPERIENCE.period)}</span>
-    </li>`);
 
   track.innerHTML = items.join("");
 }

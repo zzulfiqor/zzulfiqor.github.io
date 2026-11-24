@@ -189,6 +189,7 @@ function initScrollReveals() {
   register(".timeline-item", 45);
   register(".edu-card", 80);
   register(".cert-card", 140);
+  register(".writing-item", 60);
   register(".contact-banner", 0);
 
   const revealObserver = new IntersectionObserver(

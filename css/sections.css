@@ -805,6 +805,99 @@
   color: var(--text-secondary);
 }
 
+.cert-list {
+  display: grid;
+  gap: 0.9rem;
+  margin: 0.9rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cert-list .cert-row {
+  margin-top: 0;
+}
+
+.cert-list .cert-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+}
+
+.cert-list .cert-title {
+  font-size: 0.95rem;
+}
+
+.cert-title a {
+  text-decoration: underline;
+  text-decoration-color: var(--border-accent);
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
+}
+
+.cert-title a:hover {
+  color: var(--text-accent-bright);
+  text-decoration-color: currentColor;
+}
+
+.edu-earlier {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.edu-earlier li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.15rem 1rem;
+  font-size: 0.9rem;
+}
+
+.edu-earlier span {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+/* Writing: an editorial numbered list, not another card grid */
+.writing-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.writing-item {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.writing-index {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-accent-bright);
+  padding-top: 0.3rem;
+}
+
+.writing-title {
+  margin: 0;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.writing-summary {
+  margin: 0.4rem 0 0;
+  max-width: 68ch;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
 /* Contact Section */
 .contact-section {
   padding-bottom: var(--section-gap);

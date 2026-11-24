@@ -71,6 +71,10 @@
             "Spring Boot",
             "SQL Server",
             "MySQL",
+            "Oracle Database",
+            "PL/SQL",
+            "BLoC",
+            "Firebase",
             "Docker",
             "Nginx"
           ],
@@ -676,7 +680,7 @@
                 Bachelor of Informatics
               </h2>
               <p class="edu-institution">
-                Universitas Amikom Yogyakarta · 2017 – 2022
+                Universitas Amikom Yogyakarta · Sep 2017 – Dec 2022
               </p>
               <p class="edu-location">Yogyakarta, Indonesia</p>
 
@@ -684,33 +688,17 @@
                 <h3 class="sub-label">Relevant Coursework</h3>
                 <div class="pill-wrap" id="coursework-list"></div>
               </div>
+
+              <div class="coursework-block">
+                <h3 class="sub-label">Earlier Education</h3>
+                <ul class="edu-earlier" id="edu-earlier-list"></ul>
+              </div>
             </article>
 
             <article class="surface-card cert-card spotlight-card" aria-labelledby="cert-heading">
-              <p class="eyebrow-mono">CERTIFICATION</p>
-              <div class="cert-row">
-                <span class="cert-icon" aria-hidden="true">
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <circle cx="12" cy="8" r="7"></circle>
-                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                  </svg>
-                </span>
-                <div>
-                  <h2 class="cert-title" id="cert-heading">
-                    Membuat Aplikasi Flutter untuk Pemula
-                  </h2>
-                  <p class="cert-issuer">Dicoding · 2022</p>
-                </div>
-              </div>
+              <p class="eyebrow-mono">CREDENTIALS</p>
+              <h2 class="panel-title" id="cert-heading">Certifications &amp; Assessments</h2>
+              <ul class="cert-list" id="cert-list"></ul>
             </article>
           </div>
 
@@ -721,6 +709,45 @@
       </section>
 
       <!-- Contact CTA Banner & Composer -->
+      <!-- Writing: summaries of LinkedIn posts -->
+      <section class="section-band" id="writing" aria-labelledby="writing-heading">
+        <div class="container">
+          <div class="section-header-row">
+            <div>
+              <p class="eyebrow-mono">NOTES FROM LINKEDIN</p>
+              <h2 class="section-title" id="writing-heading">Writing on Flutter Web</h2>
+              <p class="section-subtitle">
+                Field notes from shipping Flutter Web and Spring Boot in production. Posts are in Bahasa Indonesia.
+              </p>
+            </div>
+            <a
+              class="text-link"
+              href="https://www.linkedin.com/in/zuhairdzulfiqor/recent-activity/all/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Read the posts on LinkedIn</span>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <ol class="writing-list" id="writing-list"></ol>
+        </div>
+      </section>
+
       <section class="section-band contact-section" id="contact" aria-labelledby="contact-heading">
         <div class="container">
           <div class="contact-banner surface-card">
@@ -1086,11 +1113,12 @@
         <div class="modal-footer">
           <a
             class="btn btn-primary"
+            id="modal-project-link"
             href="https://github.com/zzulfiqor"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span>Visit GitHub Profile</span>
+            <span id="modal-project-link-label">Visit GitHub Profile</span>
             <svg
               width="16"
               height="16"

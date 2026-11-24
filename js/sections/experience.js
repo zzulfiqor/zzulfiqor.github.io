@@ -5,9 +5,11 @@ import {
   PROFILE,
   PROJECTS,
   SKILL_GROUPS,
+  WRITING,
 } from "../data.js";
 import { escapeHtml, filterExperienceHighlights } from "../utils.js";
 import { openModal } from "../ui/modal.js";
+import { renderIcon } from "../ui/icons.js";
 
 const LAYER_LABELS = {
   frontend: "Flutter Web & UI/UX",
@@ -62,6 +64,48 @@ function renderCvSheet() {
     courseworkEl.innerHTML = EDUCATION.coursework
       .map((course) => `<span class="tech-pill">${escapeHtml(course)}</span>`)
       .join("");
+  }
+
+  const earlierEl = document.getElementById("edu-earlier-list");
+  if (earlierEl) {
+    earlierEl.innerHTML = EDUCATION.earlier
+      .map(
+        (e) => `<li><strong>${escapeHtml(e.school)}</strong><span>${escapeHtml(
+          e.track
+        )} · ${escapeHtml(e.period)}</span></li>`
+      )
+      .join("");
+  }
+
+  const certListEl = document.getElementById("cert-list");
+  if (certListEl) {
+    certListEl.innerHTML = CERTIFICATIONS.map((c) => {
+      const title = c.url
+        ? `<a href="${escapeHtml(c.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(
+            c.title
+          )}</a>`
+        : escapeHtml(c.title);
+      return `<li class="cert-row">
+          <span class="cert-icon" aria-hidden="true">${renderIcon("award", 18)}</span>
+          <div>
+            <h3 class="cert-title">${title}</h3>
+            <p class="cert-issuer">${escapeHtml(c.issuer)} · ${escapeHtml(c.year)}</p>
+          </div>
+        </li>`;
+    }).join("");
+  }
+
+  const writingEl = document.getElementById("writing-list");
+  if (writingEl) {
+    writingEl.innerHTML = WRITING.map(
+      (post, index) => `<li class="writing-item">
+          <span class="writing-index" aria-hidden="true">${String(index + 1).padStart(2, "0")}</span>
+          <div>
+            <h3 class="writing-title">${escapeHtml(post.title)}</h3>
+            <p class="writing-summary">${escapeHtml(post.summary)}</p>
+          </div>
+        </li>`
+    ).join("");
   }
 
   const cvSheet = document.getElementById("cv-sheet-content");
@@ -124,14 +168,22 @@ function renderCvSheet() {
       GPA: ${escapeHtml(EDUCATION.gpa)}<br />
       Relevant coursework: ${EDUCATION.coursework.map(escapeHtml).join(", ")}.
     </p>
+    <ul>
+      ${EDUCATION.earlier
+        .map(
+          (e) =>
+            `<li>${escapeHtml(e.school)}, ${escapeHtml(e.track)} (${escapeHtml(e.period)})</li>`
+        )
+        .join("")}
+    </ul>
 
-    <h3>Certification</h3>
+    <h3>Certifications &amp; Assessments</h3>
     <ul>
       ${CERTIFICATIONS.map(
         (c) =>
-          `<li>${escapeHtml(c.issuer)} - ${escapeHtml(c.title)}, ${escapeHtml(
+          `<li>${escapeHtml(c.issuer)}: ${escapeHtml(c.title)} (${escapeHtml(
             c.year
-          )}</li>`
+          )})</li>`
       ).join("")}
     </ul>
   `;
