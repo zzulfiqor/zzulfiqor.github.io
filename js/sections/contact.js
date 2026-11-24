@@ -101,6 +101,11 @@ export function initContactSection() {
       try {
         await navigator.clipboard.writeText(value);
         showToast(`Copied ${value}`);
+        btn.classList.remove("is-copied");
+        void btn.offsetWidth; // restart the pop animation on repeat clicks
+        btn.classList.add("is-copied");
+        clearTimeout(btn.copiedTimer);
+        btn.copiedTimer = setTimeout(() => btn.classList.remove("is-copied"), 1600);
       } catch {
         showToast(`Copy unavailable: ${value}`);
       }

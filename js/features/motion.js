@@ -77,6 +77,7 @@ function initScrollReveals() {
     });
   };
 
+  register(".section-header-row, .section-subhead", 0);
   register(".highlights-bar", 0);
   register(".bento-card", 80);
   register(".skill-group", 55);
@@ -91,8 +92,16 @@ function initScrollReveals() {
     (entries, observer) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
+        const el = entry.target;
+        el.classList.add("is-visible");
+        observer.unobserve(el);
+        // Drop the reveal transition once done so hover transitions aren't slowed/delayed by it.
+        el.addEventListener("transitionend", function settle(event) {
+          if (event.target !== el || event.propertyName !== "opacity") return;
+          el.classList.replace("reveal", "revealed");
+          el.classList.remove("is-visible");
+          el.removeEventListener("transitionend", settle);
+        });
       });
     },
     { threshold: 0.1, rootMargin: "0px 0px -32px 0px" }
