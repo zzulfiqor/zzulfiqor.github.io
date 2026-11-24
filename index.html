@@ -580,41 +580,57 @@
       </section>
 
       <!-- Selected Projects: Editorial 2-Column Archive -->
-      <section class="section-band" id="projects" aria-labelledby="projects-heading">
-        <div class="container">
-          <div class="section-header-row">
-            <div>
-              <p class="eyebrow-mono">MOBILE &amp; ANDROID ARCHIVE</p>
-              <h2 class="section-title" id="projects-heading">Selected Projects</h2>
-              <p class="section-subtitle">
-                Mobile and Android applications built with Flutter and Dart.
-              </p>
-            </div>
-            <a
-              class="text-link"
-              href="https://github.com/zzulfiqor"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>Explore GitHub</span>
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-          </div>
+      <section
+        class="section-band projects-timeline"
+        id="projects"
+        aria-labelledby="projects-heading"
+      >
+        <div class="tl-pin" id="projects-pin">
+          <div class="tl-frame">
+            <div class="container">
+              <div class="section-header-row">
+                <div>
+                  <p class="eyebrow-mono">MOBILE &amp; ANDROID ARCHIVE</p>
+                  <h2 class="section-title" id="projects-heading">Selected Projects</h2>
+                  <p class="section-subtitle">
+                    From the first Flutter apps in 2021 to Flutter Web frameworks today.
+                  </p>
+                </div>
+                <a
+                  class="text-link"
+                  href="https://github.com/zzulfiqor"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>Explore GitHub</span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
 
-          <div class="projects-grid" id="projects-grid"></div>
+            </div>
+
+            <div class="tl-viewport" id="projects-viewport">
+              <ol
+                class="tl-track"
+                id="projects-grid"
+                aria-label="Projects in chronological order"
+              ></ol>
+            </div>
+            <p class="tl-hint" aria-hidden="true">Scroll to travel the timeline</p>
+          </div>
         </div>
       </section>
 

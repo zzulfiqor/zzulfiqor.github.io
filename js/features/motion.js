@@ -184,7 +184,7 @@ function initScrollReveals() {
   register(".highlights-bar", 0);
   register(".bento-card", 80);
   register(".skill-group", 55);
-  register(".project-card", 70);
+  register(".project-card", 0);
   register(".experience-summary-card", 0);
   register(".timeline-item", 45);
   register(".edu-card", 80);
@@ -214,6 +214,86 @@ function initScrollReveals() {
 }
 
 /**
+ * Projects timeline: the section pins while normal vertical scrolling slides the
+ * track sideways. Below MIN_PIN_HEIGHT the frame cannot fit, so it stays a swipeable row.
+ */
+const MIN_PIN_HEIGHT = 620;
+
+function initProjectTimeline() {
+  const section = document.getElementById("projects");
+  const pin = document.getElementById("projects-pin");
+  const viewport = document.getElementById("projects-viewport");
+  const track = document.getElementById("projects-grid");
+  if (!section || !pin || !viewport || !track) return;
+
+  let distance = 0;
+  let ticking = false;
+
+  const update = () => {
+    ticking = false;
+    if (!section.classList.contains("is-pinned")) return;
+    const travelled = distance > 0 ? clamp01(-pin.getBoundingClientRect().top / distance) * distance : 0;
+    track.style.setProperty("--tx", `${(-travelled).toFixed(1)}px`);
+    section.classList.toggle("is-travelling", travelled > 24);
+
+    // Rail fill leads at 62% of the window, sweeping to the far edge as travel completes.
+    const progress = distance > 0 ? travelled / distance : 1;
+    const reach = travelled + viewport.clientWidth * (0.62 + 0.38 * progress);
+    track.style.setProperty("--fill", `${reach.toFixed(0)}px`);
+    track.querySelectorAll(".tl-dot").forEach((dot) => {
+      const x = dot.parentElement.offsetLeft + dot.offsetLeft;
+      dot.classList.toggle("is-lit", x < reach);
+    });
+  };
+
+  const measure = () => {
+    const pinned = window.innerHeight >= MIN_PIN_HEIGHT;
+    section.classList.toggle("is-pinned", pinned);
+    distance = pinned ? Math.max(0, track.scrollWidth - viewport.clientWidth) : 0;
+    pin.style.height = pinned ? `${window.innerHeight + distance}px` : "";
+    if (!pinned) {
+      track.style.removeProperty("--tx");
+      track.style.removeProperty("--fill");
+      track.querySelectorAll(".tl-dot.is-lit").forEach((dot) => dot.classList.remove("is-lit"));
+    }
+    update();
+  };
+
+  const requestUpdate = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(update);
+  };
+
+  window.addEventListener("scroll", requestUpdate, { passive: true });
+  window.addEventListener("resize", measure);
+  new ResizeObserver(measure).observe(track);
+
+  // The viewport clips with overflow:hidden; focus would otherwise scroll it sideways.
+  viewport.addEventListener("scroll", () => {
+    if (section.classList.contains("is-pinned")) viewport.scrollLeft = 0;
+  });
+
+  // Keyboard users: bring a focused card into view by scrolling the page to its spot.
+  track.addEventListener("focusin", (event) => {
+    if (!section.classList.contains("is-pinned") || distance === 0) return;
+    const item = event.target.closest("li");
+    if (!item) return;
+    const box = item.getBoundingClientRect();
+    if (box.left >= 0 && box.right <= viewport.clientWidth) return;
+    const progress = clamp01((item.offsetLeft - viewport.clientWidth * 0.15) / distance);
+    // Next frame: the browser's own focus scrolling runs after focusin and would undo ours.
+    requestAnimationFrame(() => {
+      viewport.scrollLeft = 0;
+      const pinTop = pin.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: pinTop + progress * distance, behavior: "instant" });
+    });
+  });
+
+  measure();
+}
+
+/**
  * Initializes scroll progress, pointer effects, and IntersectionObserver reveals
  * while respecting reduced-motion preferences.
  */
@@ -221,6 +301,7 @@ export function initMotion() {
   if (prefersReducedMotion()) return;
 
   initScrollProgress();
+  initProjectTimeline();
   initScrollReveals();
   initDecodeLabels();
 

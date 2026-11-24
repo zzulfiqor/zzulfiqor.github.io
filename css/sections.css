@@ -233,10 +233,221 @@
 }
 
 /* Selected Projects: Editorial 2-Column Archive */
-.projects-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 1.25rem;
+/* ---- Projects timeline ----
+   Chronological rail, read left to right. Without the pinned enhancement it is
+   a plain swipeable row; motion.js adds .is-pinned so vertical scroll drives it. */
+.tl-viewport {
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-accent) transparent;
+}
+
+.tl-track {
+  /* rail sits at the centre of the dots, which sit on top of the date row */
+  --rail-y: calc(2rem + 7px);
+  --pad: max(
+    clamp(1rem, 3vw, 2rem),
+    calc((100vw - var(--container-max)) / 2 + clamp(1rem, 3vw, 2rem))
+  );
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  width: max-content;
+  margin: 0;
+  padding: 1rem var(--pad) 0.5rem;
+  list-style: none;
+}
+
+.tl-track::before,
+.tl-track::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: calc(var(--rail-y) + 0.5rem - 1px);
+  height: 2px;
+  pointer-events: none;
+}
+
+.tl-track::before {
+  right: 0;
+  background: var(--border-subtle);
+}
+
+.tl-track::after {
+  width: var(--fill, 100%);
+  max-width: 100%;
+  background: linear-gradient(90deg, var(--accent-solid), var(--text-accent));
+}
+
+.tl-entry,
+.tl-phase {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: none;
+  scroll-snap-align: start;
+  scroll-margin-inline-start: var(--pad);
+}
+
+.tl-entry {
+  width: clamp(268px, 27vw, 350px);
+}
+
+.tl-entry .project-card {
+  width: 100%;
+}
+
+.tl-stem {
+  width: 2px;
+  height: 28px;
+  margin-left: 22px;
+  background: linear-gradient(to bottom, var(--border-subtle), var(--border-accent));
+}
+
+/* alternate stem lengths so the cards zigzag along the rail */
+.tl-entry--tall .tl-stem {
+  height: 76px;
+}
+
+.tl-dot {
+  position: relative;
+  z-index: 1;
+  width: 14px;
+  height: 14px;
+  margin-left: 16px;
+  border-radius: 50%;
+  background: var(--bg-canvas);
+  border: 2px solid var(--border-accent);
+  transition: background-color 360ms var(--ease-calm),
+    border-color 360ms var(--ease-calm), box-shadow 360ms var(--ease-calm),
+    transform 360ms var(--ease-calm);
+}
+
+.tl-dot.is-lit {
+  background: var(--accent-solid);
+  border-color: var(--text-accent);
+  box-shadow: 0 0 0 5px rgba(79, 70, 229, 0.18);
+}
+
+.tl-dot--phase {
+  width: 18px;
+  height: 18px;
+  margin: 0 0 -2px 14px;
+  border-radius: 5px;
+  transform: rotate(45deg);
+}
+
+.tl-date {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  padding-left: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.tl-phase {
+  padding-right: 0.25rem;
+}
+
+.tl-phase .tl-stem {
+  height: 18px;
+}
+
+/* era marker: the year is the headline of each phase */
+.tl-phase-year {
+  font-size: clamp(4.25rem, 9vw, 8rem);
+  font-weight: 800;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(129, 140, 248, 0.5);
+  user-select: none;
+}
+
+.tl-phase-label {
+  margin-top: 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-accent-bright);
+  white-space: nowrap;
+}
+
+.tl-now-card {
+  border-color: var(--border-accent);
+  background: linear-gradient(160deg, rgba(79, 70, 229, 0.16), var(--bg-surface) 62%);
+}
+
+.tl-now-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--status-success);
+}
+
+.tl-dot--now {
+  border-color: var(--status-success);
+}
+
+.tl-hint {
+  display: none;
+}
+
+/* Pinned mode: the frame sticks while vertical scroll slides the track sideways */
+.projects-timeline.is-pinned {
+  padding-top: 0;
+}
+
+.projects-timeline.is-pinned .tl-frame {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  padding-top: calc(var(--header-offset) + 0.5rem);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.projects-timeline.is-pinned .tl-viewport {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.projects-timeline.is-pinned .tl-track {
+  transform: translate3d(var(--tx, 0px), 0, 0);
+  will-change: transform;
+}
+
+.projects-timeline.is-pinned .tl-hint {
+  display: block;
+  margin: 0 auto 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  transition: opacity var(--transition-mid);
+}
+
+.projects-timeline.is-pinned.is-travelling .tl-hint {
+  opacity: 0;
 }
 
 .project-card {
@@ -768,10 +979,6 @@
 
 @media (min-width: 640px) {
   .bento-skills-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .projects-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
