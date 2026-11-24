@@ -3,7 +3,7 @@ export const PROFILE = {
   firstName: "Ahmad Zuhair",
   lastName: "Dzulfiqor",
   brandName: "Ahmad Zuhair",
-  role: "Flutter Developer | Mobile Developer",
+  role: "Flutter Web Developer | Mobile Developer",
   location: "South Jakarta, Indonesia",
   phoneDisplay: "(+62) 812-1581-9957",
   phoneHref: "tel:+6281215819957",
@@ -12,7 +12,7 @@ export const PROFILE = {
   githubUrl: "https://github.com/zzulfiqor",
   linkedinDisplay: "linkedin.com/in/zuhairdzulfiqor",
   summary:
-    "Flutter Developer with experience building mobile and web applications using Flutter, Dart, and supporting backend/database technologies. Experienced in developing Flutter Web reporting applications, creating reusable Flutter Web frameworks, building Spring Boot backend services, and maintaining stored procedures/functions for database-driven reporting workflows. Strong foundation in problem solving, mobile development, teamwork, and human-computer interaction.",
+    "Flutter Web Developer with experience building mobile and web applications using Flutter, Dart, and supporting backend/database technologies. Experienced in developing Flutter Web reporting applications, creating reusable Flutter Web frameworks, building Spring Boot backend services, and maintaining stored procedures/functions for database-driven reporting workflows. Strong foundation in problem solving, mobile development, teamwork, and human-computer interaction.",
 };
 
 export const HIGHLIGHTS = [
