@@ -148,4 +148,25 @@ test("resolveActiveSectionId resolves top, mid-scroll, bottom, and empty section
     }),
     "contact"
   );
+
+  // When navbar omits Home (starts at #about below hero), top of page has no active link
+  const withoutHome = sections.slice(1);
+  assert.equal(
+    resolveActiveSectionId(withoutHome, {
+      scrollY: 0,
+      viewportHeight: 800,
+      documentHeight: 4200,
+      offset: 76,
+    }),
+    null
+  );
+  assert.equal(
+    resolveActiveSectionId(withoutHome, {
+      scrollY: 460,
+      viewportHeight: 800,
+      documentHeight: 4200,
+      offset: 76,
+    }),
+    "about"
+  );
 });

@@ -3,16 +3,17 @@ import { resolveActiveSectionId } from "../utils.js";
 
 const DRAWER_EXIT_FALLBACK_MS = 170;
 const SCROLL_ELEVATION_THRESHOLD_PX = 16;
+const HEADER_OFFSET_PX = 76;
 
 /**
- * Initializes the floating header scroll state, desktop sliding active bar,
+ * Initializes the sticky header scroll state, desktop sliding underline bar,
  * reversible mobile navigation drawer, and unified section scroll-spy.
  */
 export function initNavigation() {
   const header = document.getElementById("top");
   const menuBtn = document.getElementById("mobile-menu-toggle");
   const drawer = document.getElementById("mobile-nav-drawer");
-  const navRail = document.querySelector(".nav-rail");
+  const primaryNav = document.querySelector(".primary-nav");
   const activeBar = document.getElementById("nav-active-bar");
 
   const desktopLinks = Array.from(
@@ -26,7 +27,7 @@ export function initNavigation() {
   let isDrawerOpen = false;
   let closeTimer = null;
   let onCloseEnd = null;
-  let activeSectionId = null;
+  let activeSectionId;
 
   const clearPendingClose = () => {
     clearTimeout(closeTimer);
@@ -120,8 +121,8 @@ export function initNavigation() {
   }
 
   const positionActiveBar = () => {
-    if (!activeBar || !navRail) return;
-    if (navRail.offsetParent === null) {
+    if (!activeBar || !primaryNav) return;
+    if (primaryNav.offsetParent === null) {
       activeBar.classList.remove("is-ready");
       return;
     }
@@ -134,16 +135,17 @@ export function initNavigation() {
       return;
     }
 
-    const railRect = navRail.getBoundingClientRect();
+    const navRect = primaryNav.getBoundingClientRect();
     const linkRect = activeLink.getBoundingClientRect();
-    if (railRect.width === 0 || linkRect.width === 0) return;
+    if (navRect.width === 0 || linkRect.width === 0) return;
 
-    const barWidth = Math.max(16, linkRect.width - 20);
+    const styles = getComputedStyle(activeLink);
+    const horizontalPad =
+      (parseFloat(styles.paddingLeft) || 0) +
+      (parseFloat(styles.paddingRight) || 0);
+    const barWidth = Math.max(16, linkRect.width - horizontalPad);
     const barLeft =
-      linkRect.left -
-      railRect.left -
-      navRail.clientLeft +
-      (linkRect.width - barWidth) / 2;
+      linkRect.left - navRect.left + (linkRect.width - barWidth) / 2;
 
     activeBar.style.transform = `translate3d(${barLeft.toFixed(
       1
@@ -152,11 +154,11 @@ export function initNavigation() {
   };
 
   const setActiveSection = (nextId) => {
-    if (!nextId || nextId === activeSectionId) return;
+    if (nextId === activeSectionId) return;
     activeSectionId = nextId;
-    const activeHref = `#${nextId}`;
+    const activeHref = nextId ? `#${nextId}` : null;
     allNavLinks.forEach((link) => {
-      if (link.getAttribute("href") === activeHref) {
+      if (activeHref && link.getAttribute("href") === activeHref) {
         link.setAttribute("aria-current", "page");
       } else {
         link.removeAttribute("aria-current");
@@ -193,9 +195,10 @@ export function initNavigation() {
       scrollY: window.scrollY,
       viewportHeight: window.innerHeight,
       documentHeight: document.documentElement.scrollHeight,
+      offset: HEADER_OFFSET_PX,
     });
 
-    if (nextId) setActiveSection(nextId);
+    setActiveSection(nextId);
   };
 
   let scrollTicking = false;

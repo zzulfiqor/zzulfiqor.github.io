@@ -130,13 +130,15 @@ export function resolveActiveSectionId(
   { scrollY = 0, viewportHeight = 800, documentHeight = 0, offset = 92 } = {}
 ) {
   if (!Array.isArray(sections) || sections.length === 0) return null;
-  if (scrollY <= 16) return sections[0].id;
+  if (scrollY <= 16) {
+    return sections[0].top <= offset + 16 ? sections[0].id : null;
+  }
   if (documentHeight > 0 && scrollY + viewportHeight >= documentHeight - 24) {
     return sections[sections.length - 1].id;
   }
 
   const readingLine = scrollY + offset + viewportHeight * 0.25;
-  let activeId = sections[0].id;
+  let activeId = null;
   for (const section of sections) {
     if (section.top <= readingLine) {
       activeId = section.id;

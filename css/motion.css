@@ -322,13 +322,8 @@
 
 /* Icon tiles respond to their parent hover */
 .highlight-icon,
-.skill-group-icon,
-.brand-icon {
+.skill-group-icon {
   transition: transform var(--transition-mid), background-color var(--transition-mid);
-}
-
-.brand:hover .brand-icon {
-  transform: scale(1.12);
 }
 
 .highlight-item:hover .highlight-icon,
@@ -411,10 +406,10 @@
 }
 
 @media (prefers-reduced-transparency: reduce) {
-  .header-shell,
-  .site-header.is-scrolled .header-shell,
+  .site-header.is-scrolled .header-bar,
+  .site-header:has(.mobile-drawer[data-state="open"]) .header-bar,
   .mobile-drawer {
-    background: var(--bg-surface);
+    background: var(--bg-canvas);
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
   }
